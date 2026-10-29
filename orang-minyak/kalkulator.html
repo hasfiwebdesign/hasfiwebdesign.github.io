@@ -68,6 +68,12 @@ nav.links a:hover{color:var(--deep-ink)}
 .lang button{border:0;background:transparent;color:var(--deep-muted);font:600 .76rem var(--f-mono);padding:7px 10px;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--deep-ink);color:var(--deep)}
 @media (max-width:980px){nav.links{display:none}}
+.ejen-bar{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:9px 16px;background:var(--oil);color:#1A1204;text-decoration:none;font-size:.9rem;line-height:1.3;text-align:center}
+.ejen-bar .eb-tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:#1A1204;color:var(--oil);padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ejen-bar .eb-go{font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.ejen-bar:hover .eb-go{text-decoration-thickness:2px}
+nav.links a.nav-ejen{color:var(--oil);font-weight:600}
+@media (max-width:560px){.ejen-bar{gap:6px 10px;font-size:.84rem}}
 @media (max-width:520px){.hdr-cta{display:none}}
 
 /* hero */
@@ -264,6 +270,7 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
 
 <div class="note" data-i>Mockup profesional untuk semakan Bob. Item bertanda <b>*</b> ialah cadangan dan perlu disahkan.</div>
 
+<a class="ejen-bar js-wa" data-msg="msgEjen" href="https://wa.me/60178899786" target="_blank" rel="noopener"><span class="eb-tag" data-i>Jadi Ejen Kami</span><span class="eb-txt" data-i>Kenalkan sebuah restoran atau kantin, dapat <b>RM30</b> setiap premis</span><span class="eb-go" data-i>Daftar &rarr;</span></a>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#atas">
@@ -277,6 +284,7 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
       <a href="#kawasan" data-i>Kawasan</a>
       <a href="#bukti" data-i>Rekod kami</a>
       <a href="#soalan" data-i>Soalan</a>
+      <a class="nav-ejen js-wa" data-msg="msgEjen" href="https://wa.me/60178899786" target="_blank" rel="noopener" data-i>Jadi ejen</a>
     </nav>
     <div class="lang" role="group" aria-label="Bahasa / Language">
       <button type="button" data-lang="ms" aria-pressed="true">BM</button>
@@ -487,7 +495,7 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
   </div>
 </section>
 
-<section class="block">
+<section class="block" id="ejen">
   <div class="wrap">
     <div class="duo">
       <div class="card rv">
@@ -607,7 +615,7 @@ const PHONE='60178899786';
 const EN={
  "Kenapa jual, bukan buang":"Why sell, not throw away","Satu botol minyak, dua pengakhiran":"One bottle of oil, two endings","Minyak goreng yang dituang ke sinki tidak hilang begitu sahaja. Ia berakhir di longkang dan sungai kita. Minyak yang dijual pula menjadi biodiesel, dan duitnya kembali kepada anda, surau atau sekolah anda.":"Frying oil poured down the sink does not just disappear. It ends up in our drains and rivers. Oil that is sold becomes biodiesel, and the money comes back to you, your surau or your school.","Paip dapur dan perangkap minyak tersumbat":"Kitchen pipes and grease traps get blocked","Longkang berbau, menarik tikus dan lipas":"Drains smell and attract rats and cockroaches","Sungai tercemar, ikan dan hidupan air terjejas":"Rivers get polluted, fish and river life suffer","Boleh jatuh ke tangan pihak tak berlesen dan dijual semula sebagai minyak masak murah":"It can end up with unlicensed buyers and be resold as cheap cooking oil","Anda dapat RM0":"You get RM0","Masuk sinki":"Down the sink","Dipam dan ditimbang di hadapan anda":"Pumped and weighed in front of you","Dibayar di tempat ikut berat":"Paid on the spot by weight","Diproses menjadi biodiesel, tidak dijual semula sebagai minyak masak":"Processed into biodiesel, never resold as cooking oil","Hasil boleh disalurkan ke tabung surau, masjid atau sekolah":"Proceeds can go to a surau, mosque or school fund","Dibeli oleh syarikat berlesen MPOB":"Bought by an MPOB-licensed company","Masuk tong Orang Minyak":"Into an Orang Minyak drum","Contoh kiraan untuk komuniti":"Example for a community","<b>100 rumah</b> dalam satu taman, setiap rumah simpan <b>1 kg</b> sebulan. Pada harga Program Pembelian RM3.00 sekilogram, itu <b>RM300 sebulan</b> atau <b>RM3,600 setahun</b> untuk tabung surau, masjid atau PIBG.":"<b>100 homes</b> in one neighbourhood, each storing <b>1 kg</b> a month. At the Buying Day price of RM3.00 per kilogram, that is <b>RM300 a month</b> or <b>RM3,600 a year</b> for a surau, mosque or PTA fund.","Tanya Kutipan Berkelompok":"Ask about Group Collection","Berapakah minimum untuk menjual?":"What is the minimum to sell?","Untuk isi rumah melalui Program Pembelian, 1 kg pun diterima. Untuk kutipan di premis, minimum 30 kg setiap kutipan sekali, atau pilih kontrak mingguan.":"For households at Buying Days, even 1 kg is accepted. For pickups at a business, the minimum is 30 kg per one-off collection, or choose a weekly contract.","Bagaimanakah surau atau sekolah boleh menyertai Kutipan Berkelompok?":"How can a surau or school join a Group Collection?","WhatsApp kami untuk tetapkan tarikh lebih awal supaya hebahan dapat dibuat. Ahli menyimpan minyak dalam botol bertutup, dan pada hari kutipan kami timbang serta bayar di tempat. Hasilnya boleh terus dimasukkan ke tabung.":"WhatsApp us to fix a date early so it can be announced. Members store their oil in closed bottles, and on collection day we weigh it and pay on the spot. The proceeds can go straight into the fund.","Bagaimanakah cara menyimpan minyak terpakai di rumah?":"How should I store used oil at home?","Biarkan minyak sejuk, tapis sisa makanan, dan simpan dalam botol atau jerikan bertutup. Jangan campur dengan air, sabun atau minyak enjin.":"Let the oil cool, strain out food bits and keep it in a closed bottle or jerrycan. Do not mix it with water, soap or engine oil.","Kenapa tidak boleh buang minyak ke sinki?":"Why not pour oil down the sink?","Minyak menjadi keras apabila sejuk dan menyumbat paip serta longkang. Dari longkang, ia mengalir ke sungai dan mencemarkan air.":"Oil hardens as it cools and blocks pipes and drains. From the drains it flows into rivers and pollutes the water.","Saya collector. Boleh jual kepada Orang Minyak?":"I am a collector. Can I sell to Orang Minyak?","Boleh. WhatsApp kawasan dan anggaran kuantiti anda, dan kami maklumkan harga pukal ikut kuantiti.":"Yes. WhatsApp us your area and estimated quantity, and we will tell you the bulk price for that quantity.",
  'Mockup profesional untuk semakan Bob. Item bertanda <b>*</b> ialah cadangan dan perlu disahkan.':'Professional mockup for Bob to review. Items marked <b>*</b> are proposals and need confirmation.',
- 'Untuk premis':'For businesses','Kalkulator':'Calculator','Minimum 30 kg':'Minimum 30 kg','Tong disediakan':'Drums provided','Volum besar':'Large volume','Ini anggaran sahaja. Harga sebenar ikut pasaran semasa dan timbangan di tempat.':'This is an estimate only. The actual price follows the current market and on-site weighing.','Dapatkan harga tepat di WhatsApp':'Get an exact price on WhatsApp','seminggu':'a week','Berapa bekas minyak terpakai anda seminggu?':'How many containers of used oil do you fill a week?','Botol 1.5 L':'1.5 L bottle','Jerikan 5 L':'5 L jerrycan','Jerikan 20 L':'20 L jerrycan','Tong 200 L':'200 L drum','Jumlah anggaran':'Estimated total','Pelan kutipan':'Collection plans','Rekod kami':'Our record','Soalan':'FAQ',
+ 'Untuk premis':'For businesses','Kalkulator':'Calculator','Minimum 30 kg':'Minimum 30 kg','Tong disediakan':'Drums provided','Volum besar':'Large volume','Ini anggaran sahaja. Harga sebenar ikut pasaran semasa dan timbangan di tempat.':'This is an estimate only. The actual price follows the current market and on-site weighing.','Dapatkan harga tepat di WhatsApp':'Get an exact price on WhatsApp','seminggu':'a week','Berapa bekas minyak terpakai anda seminggu?':'How many containers of used oil do you fill a week?','Botol 1.5 L':'1.5 L bottle','Jerikan 5 L':'5 L jerrycan','Jerikan 20 L':'20 L jerrycan','Tong 200 L':'200 L drum','Jumlah anggaran':'Estimated total','Jadi Ejen Kami':'Become Our Agent','Kenalkan sebuah restoran atau kantin, dapat <b>RM30</b> setiap premis':'Refer a restaurant or canteen, earn <b>RM30</b> per business','Daftar →':'Join →','Jadi ejen':'Become an agent','Pelan kutipan':'Collection plans','Rekod kami':'Our record','Soalan':'FAQ',
  'Tempah kutipan':'Book a collection','Pembeli minyak masak terpakai berlesen MPOB':'MPOB-licensed used cooking oil buyer',
  'Minyak terpakai premis anda ialah <em>wang tunai</em>.':'Your used cooking oil is <em>cash</em>.',
  'Orang Minyak mengutip minyak masak terpakai terus dari premis anda di Lembah Klang. Kami pam, timbang di hadapan anda dan bayar di tempat melalui DuitNow QR, pindahan bank atau tunai. Tiada kos, tiada kerja tambahan.':'Orang Minyak collects used cooking oil straight from your premises across the Klang Valley. We pump it, weigh it in front of you and pay on the spot by DuitNow QR, bank transfer or cash. No cost, no extra work.',
