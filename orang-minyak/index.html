@@ -119,6 +119,7 @@ section.block{padding-block:88px}
 .seg-panel li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--muted)}
 .seg-panel li svg{width:20px;height:20px;color:var(--green-2);margin-top:2px}
 @media (max-width:820px){.seg-panel{grid-template-columns:1fr}}
+@media (max-width:600px){.seg-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;overflow:visible;border-bottom:0}.seg-tabs button{margin-right:0;white-space:normal;text-align:left;padding:10px 4px;border-bottom:3px solid var(--line)}}
 
 /* calculator */
 .calc{background:var(--paper);border-block:1px solid var(--line)}
@@ -315,12 +316,13 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
       <p class="lead" data-i>Pilih jenis premis anda untuk melihat cara kami bekerja dengan perniagaan seperti anda.</p>
     </div>
     <div class="seg-tabs" role="tablist" aria-label="Jenis premis">
-      <button role="tab" id="t-r" aria-selected="true" data-seg="r" data-i>Restoran dan kedai makan</button>
-      <button role="tab" id="t-h" aria-selected="false" data-seg="h" tabindex="-1" data-i>Hotel, kantin dan katering</button>
-      <button role="tab" id="t-k" aria-selected="false" data-seg="k" tabindex="-1" data-i>Rumah dan komuniti</button>
+      <button role="tab" id="t-k" aria-selected="false" data-seg="k" tabindex="-1" data-i>Isi rumah</button>
+      <button role="tab" id="t-r" aria-selected="true" data-seg="r" data-i>Gerai, restoran dan kafe</button>
+      <button role="tab" id="t-h" aria-selected="false" data-seg="h" tabindex="-1" data-i>Institusi dan organisasi</button>
+      <button role="tab" id="t-c" aria-selected="false" data-seg="c" tabindex="-1" data-i>Collector</button>
     </div>
     <div class="seg-panel" role="tabpanel" id="segPanel" aria-labelledby="t-r">
-      <img id="segImg" src="media/pam-kedai.jpg" width="1080" height="810" decoding="async" alt="Restoran dan kedai makan">
+      <img id="segImg" src="media/pam-kedai.jpg" width="1080" height="810" decoding="async" alt="Gerai, restoran dan kafe">
       <div class="txt">
         <h3 id="segH" style="font-size:1.8rem"></h3>
         <p class="lead" id="segP"></p>
@@ -399,7 +401,7 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
         <button type="button" class="btn btn-primary js-book" data-plan="week" data-i>Mulakan kontrak</button>
       </article>
       <article class="plan rv">
-        <h3 data-i>Hotel dan korporat</h3>
+        <h3 data-i>Institusi dan pukal</h3>
         <div class="price" style="font-size:2.2rem" data-i>Ikut volum*</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg><span data-i>Harga khas untuk 500 kg sebulan ke atas</span></li>
@@ -426,7 +428,7 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
 
 <section class="block" id="kawasan" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head rv"><div><span class="eyebrow" data-i>Kawasan pickup</span><h2 data-i>Van kami sampai ke kawasan anda</h2></div><p class="lead" data-i>Kami kutip di kedai, gerai, hotel, kantin dan kafe. Kawasan anda tiada dalam senarai? WhatsApp kami untuk semak.</p></div>
+    <div class="sec-head rv"><div><span class="eyebrow" data-i>Kawasan pickup</span><h2 data-i>Van kami sampai ke kawasan anda</h2></div><p class="lead" data-i>Kami kutip di rumah, gerai, restoran, kantin, kafe, sekolah, surau, masjid dan pejabat. Kawasan anda tiada dalam senarai? WhatsApp kami untuk semak.</p></div>
     <div class="chips rv"><span>Ampang</span><span>Cheras</span><span>Kuala Lumpur</span><span>Bangi</span><span>Kajang</span><span>Semenyih</span><span>Nilai</span><span>Senawang</span><span class="more" data-i>Sekitar Lembah Klang</span></div>
     <div class="area-grid rv"><figure><img src="media/v-putrajaya.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Van Orang Minyak di Putrajaya"><figcaption data-i>Van kami di Putrajaya</figcaption></figure><figure><img src="media/v-kl.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Van Orang Minyak dengan latar bandar Kuala Lumpur"><figcaption data-i>Dalam perjalanan, Kuala Lumpur</figcaption></figure><figure><img src="media/v-dataran.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Van Orang Minyak berjenama"><figcaption data-i>Van berjenama, mudah dikenali</figcaption></figure></div>
     <div style="margin-top:24px"><a class="btn btn-dark js-wa" data-msg="msgArea" href="https://wa.me/60178899786" target="_blank" rel="noopener" data-i>Semak kawasan saya</a></div>
@@ -533,16 +535,18 @@ footer{background:var(--deep);color:var(--deep-ink);padding-block:60px 110px}
     <div id="step1" class="fld">
       <span class="lbl" data-i>Jenis premis</span>
       <div class="choices" id="chPremis">
-        <button type="button" data-v="restoran" data-i>Restoran / kedai makan</button>
-        <button type="button" data-v="gerai" data-i>Gerai / food truck</button>
-        <button type="button" data-v="hotel" data-i>Hotel / katering</button>
-        <button type="button" data-v="kantin" data-i>Kantin / asrama</button>
+        <button type="button" data-v="gerai" data-i>Gerai / kedai</button>
+        <button type="button" data-v="restoran" data-i>Restoran / kafe</button>
+        <button type="button" data-v="kantin" data-i>Kantin</button>
+        <button type="button" data-v="ibadah" data-i>Sekolah / surau / masjid</button>
+        <button type="button" data-v="org" data-i>Persatuan / kelab / pejabat</button>
+        <button type="button" data-v="coll" data-i>Collector</button>
       </div>
       <span class="lbl" style="margin-top:8px" data-i>Pelan</span>
       <div class="choices" id="chPlan">
         <button type="button" data-v="once" data-i>Kutipan sekali</button>
         <button type="button" data-v="week" data-i>Kontrak mingguan</button>
-        <button type="button" data-v="corp" data-i>Hotel dan korporat</button>
+        <button type="button" data-v="corp" data-i>Institusi dan pukal</button>
       </div>
     </div>
     <div id="step2" class="fld" hidden>
@@ -581,7 +585,7 @@ const EN={
  'Rakaman sebenar: minyak dipam terus ke tong kami':'Real footage: oil pumped straight into our drum',
  'Minyak terpakai dikutip sejak 2020*':'Used oil collected since 2020*','Pertumbuhan kutipan, 2020 hingga 2025*':'Growth in collections, 2020 to 2025*','Beroperasi di Ampang sejak':'Operating in Ampang since','Kos kepada premis anda':'Cost to your business',
  'Untuk siapa':'Who it is for','Satu servis, disesuaikan untuk premis anda':'One service, tailored to your business','Pilih jenis premis anda untuk melihat cara kami bekerja dengan perniagaan seperti anda.':'Choose your type of business to see how we work with places like yours.',
- 'Restoran dan kedai makan':'Restaurants and eateries','Hotel, kantin dan katering':'Hotels, canteens and caterers','Rumah dan komuniti':'Homes and communities',
+ 'Isi rumah':'Households','Gerai, restoran dan kafe':'Stalls, restaurants and cafes','Institusi dan organisasi':'Institutions and organisations','Collector':'Collector','Gerai / kedai':'Stall / shop','Restoran / kafe':'Restaurant / cafe','Kantin':'Canteen','Sekolah / surau / masjid':'School / surau / mosque','Persatuan / kelab / pejabat':'Association / club / office',
  'Kalkulator pendapatan':'Earnings calculator','Berapa yang premis anda buang setiap bulan?':'How much is your business throwing away each month?',
  'Kebanyakan premis membuang minyak terpakai atau menjualnya terlalu murah. Masukkan anggaran mingguan anda untuk melihat nilainya dalam setahun.':'Many businesses throw away used oil or sell it too cheaply. Enter your weekly estimate to see what it is worth in a year.',
  'Kekerapan kutipan':'Collection frequency','Sekali sahaja':'One-off','Setiap minggu':'Every week','Hotel / korporat':'Hotel / corporate','Ikut volum*':'By volume*',
@@ -591,7 +595,7 @@ const EN={
  'Harga yang jelas, tanpa caj tersembunyi':'Clear prices, no hidden charges','Semua pelan percuma untuk premis anda. Semakin kerap dan semakin banyak, semakin tinggi harga sekilogram.':'Every plan is free for your business. The more often and the more oil, the higher the price per kilogram.',
  'Kutipan sekali':'One-off collection',' /kg':' /kg',' /kg*':' /kg*','Minimum 30 kg setiap kutipan':'Minimum 30 kg per collection','Ditimbang dan dibayar di tempat':'Weighed and paid on the spot','Sesuai untuk kutipan sekali-sekala':'Suits occasional collections','Tempah sekali':'Book once',
  'Paling popular*':'Most popular*','Kontrak mingguan':'Weekly contract','Hari dan masa kutipan tetap setiap minggu':'Fixed collection day and time every week','Tong simpanan disediakan percuma*':'Free storage drums provided*','Penyata kutipan bulanan untuk akaun premis':'Monthly collection statement for your accounts','Tiada minimum selepas kutipan pertama*':'No minimum after the first collection*','Mulakan kontrak':'Start a contract',
- 'Hotel dan korporat':'Hotels and corporate','Harga khas untuk 500 kg sebulan ke atas':'Special pricing for 500 kg a month and above','Sijil kitar semula dan laporan ESG bulanan*':'Recycling certificate and monthly ESG report*','Satu pegawai untuk semua cawangan':'One account manager for all branches','Minta sebut harga':'Request a quote',
+ 'Institusi dan pukal':'Institutions and bulk','Harga khas untuk 500 kg sebulan ke atas':'Special pricing for 500 kg a month and above','Sijil kitar semula dan laporan ESG bulanan*':'Recycling certificate and monthly ESG report*','Satu pegawai untuk semua cawangan':'One account manager for all branches','Minta sebut harga':'Request a quote',
  'Cara kami bekerja':'How we work','Dari tong anda ke biodiesel':'From your drum to biodiesel',
  'Simpan':'Store','Kumpulkan minyak dalam tong. Pastikan tiada air atau minyak enjin.':'Collect oil in drums. Keep out water and engine oil.',
  'Pam':'Pump','Van kami tiba dan mengepam terus dari tong anda.':'Our van arrives and pumps straight from your drum.',
@@ -613,21 +617,22 @@ const EN={
  'Dikendalikan oleh WAUMAS Enterprise sejak 2020. Pembeli minyak masak terpakai berlesen MPOB, No. 621017017000.':'Operated by WAUMAS Enterprise since 2020. MPOB-licensed used cooking oil buyer, No. 621017017000.',
  'Hubungi':'Contact','Salin':'Copy','Media sosial':'Social media','* Cadangan dalam mockup. Harga, angka dan program perlu disahkan oleh WAUMAS.':'* Proposals in this mockup. Prices, figures and programmes must be confirmed by WAUMAS.',
  'Jenis premis':'Type of business','Restoran / kedai makan':'Restaurant / eatery','Gerai / food truck':'Stall / food truck','Hotel / katering':'Hotel / catering','Kantin / asrama':'Canteen / hostel','Pelan':'Plan',
- 'Kawasan':'Area','Lain-lain':'Other','Kawasan pickup':'Pickup areas','Van kami sampai ke kawasan anda':'Our van comes to your area','Kami kutip di kedai, gerai, hotel, kantin dan kafe. Kawasan anda tiada dalam senarai? WhatsApp kami untuk semak.':'We collect from shops, stalls, hotels, canteens and cafes. Area not listed? WhatsApp us to check.','Sekitar Lembah Klang':'Around the Klang Valley','Van kami di Putrajaya':'Our van in Putrajaya','Dalam perjalanan, Kuala Lumpur':'On the road, Kuala Lumpur','Van berjenama, mudah dikenali':'Branded van, easy to spot','Semak kawasan saya':'Check my area','Hari':'Day','Sabtu atau Ahad':'Saturday or Sunday','Slot pagi':'Morning slot','Slot petang':'Evening slot','Minimum':'Minimum','1 kg pun diterima':'Even 1 kg accepted','Bayaran':'Payment','QR, bank, tunai':'QR, bank, cash','Anggaran minyak (kg)':'Estimated oil (kg)','Nama premis':'Business name','Nama anda':'Your name','Kembali':'Back','Seterusnya':'Next','Hantar melalui WhatsApp':'Send via WhatsApp'
+ 'Kawasan':'Area','Lain-lain':'Other','Kawasan pickup':'Pickup areas','Van kami sampai ke kawasan anda':'Our van comes to your area','Kami kutip di rumah, gerai, restoran, kantin, kafe, sekolah, surau, masjid dan pejabat. Kawasan anda tiada dalam senarai? WhatsApp kami untuk semak.':'We collect from homes, stalls, restaurants, canteens, cafes, schools, mosques and offices. Area not listed? WhatsApp us to check.','Sekitar Lembah Klang':'Around the Klang Valley','Van kami di Putrajaya':'Our van in Putrajaya','Dalam perjalanan, Kuala Lumpur':'On the road, Kuala Lumpur','Van berjenama, mudah dikenali':'Branded van, easy to spot','Semak kawasan saya':'Check my area','Hari':'Day','Sabtu atau Ahad':'Saturday or Sunday','Slot pagi':'Morning slot','Slot petang':'Evening slot','Minimum':'Minimum','1 kg pun diterima':'Even 1 kg accepted','Bayaran':'Payment','QR, bank, tunai':'QR, bank, cash','Anggaran minyak (kg)':'Estimated oil (kg)','Nama premis':'Business name','Nama anda':'Your name','Kembali':'Back','Seterusnya':'Next','Hantar melalui WhatsApp':'Send via WhatsApp'
 };
 const DYN={
  ms:{
   seg:{
-   r:{img:'media/pam-kedai.jpg',h:'Restoran dan kedai makan',p:'Minyak goreng harian anda dikutip mengikut jadual, tanpa mengganggu operasi dapur.',l:['Kutipan di pintu belakang pada waktu yang anda pilih','Minyak dipam terus dari tong, tiada angkat-angkat tong berat','Penyata bulanan untuk rekod akaun kedai'],b:'Tempah untuk restoran saya'},
-   h:{img:'media/kutipan-van.jpg',h:'Hotel, kantin dan katering',p:'Untuk dapur berkapasiti besar yang memerlukan pembekal yang patuh dan boleh diaudit.',l:['Pembeli berlesen MPOB untuk keperluan audit','Sijil kitar semula dan laporan ESG bulanan*','Harga khas untuk volum besar dan banyak cawangan*'],b:'Minta sebut harga korporat'},
-   k:{img:'media/botol.jpg',h:'Rumah dan komuniti',p:'Jumlah kecil dari rumah dikumpulkan melalui Program Pembelian dan Kutipan Berkelompok.',l:['Program Pembelian setiap Sabtu atau Ahad','RM3.00 sekilogram, 1 kg pun diterima','Hasil jualan boleh disalurkan ke tabung surau atau PIBG'],b:'Tanya jadual Program Pembelian'}
+   r:{img:'media/pam-kedai.jpg',h:'Gerai, restoran dan kafe',p:'Untuk gerai, restoran, kedai, kantin dan kafe. Minyak goreng harian anda dikutip mengikut jadual, tanpa mengganggu operasi dapur.',l:['Kutipan di pintu belakang pada waktu yang anda pilih','Minyak dipam terus dari tong, tiada angkat-angkat tong berat','Penyata bulanan untuk rekod akaun kedai'],b:'Tempah untuk restoran saya'},
+   h:{img:'media/kutipan-van.jpg',h:'Institusi dan organisasi',p:'Untuk sekolah, surau, masjid, persatuan, kelab serta pejabat kerajaan dan swasta. Kumpulkan minyak warga anda dan kami datang ambil.',l:['Kutipan Berkelompok untuk ahli, jemaah atau warga sekolah','Hasil jualan boleh terus masuk ke tabung organisasi','Pembeli berlesen MPOB, sesuai untuk rekod dan laporan*'],b:'Tanya kutipan untuk organisasi saya'},
+   c:{img:'media/g-jeriken.jpg',h:'Collector',p:'Anda kumpul minyak masak terpakai daripada jiran atau premis sekitar? Jual secara pukal kepada Orang Minyak.',l:['Kami beli daripada collector secara pukal','Harga ikut kuantiti*','Pembeli berlesen MPOB, minyak anda pergi ke biodiesel'],b:'Saya collector, nak jual pukal'},
+   k:{img:'media/botol.jpg',h:'Isi rumah',p:'Jumlah kecil dari rumah dikumpulkan melalui Program Pembelian dan Kutipan Berkelompok.',l:['Program Pembelian setiap Sabtu atau Ahad','RM3.00 sekilogram, 1 kg pun diterima','Hasil jualan boleh disalurkan ke tabung surau atau PIBG'],b:'Tanya jadual Program Pembelian'}
   },
   msgOnce:'Kutipan sekali sahaja. Minimum 30 kg setiap kutipan.',
   msgWeek:'Dengan kontrak mingguan, kutipan dibuat pada hari yang tetap dan tong disediakan.*',
   msgCorp:'Untuk volum besar, harga sebenar ditentukan selepas lawatan. Anggaran ini menggunakan RM2.60/kg.*',
   msgLow:n=>'Kutipan sekali memerlukan sekurang-kurangnya 30 kg. Kumpulkan selama '+n+' minggu, atau pilih kontrak mingguan.',
-  premis:{restoran:'Restoran / kedai makan',gerai:'Gerai / food truck',hotel:'Hotel / katering',kantin:'Kantin / asrama'},
-  plan:{once:'Kutipan sekali',week:'Kontrak mingguan',corp:'Hotel dan korporat'},
+  premis:{gerai:'Gerai / kedai',restoran:'Restoran / kafe',kantin:'Kantin',ibadah:'Sekolah / surau / masjid',org:'Persatuan / kelab / pejabat',coll:'Collector'},
+  plan:{once:'Kutipan sekali',week:'Kontrak mingguan',corp:'Institusi dan pukal'},
   sumL:['Premis','Pelan','Kawasan','Anggaran'],
   errPick:'Sila pilih jenis premis dan pelan.', errName:'Sila isikan nama premis dan nama anda.',
   wa:(o)=>'Assalamualaikum Orang Minyak. Saya ingin menempah kutipan.\n\nNama: '+o.who+'\nPremis: '+o.name+' ('+o.premis+')\nPelan: '+o.plan+'\nKawasan: '+o.area+'\nAnggaran: '+o.kg+' kg',
@@ -638,16 +643,17 @@ const DYN={
  },
  en:{
   seg:{
-   r:{img:'media/pam-kedai.jpg',h:'Restaurants and eateries',p:'Your daily frying oil is collected on schedule, without disrupting the kitchen.',l:['Back-door collection at a time you choose','Oil pumped straight from the drum, no heavy lifting','Monthly statement for your shop accounts'],b:'Book for my restaurant'},
-   h:{img:'media/kutipan-van.jpg',h:'Hotels, canteens and caterers',p:'For large kitchens that need a compliant, auditable supplier.',l:['MPOB-licensed buyer for audit requirements','Recycling certificate and monthly ESG report*','Special pricing for large volumes and multiple branches*'],b:'Request a corporate quote'},
-   k:{img:'media/botol.jpg',h:'Homes and communities',p:'Small amounts from homes are gathered through Buying Days and Group Collections.',l:['Buying Days every Saturday or Sunday','RM3.00 per kilogram, even 1 kg is accepted','Proceeds can go to a mosque or PTA fund'],b:'Ask for the Buying Day schedule'}
+   r:{img:'media/pam-kedai.jpg',h:'Stalls, restaurants and cafes',p:'For stalls, restaurants, shops, canteens and cafes. Your daily frying oil is collected on schedule, without disrupting the kitchen.',l:['Back-door collection at a time you choose','Oil pumped straight from the drum, no heavy lifting','Monthly statement for your shop accounts'],b:'Book for my restaurant'},
+   h:{img:'media/kutipan-van.jpg',h:'Institutions and organisations',p:'For schools, mosques, surau, associations, clubs and government or private offices. Gather your members\' oil and we come to collect it.',l:['Group Collection for members, congregations or school communities','Proceeds can go straight to your organisation\'s fund','MPOB-licensed buyer, suitable for records and reports*'],b:'Ask about collection for my organisation'},
+   c:{img:'media/g-jeriken.jpg',h:'Collectors',p:'Do you gather used cooking oil from neighbours or nearby businesses? Sell it in bulk to Orang Minyak.',l:['We buy in bulk from collectors','Price based on quantity*','MPOB-licensed buyer, your oil goes to biodiesel'],b:'I am a collector, I want to sell in bulk'},
+   k:{img:'media/botol.jpg',h:'Households',p:'Small amounts from homes are gathered through Buying Days and Group Collections.',l:['Buying Days every Saturday or Sunday','RM3.00 per kilogram, even 1 kg is accepted','Proceeds can go to a mosque or PTA fund'],b:'Ask for the Buying Day schedule'}
   },
   msgOnce:'One-off collection. Minimum 30 kg per collection.',
   msgWeek:'With a weekly contract, collection happens on a fixed day and drums are provided.*',
   msgCorp:'For large volumes, the actual price is set after a site visit. This estimate uses RM2.60/kg.*',
   msgLow:n=>'A one-off collection needs at least 30 kg. Store it for '+n+' weeks, or choose a weekly contract.',
-  premis:{restoran:'Restaurant / eatery',gerai:'Stall / food truck',hotel:'Hotel / catering',kantin:'Canteen / hostel'},
-  plan:{once:'One-off collection',week:'Weekly contract',corp:'Hotels and corporate'},
+  premis:{gerai:'Stall / shop',restoran:'Restaurant / cafe',kantin:'Canteen',ibadah:'School / surau / mosque',org:'Association / club / office',coll:'Collector'},
+  plan:{once:'One-off collection',week:'Weekly contract',corp:'Institutions and bulk'},
   sumL:['Business','Plan','Area','Estimate'],
   errPick:'Please choose a type of business and a plan.', errName:'Please fill in the business name and your name.',
   wa:(o)=>'Hello Orang Minyak. I would like to book a collection.\n\nName: '+o.who+'\nBusiness: '+o.name+' ('+o.premis+')\nPlan: '+o.plan+'\nArea: '+o.area+'\nEstimate: '+o.kg+' kg',
@@ -680,7 +686,7 @@ function showSeg(s){
   $('segPanel').setAttribute('aria-labelledby','t-'+s);
   $('segImg').src=d.img; $('segImg').alt=d.h; $('segH').textContent=d.h; $('segP').textContent=d.p;
   $('segL').innerHTML=d.l.map(x=>'<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg><span>'+x+'</span></li>').join('');
-  $('segBtn').textContent=d.b; $('segBtn').dataset.plan=s==='h'?'corp':'week';
+  $('segBtn').textContent=d.b; $('segBtn').dataset.plan=(s==='h'||s==='c')?'corp':'week';
 }
 segTabs.forEach((b,i)=>{b.onclick=()=>showSeg(b.dataset.seg);b.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=segTabs[(i+(e.key==='ArrowRight'?1:segTabs.length-1))%segTabs.length];n.focus();showSeg(n.dataset.seg);}};});
 
