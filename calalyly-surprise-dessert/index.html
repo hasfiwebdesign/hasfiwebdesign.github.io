@@ -241,7 +241,7 @@ function upd(){
  let al='';
  if(d1){const dd=daysTo(d1);if(dd<0)al='<p class="alert warn">'+T('Tarikh itu sudah lepas.','That date has passed.')+'</p>';else if(dd<7)al='<p class="alert warn">'+T('Kurang seminggu lagi. WhatsApp segera untuk semak stok.','Less than a week away. WhatsApp now to check stock.')+'</p>'}
  const many=ht&&ht===qa('.chip[data-g="hantar"]')[1];
- if(many)al+='<p class="alert ok">'+T('Ramai penerima? Muat turun templat senarai penerima, isi dalam Excel dan hantar bersama tempahan.','Many recipients? Download the recipient list template, fill it in Excel and send it with your order.')+'<br><button type="button" class="chip" id="csvb" style="margin-top:8px">'+T('Muat turun templat penerima','Download recipient template')+'</button></p>';
+ if(many)al+='<p class="alert ok">'+T('Ramai penerima? Muat turun templat senarai penerima, isi dalam Excel dan hantar bersama tempahan.','Many recipients? Download the recipient list template, fill it in Excel and send it with your order.')+'<br><button type="button" class="btn sec" id="csvb" style="margin-top:10px;width:100%">'+T('Muat turun templat penerima','Download recipient template')+'</button></p>';
  q('#ra').innerHTML=al;const cb=q('#csvb');if(cb)cb.onclick=csv;
  const n=all.reduce((s,l)=>s+l.n,0),tot=all.reduce((s,l)=>s+l.p*l.n,0),ex=[];
  if(ht)ex.push(txt(ht));ad.forEach(x=>ex.push(txt(x)));
