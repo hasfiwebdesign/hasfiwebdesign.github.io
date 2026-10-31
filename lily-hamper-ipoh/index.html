@@ -235,6 +235,7 @@ qa('.tool input,.tool select').forEach(e=>{e.addEventListener('input',upd);e.add
 const on=g=>qa('.chip[data-g="'+g+'"][aria-pressed=true]');
 const txt=e=>e.textContent.trim();
 const RM=n=>'RM'+(Math.round(n*100)/100).toLocaleString('en-MY',{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2});
+const fd=d=>d?d.split('-').reverse().join('/'):d;
 const daysTo=d=>{const t=new Date();t.setHours(12,0,0,0);return Math.round((new Date(d+'T12:00')-t)/864e5)};
 const GR="Hai",NAME="Lily Hamper Ipoh",WAN="60194427900",NOTE=["Harga koleksi Deepavali 2026 Rangoli & Radiance. Penghantaran dan tempahan pukal disahkan melalui WhatsApp.","Prices from the Deepavali 2026 Rangoli & Radiance collection. Delivery and bulk orders are confirmed on WhatsApp."],UNIT=["unit","units"],MUSIM=[["Deepavali", "Deepavali", "2026-11-08"], ["Krismas", "Christmas", "2026-12-25"], ["Tahun Baru Cina", "Chinese New Year", "2027-02-06"], ["Hari Raya Aidilfitri (jangkaan)", "Hari Raya Aidilfitri (expected)", "2027-03-10"]],FIRM="Lily Hamper Ipoh \u00b7 Taman Klebang Putra, Ipoh";
 const UN=()=>T(UNIT[0],UNIT[1]),U1=()=>T(UNIT[0],UNIT[1].replace(/s$/,''));
@@ -266,7 +267,7 @@ function upd(){
  const go=q('#go');go.textContent=T('Hantar di WhatsApp','Send on WhatsApp');
  q('#hint').textContent=T('Sebut harga PDF boleh terus dihantar kepada bos untuk kelulusan.','The PDF quotation can go straight to your manager for approval.');
  const m=T(GR+' '+NAME+', saya nak sebut harga:','Hi '+NAME+', I would like a quotation:')+(co?'\n'+co:'')+(pn?'\n'+T('Pegawai: ','Contact: ')+pn:'')+(em?'\n'+em:'')
-  +'\n• '+all.map(lline).join('\n• ')+'\n• '+T('Tarikh perlu: ','Needed by: ')+(d1||T('belum pasti','not fixed yet'))+ex.map(x=>'\n• '+x).join('')
+  +'\n• '+all.map(lline).join('\n• ')+'\n• '+T('Tarikh perlu: ','Needed by: ')+(fd(d1)||T('belum pasti','not fixed yet'))+ex.map(x=>'\n• '+x).join('')
   +T('\nAnggaran: ','\nEstimate: ')+RM(tot)+T('\nBoleh sahkan stok dan harga akhir?','\nCan you confirm stock and final price?');
  go.href=WA(WAN)+encodeURIComponent(m);
 }
@@ -284,7 +285,7 @@ q('#pdf').addEventListener('click',()=>{
  doc.setFont('helvetica','normal');doc.setFontSize(10);doc.text('No: '+no,150,44);doc.text(T('Tarikh: ','Date: ')+ds,150,50);
  let y=58;doc.text(T('Kepada: ','To: ')+(Q.co||'-'),16,y);
  if(Q.pn){y+=6;doc.text(T('Pegawai: ','Attn: ')+Q.pn+(Q.em?' ('+Q.em+')':''),16,y)}
- y+=6;doc.text(T('Tarikh perlu: ','Needed by: ')+(Q.d1||T('belum pasti','not fixed yet')),16,y);
+ y+=6;doc.text(T('Tarikh perlu: ','Needed by: ')+(fd(Q.d1)||T('belum pasti','not fixed yet')),16,y);
  y+=12;doc.setFillColor(240,240,240);doc.rect(16,y-6,178,9,'F');doc.setFont('helvetica','bold');
  doc.text(T('Perkara','Item'),18,y);doc.text(T('Kuantiti','Qty'),112,y);doc.text(T('Seunit','Unit'),140,y);doc.text(T('Jumlah','Total'),170,y);
  doc.setFont('helvetica','normal');y+=10;
