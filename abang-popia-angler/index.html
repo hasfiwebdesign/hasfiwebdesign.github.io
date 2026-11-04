@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abang Popia Angler · Kedai Rekomen</title>
+<meta name="description" content="Peralatan memancing yang Abang Popia rekomen dalam live. Taip kod, tambah ke troli, tempah terus melalui WhatsApp.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Abang Popia Angler · Kedai Rekomen">
+<meta property="og:description" content="Apa yang Abg Popia rekomen dalam live, boleh terus beli di sini.">
+<meta property="og:image" content="img/toman.jpg">
+<link rel="icon" href="img/logo-s.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1630;--navy2:#13224a;--red:#d32232;--red2:#a9141f;--sand:#f4efe6;--ink:#0d1220;--mut:#5d6578;--teal:#19b6a6;--line:#dfd8c9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--sand);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.top{background:#000;color:#bfc6d8;font-size:12.5px;text-align:center;padding:8px 16px}.top b{color:#fff}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,22,48,.94);backdrop-filter:blur(10px);color:#fff}
+nav .wrap{display:flex;align-items:center;gap:14px;height:62px}
+nav .lg{display:flex;align-items:center;gap:10px;font-family:Anton;font-size:20px;letter-spacing:.5px;text-decoration:none;text-transform:uppercase}
+nav .lg img{width:38px;height:38px;border-radius:8px}
+nav .sp{flex:1}
+nav a.l{font-weight:800;font-size:14px;text-decoration:none;color:#d6dcec}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-weight:800;border:0;border-radius:999px;padding:13px 22px;font-size:15px;text-decoration:none;cursor:pointer;min-height:46px;box-shadow:0 8px 22px -8px rgba(211,34,50,.7);transition:transform .15s,background .15s;font-family:inherit}
+.btn:hover{background:var(--red2);transform:translateY(-2px)}
+.btn.g{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);box-shadow:none}
+.btn.g:hover{background:#fff;color:var(--navy)}
+.cartbtn{position:relative}
+.cartbtn b{background:#fff;color:var(--red);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;padding:0 6px}
+@media(max-width:700px){nav a.l{display:none}}
+
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 480px at 90% 10%,rgba(25,182,166,.35),transparent 60%),radial-gradient(700px 420px at 0 100%,rgba(211,34,50,.35),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;padding-top:46px;padding-bottom:56px}
+.stat{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--red);animation:pl 1.6s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 10px rgba(211,34,50,0)}100%{box-shadow:0 0 0 0 rgba(211,34,50,0)}}
+h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(54px,11vw,112px);line-height:.92;text-transform:uppercase;margin:18px 0 16px}
+h1 em{font-style:normal;color:var(--teal);display:block}
+.lead{font-size:clamp(16px,2.2vw,19px);color:#dbe2f2;max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:7px 12px;font-size:13px;font-weight:700}
+.photo{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);transform:rotate(2deg);border:6px solid #fff}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.photo .tag{position:absolute;left:14px;bottom:14px;background:var(--red);color:#fff;font-weight:800;font-size:13px;padding:8px 14px;border-radius:999px}
+.badge{position:absolute;right:-6px;top:-12px;width:100px;height:100px;border-radius:50%;background:#fff;display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 10px 24px -8px rgba(0,0,0,.5);z-index:2;overflow:hidden}
+.badge img{width:88px;height:88px;border-radius:50%;object-fit:cover}
+.ph-wrap{position:relative}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:34px}.photo{transform:none;max-width:420px}.badge{right:8px}}
+
+.mq{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:13px 0;font-family:Anton;font-size:20px;letter-spacing:1px;text-transform:uppercase}
+.mq div{display:inline-block;animation:mq 30s linear infinite}
+.mq span{margin:0 22px}.mq span::after{content:"★";margin-left:44px;opacity:.7}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:70px 0}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+h2{font-family:Anton;font-weight:400;font-size:clamp(34px,6vw,58px);line-height:1.02;text-transform:uppercase;margin-bottom:14px}
+.sub{color:var(--mut);max-width:640px;font-size:16.5px}
+
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;counter-reset:s}
+.fl{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;position:relative;counter-increment:s}
+.fl::before{content:"0" counter(s);font-family:Anton;font-size:54px;color:#e9ecf5;position:absolute;right:20px;top:8px;line-height:1}
+.fl h3{font-size:19px;margin-bottom:8px;padding-right:50px}.fl p{color:var(--mut);font-size:15px}
+@media(max-width:800px){.flow{grid-template-columns:1fr}}
+
+/* LIVE KOD */
+.live{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.live::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 100% 0,rgba(211,34,50,.4),transparent 60%)}
+.live .wrap{position:relative}
+.live h2{color:#fff}.live .sub{color:#c4cce0}
+.kod{margin-top:26px;background:#fff;color:var(--ink);border-radius:24px;padding:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.kod label{font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);width:100%}
+.kod input{flex:1;min-width:140px;height:54px;border:2px solid var(--line);border-radius:14px;padding:0 16px;font:800 22px Manrope;text-transform:uppercase}
+.kod .res{width:100%;font-weight:700;min-height:24px}
+.kod .res.bad{color:var(--red)}
+
+/* SHOP */
+.fil{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 22px}
+.fil button{border:2px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font:800 14px Manrope;cursor:pointer;min-height:44px}
+.fil button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+.pc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 18px 30px -18px rgba(0,0,0,.4)}
+.pc.hl{outline:3px solid var(--red)}
+.pi{aspect-ratio:1;background:linear-gradient(135deg,var(--navy2),var(--navy));display:grid;place-items:center;position:relative;overflow:hidden}
+.pi img{width:100%;height:100%;object-fit:cover}
+.pi svg{width:46%;height:46%;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.kd{position:absolute;left:10px;top:10px;background:var(--red);color:#fff;font:800 12px Manrope;padding:5px 10px;border-radius:999px;letter-spacing:.06em}
+.pb{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pb h3{font-size:15.5px;line-height:1.25}
+.pb p{font-size:13px;color:var(--mut);flex:1}
+.pr{font-weight:800;font-size:13px;color:var(--teal)}
+.add{border:0;background:var(--navy);color:#fff;border-radius:12px;min-height:44px;font:800 14px Manrope;cursor:pointer}
+.add:hover{background:var(--red)}
+.note{margin-top:18px;font-size:13.5px;color:var(--mut)}
+
+/* CART */
+.drawer{position:fixed;inset:0;z-index:80;display:none}
+.drawer.open{display:block}
+.drawer .bg{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.drawer .pn{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:#fff;padding:22px;overflow:auto;display:flex;flex-direction:column}
+.pn h3{font-family:Anton;font-weight:400;font-size:28px;text-transform:uppercase;margin-bottom:12px}
+.ci{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.ci span.n{flex:1;font-weight:700;font-size:14.5px}
+.ci button{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:18px;font-weight:800;cursor:pointer}
+.pn textarea{width:100%;border:2px solid var(--line);border-radius:14px;padding:12px;font:600 14px Manrope;min-height:60px;margin:12px 0}
+.pn .btn{justify-content:center;width:100%}
+.x{align-self:flex-end;border:0;background:var(--sand);width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;margin-bottom:6px}
+
+/* TRIP */
+.tr{background:#fff}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.tg figure{border-radius:20px;overflow:hidden;position:relative;background:var(--navy)}
+.tg figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.tg figcaption{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(11,22,48,.88);color:#fff;font-size:12.5px;font-weight:800;padding:7px 12px;border-radius:12px}
+@media(max-width:700px){.tg{grid-template-columns:repeat(2,1fr);gap:10px}}
+.loc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.loc span{background:var(--sand);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:800;font-size:13.5px}
+
+/* BIZ */
+.biz{background:var(--navy2);color:#fff}
+.biz h2{color:#fff}.biz .sub{color:#c4cce0}
+.bg3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.bg3 div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:22px}
+.bg3 h3{font-size:18px;margin-bottom:6px}.bg3 p{color:#c4cce0;font-size:14.5px}
+@media(max-width:800px){.bg3{grid-template-columns:1fr}}
+
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:800;cursor:pointer;font-size:16px}
+details p{margin-top:10px;color:var(--mut)}
+.band{background:var(--red);color:#fff;text-align:center;padding:64px 20px}
+.band h2{color:#fff}.band .btn{background:#fff;color:var(--red);box-shadow:none;margin-top:14px}
+footer{background:#000;color:#aab2c6;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}footer b{color:#fff}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;min-height:56px;border-radius:999px;background:var(--red);color:#fff;display:flex;align-items:center;gap:8px;padding:0 20px;font-weight:800;box-shadow:0 12px 28px -8px rgba(0,0,0,.6);border:0;cursor:pointer;font-family:inherit;font-size:15px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.mq div,.dot{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top">Contoh reka bentuk oleh <b>Hasfi Web Design</b> untuk Abang Popia. Bukan laman rasmi. Senarai produk di bawah hanyalah contoh susunan.</div>
+
+<nav><div class="wrap">
+  <a class="lg" href="#"><img src="img/logo-s.jpg" alt="Logo Abang Popia"> Abang Popia</a>
+  <span class="sp"></span>
+  <a class="l" href="#kod">Taip kod live</a><a class="l" href="#kedai">Kedai</a><a class="l" href="#trip">Trip</a><a class="l" href="#biz">Kerjasama</a>
+  <button class="btn cartbtn" id="cb" type="button">Troli <b id="cn">0</b></button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="stat"><i class="dot"></i>114K pengikut mengikuti setiap trip</span>
+    <h1>Abang Popia<em>Kedai Rekomen</em></h1>
+    <p class="lead">Apa yang Abang Popia guna dan rekomen dalam live, boleh terus dibeli di sini. Dengar dalam live, taip kod, siap tempah.</p>
+    <div class="cta">
+      <a class="btn" href="#kod">Ada kod dari live?</a>
+      <a class="btn g" href="#kedai">Tengok kedai</a>
+    </div>
+    <div class="chips"><span>Tips &amp; teknik memancing</span><span>Syndicate Fishing</span><span>Tempah melalui WhatsApp</span></div>
+  </div>
+  <div class="ph-wrap">
+    <div class="badge"><img src="img/logo.jpg" alt="Logo Abang Popia"></div>
+    <div class="photo"><img src="img/toman.jpg" alt="Abang Popia bersama ikan toman besar" width="1000" height="1250"><span class="tag">Toman, lesen Tasik Beris</span></div>
+  </div>
+</div></header>
+
+<div class="mq" aria-hidden="true"><div><span>Rekomen dalam live</span><span>Taip kod, siap tempah</span><span>Umpan &amp; peralatan pilihan</span><span>Mancing bosskurrr</span><span>Rekomen dalam live</span><span>Taip kod, siap tempah</span><span>Umpan &amp; peralatan pilihan</span><span>Mancing bosskurrr</span></div></div>
+
+<section><div class="wrap">
+  <div class="eyebrow rv">Dari live ke troli</div>
+  <h2 class="rv">Peminat dah tahu nak beli apa</h2>
+  <p class="sub rv">Sekarang peminat dengar rekomen dalam live, tapi nak beli kena tanya satu-satu. Dengan kedai ini, semua terus kemas.</p>
+  <div class="flow">
+    <div class="fl rv"><h3>Abang Popia rekomen</h3><p>Dalam live atau video, sebut satu kod ringkas, contoh <b>P01</b>, untuk umpan atau peralatan yang dia guna.</p></div>
+    <div class="fl rv"><h3>Peminat taip kod</h3><p>Taip kod di laman ini, produk terus keluar. Tambah ke troli, pilih kuantiti.</p></div>
+    <div class="fl rv"><h3>Tempahan masuk WhatsApp</h3><p>Satu butang, senarai tempahan lengkap terus sampai ke WhatsApp. Tak perlu taip "boleh PM harga?" berulang kali.</p></div>
+  </div>
+</div></section>
+
+<section class="live" id="kod"><div class="wrap">
+  <div class="eyebrow rv" style="color:#ff8b94">Cuba sendiri</div>
+  <h2 class="rv">Taip kod dari live</h2>
+  <p class="sub rv">Cuba taip <b>P01</b>, <b>P02</b> atau <b>P03</b>.</p>
+  <div class="kod rv">
+    <label for="kodin">Kod produk</label>
+    <input id="kodin" placeholder="P01" maxlength="5" autocomplete="off" inputmode="text">
+    <button class="btn" id="kodbtn" type="button">Cari</button>
+    <div class="res" id="res"></div>
+  </div>
+</div></section>
+
+<section id="kedai"><div class="wrap">
+  <div class="eyebrow rv">Kedai rekomen</div>
+  <h2 class="rv">Pilihan Abang Popia</h2>
+  <p class="sub rv">Setiap produk ada kod yang disebut dalam live. Abang Popia boleh tambah atau tukar sendiri bila-bila masa.</p>
+  <div class="fil" id="fil"></div>
+  <div class="grid" id="grid"></div>
+  <p class="note">Senarai di atas ialah contoh susunan. Harga dan stok sebenar disahkan melalui WhatsApp.</p>
+</div></section>
+
+<section class="tr" id="trip"><div class="wrap">
+  <div class="eyebrow rv">Dari trip ke trip</div>
+  <h2 class="rv">Ikan sebenar, tempat sebenar</h2>
+  <p class="sub rv">Pengikut percaya sebab mereka nampak sendiri hasilnya. Kedai ini duduk di sebelah cerita itu.</p>
+  <div class="tg">
+    <figure class="rv"><img src="img/kakap.jpg" alt="Ikan kakap merah" loading="lazy" width="800" height="1000"><figcaption>Kakap merah</figcaption></figure>
+    <figure class="rv"><img src="img/bass.jpg" alt="Ikan bass" loading="lazy" width="800" height="1000"><figcaption>Bass, kolam pancing</figcaption></figure>
+    <figure class="rv"><img src="img/ali.jpg" alt="Hasil tangkapan di Ali Fishing Club" loading="lazy" width="800" height="1000"><figcaption>Ali Fishing Club</figcaption></figure>
+    <figure class="rv"><img src="img/belanak.jpg" alt="Memancing dengan umpan belanak" loading="lazy" width="800" height="1400"><figcaption>Umpan belanak paling laku</figcaption></figure>
+    <figure class="rv"><img src="img/kolam.jpg" alt="Memancing di kolam" loading="lazy" width="800" height="1400"><figcaption>Best PD Fishing</figcaption></figure>
+    <figure class="rv"><img src="img/bot.jpg" alt="Memancing dari bot" loading="lazy" width="800" height="1400"><figcaption>Atas bot, matahari terbit</figcaption></figure>
+  </div>
+  <div class="loc rv"><span>Tasik Beris</span><span>Ali Fishing Club</span><span>Best PD Fishing</span><span>Kolam Ayong Jimah</span><span>Luconia</span></div>
+</div></section>
+
+<section class="biz" id="biz"><div class="wrap">
+  <div class="eyebrow rv" style="color:#ff8b94">Lebih daripada kedai</div>
+  <h2 class="rv">Satu rumah untuk semua</h2>
+  <p class="sub rv">Pengikut besar di Facebook, TikTok dan Instagram. Laman sendiri jadi tempat semua itu bertemu dan menjadi pendapatan.</p>
+  <div class="bg3">
+    <div class="rv"><h3>Jualan umpan &amp; peralatan</h3><p>Barang yang direkomen terus boleh dibeli, tanpa perlu cari penjual lain.</p></div>
+    <div class="rv"><h3>Baju &amp; merchandais</h3><p>Jersey, topi dan baju bertema Syndicate Fishing / Abang Popia untuk peminat setia.</p></div>
+    <div class="rv"><h3>Sponsor &amp; jenama</h3><p>Jenama umpan dan peralatan boleh minta ruang di laman. Ada halaman rasmi untuk tawaran, bukan hanya DM.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow rv">Soalan lazim</div><h2 class="rv">Tanya dahulu</h2>
+  <details><summary>Macam mana beli dari live?</summary><p>Dengar kod yang disebut dalam live, taip di laman ini, tambah ke troli dan tekan hantar ke WhatsApp.</p></details>
+  <details><summary>Bayar bagaimana?</summary><p>Kuantiti, harga dan cara bayaran disahkan melalui WhatsApp selepas tempahan sampai.</p></details>
+  <details><summary>Boleh hantar ke seluruh Malaysia?</summary><p>Caj dan masa hantar disahkan melalui WhatsApp mengikut alamat anda.</p></details>
+</div></section>
+
+<div class="band"><h2>Jom, mancing bosskurrr</h2><p style="opacity:.9">Dengar, taip, tempah.</p><a class="btn" href="#kedai">Tengok kedai</a></div>
+
+<footer><div class="wrap"><div><b>Abang Popia Angler</b> · Berkongsi tips dan teknik memancing</div><div>Contoh reka bentuk oleh Hasfi Web Design</div></div></footer>
+
+<button class="fab" id="fab" type="button" aria-label="Buka troli">🛒 Troli <b id="cn2">0</b></button>
+
+<div class="drawer" id="dr"><div class="bg" id="bgx"></div><div class="pn">
+  <button class="x" id="cx" aria-label="Tutup">×</button>
+  <h3>Troli anda</h3>
+  <div id="items"></div>
+  <textarea id="cat" placeholder="Nama, alamat atau catatan (pilihan)"></textarea>
+  <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Hantar tempahan ke WhatsApp</a>
+  <p style="font-size:12.5px;color:var(--mut);margin-top:10px;text-align:center">Harga dan stok disahkan melalui WhatsApp.</p>
+</div></div>
+
+<script>
+const WA='60102382464';
+const IC={umpan:'<path d="M3 12c4-6 12-6 16 0-4 6-12 6-16 0z"/><circle cx="15" cy="11" r="1"/><path d="M19 12l3-3v6z"/>',joran:'<path d="M3 21L21 3"/><path d="M21 3c0 5-2 8-5 10"/><circle cx="16" cy="13" r="1.5"/>',reel:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v-2M20 12h2"/>',tali:'<path d="M4 6c6 0 6 6 12 6s4-6 4-6M4 18c6 0 6-6 12-6"/>',aks:'<path d="M12 3v10a4 4 0 1 1-4-4"/>',baju:'<path d="M8 3l-5 4 3 3 2-1v12h8V9l2 1 3-3-5-4a4 4 0 0 1-8 0z"/>'};
+const P=[
+ {k:'P01',n:'Umpan spinnerbait',c:'Umpan',d:'Umpan tiruan yang dikongsi Abg Popia dalam post terbarunya.',i:'umpan',img:'umpan.jpg'},
+ {k:'P02',n:'Umpan belanak',c:'Umpan',d:'Umpan yang Abg Popia kata paling laku di kolam.',i:'umpan'},
+ {k:'P03',n:'Joran spinning',c:'Joran & reel',d:'Joran untuk kolam dan tasik, sesuai toman dan bass.',i:'joran'},
+ {k:'P04',n:'Reel spinning',c:'Joran & reel',d:'Reel yang dipadankan dengan joran di atas.',i:'reel'},
+ {k:'P05',n:'Tali PE',c:'Aksesori',d:'Tali PE untuk teknik casting dan jigging.',i:'tali'},
+ {k:'P06',n:'Hook & leader',c:'Aksesori',d:'Set hook dan leader yang tahan ikan besar.',i:'aks'},
+ {k:'P07',n:'Jersey Syndicate Fishing',c:'Baju',d:'Jersey bercorak yang dipakai Abg Popia di bot dan kolam.',i:'baju'},
+ {k:'P08',n:'Topi Abang Popia',c:'Baju',d:'Topi untuk peminat setia.',i:'baju'}
+];
+const $=id=>document.getElementById(id);
+let cart={},cat='Semua';
+try{cart=JSON.parse(localStorage.getItem('pop-cart')||'{}')}catch(e){}
+function save(){try{localStorage.setItem('pop-cart',JSON.stringify(cart))}catch(e){}}
+function cnt(){return Object.values(cart).reduce((a,b)=>a+b,0)}
+function badge(){$('cn').textContent=$('cn2').textContent=cnt()}
+function fil(){const cs=['Semua',...new Set(P.map(p=>p.c))];$('fil').innerHTML=cs.map(c=>`<button type="button" class="${c===cat?'on':''}" data-c="${c}">${c}</button>`).join('');
+ $('fil').querySelectorAll('button').forEach(b=>b.onclick=()=>{cat=b.dataset.c;fil();grid()})}
+function grid(hl){$('grid').innerHTML=P.filter(p=>cat==='Semua'||p.c===cat).map(p=>`<article class="pc${hl===p.k?' hl':''}" id="pc-${p.k}"><div class="pi">${p.img?`<img src="img/${p.img}" alt="${p.n}" loading="lazy">`:`<svg viewBox="0 0 24 24">${IC[p.i]}</svg>`}<span class="kd">${p.k}</span></div><div class="pb"><h3>${p.n}</h3><p>${p.d}</p><span class="pr">Tanya harga</span><button class="add" type="button" data-k="${p.k}">Tambah ke troli</button></div></article>`).join('');
+ $('grid').querySelectorAll('.add').forEach(b=>b.onclick=()=>add(b.dataset.k))}
+function add(k,n=1){cart[k]=(cart[k]||0)+n;if(cart[k]<=0)delete cart[k];save();badge();items()}
+function items(){const ks=Object.keys(cart);
+ $('items').innerHTML=ks.length?ks.map(k=>{const p=P.find(x=>x.k===k);return `<div class="ci"><span class="n">${k} · ${p.n}</span><button type="button" data-k="${k}" data-d="-1" aria-label="Kurang">−</button><b>${cart[k]}</b><button type="button" data-k="${k}" data-d="1" aria-label="Tambah">+</button></div>`}).join(''):'<p style="color:var(--mut);padding:10px 0">Troli masih kosong.</p>';
+ $('items').querySelectorAll('button').forEach(b=>b.onclick=()=>add(b.dataset.k,+b.dataset.d));
+ let m='Salam Abg Popia, saya nak tempah dari kedai rekomen:\n'+ks.map(k=>'• '+k+' '+P.find(x=>x.k===k).n+' x'+cart[k]).join('\n');
+ const c=$('cat').value.trim();if(c)m+='\n\nCatatan: '+c;m+='\n\nBoleh sahkan harga, stok dan cara bayar?';
+ $('wa').href=ks.length?'https://wa.me/'+WA+'?text='+encodeURIComponent(m):'#kedai';$('wa').style.opacity=ks.length?1:.5}
+$('cat').addEventListener('input',items);
+function open(v){$('dr').classList.toggle('open',v);if(v)items()}
+$('cb').onclick=$('fab').onclick=()=>open(true);$('cx').onclick=$('bgx').onclick=()=>open(false);
+addEventListener('keydown',e=>{if(e.key==='Escape')open(false)});
+function cari(){const v=$('kodin').value.trim().toUpperCase(),p=P.find(x=>x.k===v),r=$('res');
+ if(!v){r.className='res';r.textContent='';return}
+ if(!p){r.className='res bad';r.textContent='Kod "'+v+'" tiada. Cuba P01 hingga P08.';return}
+ r.className='res';r.innerHTML='✅ '+p.k+' · <b>'+p.n+'</b> ditemui. ';cat='Semua';fil();grid(p.k);add(p.k);r.innerHTML+='Sudah masuk troli.';
+ $('pc-'+p.k).scrollIntoView({behavior:'smooth',block:'center'})}
+$('kodbtn').onclick=cari;$('kodin').addEventListener('keydown',e=>{if(e.key==='Enter')cari()});
+fil();grid();badge();items();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
