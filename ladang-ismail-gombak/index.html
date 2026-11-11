@@ -2,257 +2,371 @@
 <html lang="ms">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Ladang Ismail · Akikah & Korban Gombak</title>
-<meta name="description" content="Lembu dan kambing untuk akikah dan korban dari Ladang Ternakan Ismail, Lembah Gombak. Sembelih, masak dan hantar. Tempah melalui WhatsApp.">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Ladang Ismail · Akikah & Korban Gombak">
-<meta property="og:description" content="Lembu dan kambing untuk akikah dan korban dari Ladang Ternakan Ismail, Lembah Gombak. Sembelih, masak dan hantar. Tempah melalui WhatsApp.">
+<meta property="og:description" content="Lembu dan kambing untuk akikah dan korban dari Ladang Ternakan Ismail, Lembah Gombak. Sembelih, masak dan hantar.">
+<meta property="og:image" content="https://hasfiwebdesign.github.io/ladang-ismail-gombak/img/px-hero.jpg">
 <meta property="og:url" content="https://hasfiwebdesign.github.io/ladang-ismail-gombak/">
-<meta property="og:image" content="https://hasfiwebdesign.github.io/ladang-ismail-gombak/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#171b0b">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23171b0b'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='32' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website"><title>Ladang Ismail Gombak</title>
+<meta name="description" content="Lembu dan kambing untuk akikah dan korban dari Ladang Ternakan Ismail, Lembah Gombak. Sembelih, masak dan hantar. Tempah melalui WhatsApp.">
+<meta name="theme-color" content="#14211a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314211a'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' fill='%23e4b552' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--p:#5d6b2e;--pd:#171b0b;--a:#d9e3a6;--s:#f8f8ee;--ink:#161a22;--mut:#525b6b;--line:#e3e6ec;--bg:#fbfaf8;--r:20px}
+/* Layout: gambar penuh skrin di hero, bento servis bergambar, jalur proses 4 langkah, alat tempahan hijau gelap, foto ladang sebenar */
+:root{
+ --forest:#14211a;      /* hijau hutan, latar gelap */
+ --leaf:#2f5a3a;        /* hijau daun, aksen utama */
+ --hay:#e4b552;         /* kuning jerami, sorotan */
+ --bone:#f4f5ee;        /* latar cerah berona hijau */
+ --card:#ffffff;
+ --ink:#17201a;
+ --mut:#5b6a5f;
+ --line:#dfe3d8;
+ --on-dark:#f4f5ee;
+ --on-dark-mut:rgba(244,245,238,.78);
+ --f-disp:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+ --f-body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+ --r:22px;
+ --gut:max(16px,env(safe-area-inset-left,0px));
+ --gutr:max(16px,env(safe-area-inset-right,0px));
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bone:#0f1712;--card:#18231b;--ink:#eef1ea;--mut:#a7b3a8;--line:#2a372d;--leaf:#7fb58a;color-scheme:dark}}
+:root[data-theme="dark"]{--bone:#0f1712;--card:#18231b;--ink:#eef1ea;--mut:#a7b3a8;--line:#2a372d;--leaf:#7fb58a;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font:16px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
+body{margin:0;font:16px/1.65 var(--f-body);color:var(--ink);background:var(--bone);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--forest)}
 img{max-width:100%;height:auto;display:block}
-a{color:var(--pd)}
-:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:6px}
-[id]{scroll-margin-top:76px}
-h1,h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.08;margin:0 0 .45em;letter-spacing:-.01em}
-h1{font-size:clamp(38px,7.6vw,64px)}
-h2{font-size:clamp(30px,5.4vw,44px)}
-h3{font-size:18px;line-height:1.3;margin:0 0 .4em;font-weight:800}
-.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
-.demo{background:var(--ink);color:#eef0f4;font-size:13px;text-align:center;padding:7px 16px}
-.top{position:sticky;top:0;z-index:50;background:rgba(251,250,248,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:12px;height:66px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
-.brand .mk{width:42px;height:42px;border-radius:13px;background:var(--pd);color:#fff;display:grid;place-items:center;font:22px "DM Serif Display",serif;flex:none}
-.brand b{display:block;font-size:16px;line-height:1.15}
-.brand small{display:block;color:var(--mut);font-size:12px;line-height:1.2}
-.nav{display:none;gap:22px;margin-left:auto}
-.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
-.lang{margin-left:auto;border:1.5px solid var(--ink);background:none;border-radius:999px;padding:6px 12px;font:700 13px Manrope;cursor:pointer;color:var(--ink);min-height:38px}
-.navcta{background:var(--pd);color:#fff;text-decoration:none;border-radius:999px;padding:0 16px;font-weight:700;font-size:14px;min-height:42px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--pd);cursor:pointer;font-family:Manrope}
-.btn.pri{background:var(--pd);color:#fff}
-.btn.sec{background:transparent;color:var(--pd)}
-.btn[aria-disabled=true]{opacity:.45;pointer-events:none}
-.hero{padding:30px 0 40px;background:linear-gradient(180deg,var(--s),var(--bg) 85%)}
-.hero .wrap{display:grid;gap:30px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--pd);margin-bottom:14px}
-.eyebrow::before{content:"";width:26px;height:2px;background:var(--a)}
-.lead{font-size:18px;color:var(--mut);max-width:33em;margin:0 0 24px}
-.ctas{display:flex;flex-wrap:wrap;gap:10px}
-.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:24px 0 0;padding:0;list-style:none;color:var(--ink);font-weight:600;font-size:14px}
-.facts li{display:flex;align-items:center;gap:7px}
-.facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--a)}
-.collage{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
-.collage figure{margin:0;border-radius:var(--r);overflow:hidden;box-shadow:0 24px 50px -24px rgba(20,25,40,.45);background:#ddd}
-.collage img{width:100%;height:100%;object-fit:cover}
-.collage .c1{grid-row:span 2;aspect-ratio:3/4}
-.collage .c2,.collage .c3{aspect-ratio:1}
-.badge{position:absolute;left:-6px;bottom:18px;background:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 14px 30px -12px rgba(20,25,40,.4);display:flex;gap:10px;align-items:center;max-width:250px}
-.badge i{width:38px;height:38px;border-radius:12px;background:var(--s);color:var(--pd);display:grid;place-items:center;flex:none;font-style:normal;font-weight:800}
-.badge b{display:block;font-size:14px;line-height:1.25}
-.badge small{color:var(--mut);font-size:12px}
-section{padding:58px 0}
-.kick{color:var(--pd);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
-.sub{color:var(--mut);max-width:42em;margin:-4px 0 28px;font-size:17px}
-.svc{display:grid;gap:14px}
-.svc .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:transform .2s,box-shadow .2s}
-.svc .card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(20,25,40,.4)}
-.ic{width:46px;height:46px;border-radius:14px;background:var(--s);color:var(--pd);display:grid;place-items:center;margin-bottom:14px}
-.card p{margin:0;color:var(--mut);font-size:15px}
-.tool{background:var(--pd);color:#fff}
-.tool h2{color:#fff}.tool .kick{color:var(--a)}
-.tool .sub{color:rgba(255,255,255,.86)}
-.tgrid{display:grid;gap:20px}
-.panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:20px}
-.fl{display:block;font-weight:700;font-size:14px;margin:0 0 8px}
-.chipset{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-.chip{border:1.5px solid rgba(255,255,255,.55);background:none;color:#fff;border-radius:999px;padding:9px 14px;font:600 14px Manrope;cursor:pointer;min-height:44px;text-align:left}
-.chip[aria-pressed=true]{background:#fff;color:var(--pd);border-color:#fff}
-.chip.red[aria-pressed=true]{background:#ffe1dc;color:#8a1c0e;border-color:#ffe1dc}
-.row2{display:grid;gap:12px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-bottom:16px}
-.row2>div{min-width:0}.tool input[type=date]{min-width:0;max-width:100%;-webkit-appearance:none;appearance:none}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hay);outline-offset:3px;border-radius:8px}
+[id]{scroll-margin-top:80px}
+h1,h2,h3{font-family:var(--f-disp);margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,5.6vw,56px);line-height:1.02;font-weight:800;letter-spacing:-.025em;margin-bottom:.35em}
+h3{font-size:22px;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.wrap{max-width:1200px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gutr)}
+.kick{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin:0 0 14px}
+.kick::before{content:"";width:22px;height:2px;background:currentColor}
+.sub{color:var(--mut);max-width:40em;margin:0 0 34px;font-size:17px}
+section{padding-block:84px}
+
+/* nota demo + header */
+.demo{background:var(--forest);color:var(--on-dark-mut);font-size:12.5px;text-align:center;padding:7px var(--gutr) 7px var(--gut)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;transition:background .3s,box-shadow .3s}
+.top .wrap{display:flex;align-items:center;gap:12px;height:70px}
+.top.solid{background:rgba(20,33,26,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px -18px rgba(0,0,0,.6)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-dark);min-width:0}
+.mk{width:42px;height:42px;border-radius:13px;background:var(--hay);color:var(--forest);display:grid;place-items:center;font:800 22px var(--f-disp);flex:none}
+.brand b{display:block;font:700 17px/1.1 var(--f-disp)}
+.brand small{display:block;color:var(--on-dark-mut);font-size:12px;line-height:1.2}
+.nav{display:none;gap:26px;margin-left:auto}
+.nav a{color:var(--on-dark);text-decoration:none;font-weight:600;font-size:15px;opacity:.88}
+.nav a:hover{opacity:1;color:var(--hay)}
+.lang{margin-left:auto;border:1.5px solid rgba(244,245,238,.5);background:none;border-radius:999px;padding:6px 12px;font:700 13px var(--f-body);cursor:pointer;color:var(--on-dark);min-height:40px}
+.navcta{background:var(--hay);color:var(--forest);text-decoration:none;border-radius:999px;padding:0 18px;font-weight:700;font-size:14px;min-height:44px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+
+/* butang */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:54px;padding:0 26px;border-radius:999px;font:700 16px var(--f-body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.hay{background:var(--hay);color:var(--forest);box-shadow:0 14px 30px -14px rgba(228,181,82,.8)}
+.btn.glass{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.45);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn.leaf{background:var(--leaf);color:var(--bone)}
+.btn.line{border-color:var(--line);color:var(--ink);background:var(--card)}
+
+/* hero */
+.hero{position:relative;margin-top:-70px;padding-block:150px 64px;color:#fff;overflow:hidden;isolation:isolate;background:var(--forest)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:kb 18s ease-out both}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,33,26,.7) 0%,rgba(20,33,26,.25) 38%,rgba(20,33,26,.82) 78%,var(--forest) 100%),linear-gradient(90deg,rgba(20,33,26,.75),rgba(20,33,26,0) 70%)}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;padding:7px 14px 7px 8px;font-size:13px;font-weight:600;margin-bottom:22px}
+.pill i{font-style:normal;background:var(--hay);color:var(--forest);border-radius:999px;padding:2px 9px;font-weight:800}
+.hero h1{font-size:clamp(46px,9.6vw,112px);line-height:.92;font-weight:800;letter-spacing:-.04em;max-width:11ch;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--hay)}
+.hero .lead{font-size:clamp(17px,2vw,20px);color:rgba(255,255,255,.88);max-width:32em;margin:0 0 30px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hgrid{display:grid;gap:40px;align-items:end}
+.rate{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:var(--r);padding:20px;max-width:330px}
+.rate .n{font:800 52px/1 var(--f-disp);letter-spacing:-.03em}
+.rate .st{color:var(--hay);letter-spacing:3px;font-size:18px}
+.rate p{margin:6px 0 0;color:rgba(255,255,255,.82);font-size:14px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 0;padding:0;list-style:none}
+.facts li{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;background:rgba(20,33,26,.35)}
+
+/* marquee */
+.mq{background:var(--hay);color:var(--forest);overflow:hidden;padding-block:16px;white-space:nowrap}
+.mq div{display:inline-flex;gap:34px;animation:mq 30s linear infinite;font:800 clamp(20px,3vw,30px)/1 var(--f-disp);letter-spacing:-.01em;padding-left:34px}
+.mq span::after{content:"✦";margin-left:34px;font-size:.6em;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* bento servis */
+.bento{display:grid;gap:14px}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;color:#fff;display:flex;align-items:flex-end;isolation:isolate;text-decoration:none;background:var(--forest)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,33,26,0) 30%,rgba(20,33,26,.88))}
+.tile:hover img{transform:scale(1.07)}
+.tile .in{padding:22px;width:100%}
+.tile p{margin:6px 0 0;color:rgba(255,255,255,.86);font-size:15px;max-width:30em}
+.tag{display:inline-block;background:var(--hay);color:var(--forest);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px;margin-bottom:10px}
+.tile .go{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;transition:background .2s,transform .3s}
+.tile:hover .go{background:var(--hay);color:var(--forest);transform:rotate(-45deg)}
+.tile.big h3{font-size:clamp(28px,3.4vw,40px)}
+
+/* proses */
+.proc{background:var(--card);border-block:1px solid var(--line)}
+.steps{display:grid;gap:16px;counter-reset:s}
+.step{display:grid;gap:14px;align-content:start}
+.step figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:4/3;max-width:100%;background:var(--line)}
+.step img{width:100%;height:100%;object-fit:cover}
+.step .no{font:800 15px var(--f-disp);color:var(--leaf);display:flex;align-items:center;gap:10px}
+.step .no::after{content:"";flex:1;height:1px;background:var(--line)}
+.step p{margin:0;color:var(--mut);font-size:15px}
+
+/* alat tempahan */
+.tool{background:var(--forest);color:var(--on-dark);position:relative;overflow:hidden}
+.tool::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-200px;border-radius:50%;background:radial-gradient(closest-side,rgba(228,181,82,.22),rgba(228,181,82,0))}
+.tool .kick{color:var(--hay)}
+.tool .sub{color:var(--on-dark-mut)}
+.tgrid{display:grid;gap:20px;position:relative}
 .tgrid>*{min-width:0}
-.tool input,.tool select{width:100%;min-height:48px;border-radius:12px;border:0;padding:0 12px;font:600 16px Manrope;color:var(--ink);background:#fff}
-.res{background:#fff;color:var(--ink);border-radius:var(--r);padding:22px;align-self:start}
-.res .big{font-family:"DM Serif Display",serif;font-size:34px;line-height:1.1;color:var(--pd);margin:0 0 8px}
+.panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:22px}
+.fl{display:block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px;color:var(--on-dark-mut)}
+.chipset{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{border:1.5px solid rgba(255,255,255,.35);background:none;color:var(--on-dark);border-radius:999px;padding:9px 16px;font:600 15px var(--f-body);cursor:pointer;min-height:46px;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--hay)}
+.chip[aria-pressed=true]{background:var(--hay);color:var(--forest);border-color:var(--hay)}
+.tool input{width:100%;min-height:50px;border-radius:14px;border:1.5px solid rgba(255,255,255,.3);padding:0 14px;font:600 16px var(--f-body);color:var(--on-dark);background:rgba(255,255,255,.06)}
+.tool input::placeholder{color:rgba(244,245,238,.5)}
+.res{background:var(--bone);color:var(--ink);border-radius:var(--r);padding:24px;align-self:start}
+.res .big{font:800 30px/1.1 var(--f-disp);letter-spacing:-.02em;color:var(--leaf);margin:0 0 12px}
 .res ul{margin:0 0 14px;padding-left:18px;color:var(--mut);font-size:15px}
-.res .note{font-size:14px;color:var(--mut);margin:0 0 14px}
+.res .note{font-size:14px;color:var(--mut);margin:0 0 16px}
 .res .btn{width:100%}
-.hint{font-size:13px;color:var(--mut);margin:10px 0 0}.btn[aria-disabled=true]{opacity:.55;cursor:not-allowed}
-.alert{border-radius:14px;padding:12px 14px;font-size:14px;font-weight:600;margin:0 0 14px}
-.alert.warn{background:#fff1ed;color:#8a1c0e}
-.alert.ok{background:var(--s);color:var(--pd)}
 .hint{font-size:13px;color:var(--mut);text-align:center;margin:10px 0 0}
-.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.gal figure{margin:0;position:relative;border-radius:16px;overflow:hidden;background:#ddd}
-.gal img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.gal figcaption{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(255,255,255,.94);color:var(--ink);border-radius:10px;padding:6px 10px;font-size:13px;font-weight:600;line-height:1.3}
-.br{display:grid;gap:14px}
-.br .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
-.hrs{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:15px}
-.hrs td{padding:7px 0;border-bottom:1px solid var(--line)}
-.hrs td:last-child{text-align:right;font-weight:700}
-.br .acts{display:flex;flex-wrap:wrap;gap:8px}
-.br .acts a{flex:1 1 140px;min-height:46px;font-size:15px}
-details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
-summary{cursor:pointer;padding:17px 20px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+
+/* ladang sebenar */
+.real{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.real figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:var(--line)}
+.real img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(1.08) contrast(1.04)}
+.real figcaption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(20,33,26,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;border-radius:10px;padding:6px 10px;font-size:13px;font-weight:600;line-height:1.3}
+
+/* lokasi + faq */
+.two{display:grid;gap:28px}
+.two>*{min-width:0}
+.loc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.loc .addr{font:700 20px/1.3 var(--f-disp);margin:0 0 6px}
+.loc p{color:var(--mut);margin:0 0 18px}
+.loc .row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+.loc .row b{text-align:right}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.acts .btn{flex:1 1 140px;min-height:48px;font-size:15px;padding:0 16px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:20px 0;font:700 18px/1.3 var(--f-disp);list-style:none;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:22px;line-height:1;color:var(--pd)}
-details[open] summary::after{content:"\2212"}
-details p{margin:0;padding:0 20px 18px;color:var(--mut)}
-.band{background:var(--s);border-radius:28px;padding:34px 22px;text-align:center}
-.band p{color:var(--mut);margin:0 auto 20px;max-width:34em}
-footer{background:var(--ink);color:#cfd3dc;padding:40px 0 110px;font-size:15px}
-footer a{color:#fff}
-footer .wrap{display:grid;gap:20px}
-footer small{color:#9ba2b0}
-.fab{position:fixed;left:16px;bottom:16px;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .25s,opacity .25s;border-radius:999px;background:var(--pd);color:#fff;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px}
-.fab.off{transform:translateY(130%);opacity:0;pointer-events:none;visibility:hidden}
-.rev{display:grid;gap:14px}.rev blockquote{margin:0;background:var(--s);border-radius:var(--r);padding:22px}.rev blockquote p{margin:0 0 12px;font-size:16px}.rev .who{font-size:13px;color:var(--mut)}.rev .stars{color:var(--pd);font-weight:800;font-size:15px;margin:0 0 6px}.chip[hidden]{display:none}
-@media(min-width:700px){.rev{grid-template-columns:repeat(3,1fr)}.svc{grid-template-columns:repeat(2,1fr)}.br{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:960px){
- .nav{display:flex}.lang{margin-left:0}
- .hero{padding:56px 0 64px}
- .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}
- .svc{grid-template-columns:repeat(3,1fr)}
- .tgrid{grid-template-columns:1.3fr .9fr;align-items:start}
- .res{position:sticky;top:86px}
- .gal{grid-template-columns:repeat(4,1fr)}
- footer .wrap{grid-template-columns:2fr 1fr 1fr}
+summary::after{content:"+";font-size:26px;line-height:.8;color:var(--leaf);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0;padding:0 0 20px;color:var(--mut)}
+
+/* band penutup */
+.band{position:relative;border-radius:30px;overflow:hidden;color:#fff;padding:70px 26px;text-align:center;isolation:isolate;background:var(--forest)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,33,26,.55),rgba(20,33,26,.85))}
+.band h2{margin:0 auto .3em;max-width:14ch}
+.band p{color:rgba(255,255,255,.86);margin:0 auto 26px;max-width:30em}
+
+footer{background:var(--forest);color:var(--on-dark-mut);padding-block:48px 120px;font-size:15px}
+footer a{color:var(--on-dark)}
+footer .wrap{display:grid;gap:24px}
+footer b{color:var(--on-dark)}
+footer small{display:block;color:rgba(244,245,238,.55);font-size:13px}
+
+.fab{position:fixed;left:calc(16px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;box-shadow:0 14px 34px rgba(0,0,0,.3);transition:transform .25s,opacity .25s;border-radius:999px;background:var(--hay);color:var(--forest);text-decoration:none;font-weight:800;display:inline-flex;align-items:center;gap:8px;min-height:54px;padding:0 22px}
+.fab.off{transform:translateY(140%);opacity:0;pointer-events:none;visibility:hidden}
+
+/* animasi masuk (bermula dari keadaan kelihatan) */
+@supports (animation-timeline:view()){
+ .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+ @keyframes rise{from{opacity:.35;transform:translateY(36px)}to{opacity:1;transform:none}}
 }
+
+@media(min-width:700px){
+ .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .real{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(min-width:980px){
+ .nav{display:flex}.lang{margin-left:0}
+ .hero{padding-block:190px 80px}
+ .hgrid{grid-template-columns:1fr auto}
+ .bento{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:270px}
+ .tile{min-height:0}
+ .tile.big{grid-column:span 4;grid-row:span 2}
+ .tile.s2{grid-column:span 2}
+ .tile.w3{grid-column:span 3}
+ .steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .tgrid{grid-template-columns:1.3fr .9fr;align-items:start}
+ .res{position:sticky;top:96px}
+ .two{grid-template-columns:.9fr 1.1fr;gap:56px}
+ footer .wrap{grid-template-columns:2fr 1fr 1.4fr}
+}
+@media(max-width:979px){.rate{display:none}}
 @media(max-width:420px){.navcta .t{display:none}.brand small{display:none}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+
+
 <div class="demo" role="note" data-en="Design sample by Hasfi for Ladang Ternakan Ismail. Not the official website.">Contoh reka bentuk oleh Hasfi untuk Ladang Ternakan Ismail. Bukan laman rasmi.</div>
-<header class="top"><div class="wrap">
-<a class="brand" href="#top"><span class="mk" aria-hidden="true">L</span><span><b>Ladang Ismail</b><small data-en="Aqiqah & korban · Gombak">Akikah & korban · Gombak</small></span></a>
-<nav class="nav" aria-label="Menu"><a href="#servis" data-en="Services">Servis</a><a href="#tool" data-en="Quotation">Sebut harga</a><a href="#galeri" data-en="Gallery">Galeri</a><a href="#lokasi" data-en="Locations">Lokasi</a></nav>
+<header class="top" id="hdr"><div class="wrap">
+<a class="brand" href="#top"><span class="mk" aria-hidden="true">L</span><span><b>Ladang Ismail</b><small data-en="Aqiqah &amp; korban · Gombak">Akikah &amp; korban · Gombak</small></span></a>
+<nav class="nav" aria-label="Menu"><a href="#servis" data-en="Services">Servis</a><a href="#proses" data-en="How it works">Cara kami</a><a href="#tool" data-en="Booking">Tempahan</a><a href="#lokasi" data-en="Location">Lokasi</a></nav>
 <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
 <a class="navcta" href="https://wa.me/601128096559" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg><span class="t">WhatsApp</span></a>
 </div></header>
+
 <main id="top">
-<section class="hero" style="padding-top:34px"><div class="wrap">
+<section class="hero" aria-labelledby="h1">
+<img src="img/px-hero.jpg" width="2000" height="1333" alt="Kawanan kambing meragut rumput di padang" data-en-alt="A herd of goats grazing in a field" fetchpriority="high">
+<div class="wrap hgrid">
 <div>
-<p class="eyebrow" data-en="Aqiqah & korban · Gombak">Akikah & korban · Gombak</p>
-<h1 data-en="Aqiqah and korban, handled from farm to your door.">Akikah dan korban, diurus dari ladang hingga ke rumah.</h1>
-<p class="lead" data-en="Cattle and goats from our farm in Lembah Gombak. We slaughter, cook and deliver to your location. Choose the purpose and animal and your WhatsApp message is written for you.">Lembu dan kambing dari ladang kami di Lembah Gombak. Kami sembelih, masak dan hantar ke lokasi anda. Pilih tujuan dan haiwan, mesej siap ditulis untuk WhatsApp.</p>
-<div class="ctas"><a class="btn pri" href="#tool" data-en="Book now">Tempah sekarang</a><a class="btn sec" href="https://wa.me/601128096559" rel="noopener" data-en="WhatsApp us">WhatsApp kami</a></div>
-<ul class="facts"><li data-en="Farm in Lembah Gombak, near KL">Ladang di Lembah Gombak, dekat KL</li><li data-en="Slaughter, cook and deliver">Sembelih, masak dan hantar</li><li data-en="Learn how to slaughter on site">Boleh belajar cara sembelih</li></ul>
+<span class="pill"><i>★ 4.9</i><span data-en="Google rating · 12 reviews">Ulasan Google · 12 ulasan</span></span>
+<h1 id="h1" data-en="From our farm, <em>to your home.</em>">Dari ladang, <em>terus ke rumah.</em></h1>
+<p class="lead" data-en="Cattle and goats for aqiqah and korban from Lembah Gombak. We slaughter, cook and deliver to your location.">Lembu dan kambing untuk akikah dan korban dari Lembah Gombak. Kami sembelih, masak dan hantar ke lokasi anda.</p>
+<div class="ctas"><a class="btn hay" href="#tool" data-en="Book now">Tempah sekarang</a><a class="btn glass" href="#servis" data-en="See services">Lihat servis</a></div>
+<ul class="facts"><li data-en="Farm in Lembah Gombak">Ladang di Lembah Gombak</li><li data-en="Slaughter · cook · deliver">Sembelih · masak · hantar</li><li data-en="Learn to slaughter on site">Boleh belajar sembelih</li></ul>
 </div>
-<div class="collage">
-<figure class="c1"><img src="img/h1.jpg" width="720" height="960" alt="Lembu di kandang Ladang Ismail" data-en-alt="Cattle in the Ladang Ismail shed" fetchpriority="high"></figure>
-<figure class="c2"><img src="img/h2.jpg" width="560" height="560" alt="Kambing di kandang" data-en-alt="Goats in the pen"></figure>
-<figure class="c3"><img src="img/h3.jpg" width="560" height="560" alt="Pintu masuk Ladang Ismail" data-en-alt="The Ladang Ismail entrance"></figure>
-<div class="badge"><i aria-hidden="true">★</i><span><b data-en="Google rating 4.9">Ulasan Google 4.9</b><small data-en="12 customer reviews">12 ulasan pelanggan</small></span></div>
+<div class="rate"><div class="n">4.9 <span class="st" aria-hidden="true">★★★★★</span></div><p data-en="12 customer reviews on Google Maps. Customers mention well-cooked meat delivered right to their location.">12 ulasan pelanggan di Google Maps. Pelanggan sebut daging dimasak sedap dan dihantar tepat ke lokasi.</p></div>
 </div>
-</div></section>
+</section>
+
+<div class="mq" aria-hidden="true"><div><span data-en="Aqiqah">Akikah</span><span>Korban</span><span data-en="Feasts">Kenduri</span><span data-en="Slaughter">Sembelih</span><span data-en="Cook">Masak</span><span data-en="Deliver">Hantar</span><span data-en="Aqiqah">Akikah</span><span>Korban</span><span data-en="Feasts">Kenduri</span><span data-en="Slaughter">Sembelih</span><span data-en="Cook">Masak</span><span data-en="Deliver">Hantar</span></div></div>
 
 <section id="servis" aria-labelledby="svc-h"><div class="wrap">
 <p class="kick" data-en="Services">Servis</p>
-<h2 id="svc-h" data-en="What we do">Apa yang kami buat</h2>
-<p class="sub" data-en="For aqiqah, korban and feasts.">Untuk akikah, korban dan kenduri.</p>
-<div class="svc"><div class="card"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><rect x="5" y="12" width="14" height="9" rx="1"/><path d="M12 8c-1-3-5-5-6-3s2 3 6 3zm0 0c1-3 5-5 6-3s-2 3-6 3z"/><rect x="11" y="8" width="2" height="13" fill="#fff" opacity=".6"/></svg></span><h3 data-en="Aqiqah">Akikah</h3><p data-en="A goat or cattle share for a child’s aqiqah.">Kambing atau bahagian lembu untuk akikah anak.</p></div><div class="card"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><h3 data-en="Korban">Korban</h3><p data-en="A whole animal or one cattle share.">Seekor penuh atau satu bahagian lembu.</p></div><div class="card"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C9 7 6 10 6 14a6 6 0 0 0 12 0c0-4-3-7-6-12z"/></svg></span><h3 data-en="Cook & deliver">Masak & hantar</h3><p data-en="Meat cooked and delivered to your location.">Daging dimasak dan dihantar ke lokasi anda.</p></div><div class="card"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/></svg></span><h3 data-en="Learn to slaughter">Belajar sembelih</h3><p data-en="Come to the farm and learn with us.">Datang ke ladang dan belajar dengan kami.</p></div></div>
+<h2 id="svc-h" class="rv" data-en="Everything for your aqiqah and korban.">Semua untuk akikah dan korban anda.</h2>
+<p class="sub" data-en="Choose one service or all of them. We handle it from the farm to your table.">Pilih satu servis atau semuanya. Kami urus dari ladang hingga ke meja makan.</p>
+<div class="bento">
+<a class="tile big rv" href="#tool" data-pick="0"><img src="img/px-akikah.jpg" width="1100" height="733" loading="lazy" alt="Kambing di kandang" data-en-alt="Goats in a pen"><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="in"><span class="tag" data-en="Most requested">Paling banyak ditempah</span><h3 data-en="Aqiqah">Akikah</h3><p data-en="A goat or a cattle share for your child's aqiqah, slaughtered according to syariah.">Kambing atau bahagian lembu untuk akikah anak, disembelih mengikut syarak.</p></div></a>
+<a class="tile s2 rv" href="#tool" data-pick="1"><img src="img/px-korban.jpg" width="1100" height="617" loading="lazy" alt="Lembu di padang" data-en-alt="Cattle in a field"><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="in"><h3>Korban</h3><p data-en="A whole animal or one cattle share.">Seekor penuh atau satu bahagian lembu.</p></div></a>
+<a class="tile s2 rv" href="#tool" data-pick="2"><img src="img/px-masak.jpg" width="1100" height="619" loading="lazy" alt="Kari daging dalam mangkuk" data-en-alt="Meat curry in a bowl"><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="in"><h3 data-en="Cook &amp; deliver">Masak &amp; hantar</h3><p data-en="Meat cooked and sent to your location.">Daging dimasak dan dihantar ke lokasi anda.</p></div></a>
+<a class="tile w3 rv" href="#tool" data-pick="3"><img src="img/px-anak.jpg" width="1100" height="733" loading="lazy" alt="Anak kambing di kampung" data-en-alt="Young goats in a village" style="object-position:50% 45%"><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="in"><h3 data-en="Learn to slaughter">Belajar sembelih</h3><p data-en="Come to the farm and learn the right way with us.">Datang ke ladang dan belajar cara yang betul bersama kami.</p></div></a>
+<a class="tile w3 rv" href="#tool" data-pick="4"><img src="img/px-kenduri.jpg" width="1100" height="1954" loading="lazy" alt="Hidangan nasi dan lauk untuk kenduri" data-en-alt="Rice and dishes for a feast" style="object-position:50% 40%"><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="in"><h3 data-en="Feasts">Kenduri</h3><p data-en="Meat for weddings, tahlil and family gatherings.">Daging untuk majlis kahwin, tahlil dan jamuan keluarga.</p></div></a>
+</div>
 </div></section>
 
+<section class="proc" id="proses" aria-labelledby="pr-h"><div class="wrap">
+<p class="kick" data-en="How it works">Cara kami</p>
+<h2 id="pr-h" class="rv" data-en="Four steps, one WhatsApp message.">Empat langkah, satu mesej WhatsApp.</h2>
+<p class="sub" data-en="You only need to choose. We take care of the rest.">Anda hanya perlu pilih. Selebihnya kami uruskan.</p>
+<div class="steps">
+<div class="step rv"><figure><img src="img/px-ladang.jpg" width="1100" height="733" loading="lazy" alt="Lembu di padang ragut" data-en-alt="Cattle on pasture"></figure><span class="no" data-en="Step 1">Langkah 1</span><h3 data-en="Choose the animal">Pilih haiwan</h3><p data-en="Goat, cattle share or a whole cow. Come and see it at the farm if you like.">Kambing, bahagian lembu atau lembu seekor. Boleh datang tengok di ladang.</p></div>
+<div class="step rv"><figure><img src="img/px-lembu.jpg" width="1100" height="617" loading="lazy" alt="Lembu Brahman" data-en-alt="Brahman cattle"></figure><span class="no" data-en="Step 2">Langkah 2</span><h3 data-en="Slaughter by syariah">Sembelih ikut syarak</h3><p data-en="Slaughtered on the date you choose. You may watch or take part.">Disembelih pada tarikh pilihan anda. Boleh saksikan atau ikut serta.</p></div>
+<div class="step rv"><figure><img src="img/px-kari.jpg" width="1100" height="1100" loading="lazy" alt="Kari kambing dalam periuk" data-en-alt="Mutton curry in a pot"></figure><span class="no" data-en="Step 3">Langkah 3</span><h3 data-en="Cooked for you">Dimasak untuk anda</h3><p data-en="If you choose the cooking service, the meat is cooked ready to serve.">Kalau pilih servis masak, daging dimasak siap untuk dihidang.</p></div>
+<div class="step rv"><figure><img src="img/px-keluarga.jpg" width="1100" height="733" loading="lazy" alt="Bapa dan anak makan bersama" data-en-alt="A father and son eating together"></figure><span class="no" data-en="Step 4">Langkah 4</span><h3 data-en="Delivered to your door">Dihantar ke rumah</h3><p data-en="Sent to your location, ready for your guests.">Dihantar ke lokasi anda, sedia untuk tetamu.</p></div>
+</div>
+</div></section>
 
 <section class="tool" id="tool" aria-labelledby="tool-h"><div class="wrap">
 <p class="kick" data-en="Book aqiqah / korban">Tempah akikah / korban</p>
 <h2 id="tool-h" data-en="Tell us what you need">Beritahu kami keperluan anda</h2>
-<p class="sub" data-en="Choose the purpose, animal and service. Your message is written for you on WhatsApp.">Pilih tujuan, haiwan dan servis. Mesej siap ditulis untuk WhatsApp.</p>
-<div class="tgrid"><div class="panel"><span class="fl" data-en="Purpose">Tujuan</span><div class="chipset"><button type="button" class="chip" data-g="tj" data-single="tj" aria-pressed="true" data-p="0" data-en="Aqiqah">Akikah</button><button type="button" class="chip" data-g="tj" data-single="tj" aria-pressed="false" data-p="0" data-en="Korban">Korban</button><button type="button" class="chip" data-g="tj" data-single="tj" aria-pressed="false" data-p="0" data-en="Feast">Kenduri</button></div><span class="fl" data-en="Animal">Haiwan</span><div class="chipset"><button type="button" class="chip" data-g="hw" data-single="hw" aria-pressed="true" data-p="0" data-en="Goat">Kambing</button><button type="button" class="chip" data-g="hw" data-single="hw" aria-pressed="false" data-p="0" data-en="Cattle share">Bahagian lembu</button><button type="button" class="chip" data-g="hw" data-single="hw" aria-pressed="false" data-p="0" data-en="Whole cow">Lembu seekor</button></div><span class="fl" data-en="Service">Servis</span><div class="chipset"><button type="button" class="chip" data-g="sv" data-single="sv" aria-pressed="true" data-p="0" data-en="Slaughter only">Sembelih sahaja</button><button type="button" class="chip" data-g="sv" data-single="sv" aria-pressed="false" data-p="0" data-en="Slaughter + cook">Sembelih + masak</button><button type="button" class="chip" data-g="sv" data-single="sv" aria-pressed="false" data-p="0" data-en="Cook + deliver">Masak + hantar</button></div><label class="fl" for="tk" data-en="Date and location">Tarikh dan lokasi</label><input id="tk" type="text" placeholder="Contoh: 20 Dis, Gombak" data-en-ph="e.g. 20 Dec, Gombak" style="margin-bottom:16px"></div>
-<div class="res" id="res" aria-live="polite"><p class="big" id="rh"></p><div id="ra"></div><ul id="rl"></ul><p class="note" id="rn"></p>
-<a class="btn pri" id="go" href="#" rel="noopener">WhatsApp</a>
+<p class="sub" data-en="Choose the purpose, animal and service. Your WhatsApp message is written for you.">Pilih tujuan, haiwan dan servis. Mesej WhatsApp siap ditulis untuk anda.</p>
+<div class="tgrid"><div class="panel">
+<span class="fl" data-en="Purpose">Tujuan</span><div class="chipset"><button type="button" class="chip" data-g="tj" aria-pressed="true" data-en="Aqiqah">Akikah</button><button type="button" class="chip" data-g="tj" aria-pressed="false">Korban</button><button type="button" class="chip" data-g="tj" aria-pressed="false" data-en="Feast">Kenduri</button><button type="button" class="chip" data-g="tj" aria-pressed="false" data-en="Learn to slaughter">Belajar sembelih</button></div>
+<span class="fl" data-en="Animal">Haiwan</span><div class="chipset"><button type="button" class="chip" data-g="hw" aria-pressed="true" data-en="Goat">Kambing</button><button type="button" class="chip" data-g="hw" aria-pressed="false" data-en="Cattle share">Bahagian lembu</button><button type="button" class="chip" data-g="hw" aria-pressed="false" data-en="Whole cow">Lembu seekor</button></div>
+<span class="fl" data-en="Service">Servis</span><div class="chipset"><button type="button" class="chip" data-g="sv" aria-pressed="true" data-en="Slaughter only">Sembelih sahaja</button><button type="button" class="chip" data-g="sv" aria-pressed="false" data-en="Slaughter + cook">Sembelih + masak</button><button type="button" class="chip" data-g="sv" aria-pressed="false" data-en="Cook + deliver">Masak + hantar</button></div>
+<label class="fl" for="tk" data-en="Date and location">Tarikh dan lokasi</label><input id="tk" type="text" placeholder="Contoh: 20 Dis, Gombak" data-en-ph="e.g. 20 Dec, Gombak">
+</div>
+<div class="res" id="res" aria-live="polite"><p class="big" id="rh"></p><ul id="rl"></ul><p class="note" id="rn"></p>
+<a class="btn leaf" id="go" href="https://wa.me/601128096559" rel="noopener">WhatsApp</a>
 <p class="hint" id="hint"></p></div></div>
 </div></section>
 
-<section id="galeri" aria-labelledby="gal-h"><div class="wrap">
-<p class="kick" data-en="Gallery">Galeri</p>
-<h2 id="gal-h" data-en="Our work">Hasil kerja kami</h2>
-<p class="sub" data-en="Photos from our own Instagram.">Gambar daripada Instagram kami sendiri.</p>
-<div class="gal"><figure><img src="img/g0.jpg" width="560" height="700" loading="lazy" alt="Kambing sihat di kandang" data-en-alt="Healthy goats in the pen"><figcaption data-en="Healthy goats in the pen">Kambing sihat di kandang</figcaption></figure><figure><img src="img/g1.jpg" width="560" height="700" loading="lazy" alt="Kawasan ladang yang lapang" data-en-alt="The open farm grounds"><figcaption data-en="The open farm grounds">Kawasan ladang yang lapang</figcaption></figure><figure><img src="img/g2.jpg" width="560" height="700" loading="lazy" alt="Papan tanda ladang" data-en-alt="The farm signboard"><figcaption data-en="The farm signboard">Papan tanda ladang</figcaption></figure></div>
+<section id="ladang" aria-labelledby="real-h"><div class="wrap">
+<p class="kick" data-en="Our real farm">Ladang sebenar</p>
+<h2 id="real-h" class="rv" data-en="Come and see the farm yourself.">Datang tengok sendiri ladang kami.</h2>
+<p class="sub" data-en="Photos from our own Instagram, in Kampung Tengah, Lembah Gombak.">Gambar daripada Instagram kami sendiri, di Kampung Tengah, Lembah Gombak.</p>
+<div class="real">
+<figure class="rv"><img src="img/h1.jpg" width="720" height="960" loading="lazy" alt="Lembu di kandang Ladang Ismail" data-en-alt="Cattle in the Ladang Ismail shed"><figcaption data-en="Cattle in the shed">Lembu di kandang</figcaption></figure>
+<figure class="rv"><img src="img/g0.jpg" width="560" height="700" loading="lazy" alt="Kambing sihat di kandang" data-en-alt="Healthy goats in the pen"><figcaption data-en="Healthy goats">Kambing sihat</figcaption></figure>
+<figure class="rv"><img src="img/g1.jpg" width="560" height="700" loading="lazy" alt="Kawasan ladang yang lapang" data-en-alt="The open farm grounds"><figcaption data-en="Open farm grounds">Kawasan ladang lapang</figcaption></figure>
+<figure class="rv"><img src="img/h3.jpg" width="560" height="560" loading="lazy" alt="Pintu masuk Ladang Ismail" data-en-alt="The Ladang Ismail entrance"><figcaption data-en="The farm entrance">Pintu masuk ladang</figcaption></figure>
+</div>
 </div></section>
 
-<section id="lokasi" style="background:#fff" aria-labelledby="lok-h"><div class="wrap">
-<p class="kick" data-en="Locations &amp; hours">Lokasi &amp; waktu</p>
-<h2 id="lok-h" data-en="Find us">Lokasi kami</h2>
-<div class="br"><div class="card"><h3 data-en="Ladang Ternakan Ismail">Ladang Ternakan Ismail</h3><p style="color:var(--mut);margin:0">Kampung Tengah, Lembah Gombak, 53100 Selangor</p><table class="hrs"><tr><td><span data-en="Opening hours">Waktu operasi</span></td><td><span data-en="Ask on WhatsApp">Tanya melalui WhatsApp</span></td></tr></table><div class="acts"><a class="btn pri" href="https://wa.me/601128096559" rel="noopener">WhatsApp</a><a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Ladang%20Ternakan%20Ismail%20Gombak%20Farming%20Sdn%20Bhd" target="_blank" rel="noopener" data-en="Directions">Arah ke sini</a><a class="btn sec" href="tel:+601128096559" data-en="Call">Telefon</a></div></div></div>
-</div></section>
-
-<section aria-labelledby="faq-h"><div class="wrap" style="max-width:820px">
+<section id="lokasi" style="padding-top:20px" aria-labelledby="lok-h"><div class="wrap two">
+<div>
+<p class="kick" data-en="Location">Lokasi</p>
+<h2 id="lok-h" data-en="Find us">Cari kami</h2>
+<div class="loc">
+<p class="addr">Ladang Ternakan Ismail</p>
+<p>Kampung Tengah, Lembah Gombak, 53100 Selangor</p>
+<div class="row"><span data-en="Opening hours">Waktu operasi</span><b data-en="Ask on WhatsApp">Tanya melalui WhatsApp</b></div>
+<div class="row"><span>WhatsApp</span><b>011-2809 6559</b></div>
+<div class="acts"><a class="btn leaf" href="https://wa.me/601128096559" rel="noopener">WhatsApp</a><a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Ladang%20Ternakan%20Ismail%20Gombak" target="_blank" rel="noopener" data-en="Directions">Arah ke sini</a><a class="btn line" href="tel:+601128096559" data-en="Call">Telefon</a></div>
+</div>
+</div>
+<div>
 <p class="kick" data-en="FAQ">Soalan lazim</p>
 <h2 id="faq-h" data-en="Before you come">Sebelum anda datang</h2>
-<details><summary><span data-en="Can you deliver cooked meat?">Boleh hantar daging yang dah dimasak?</span></summary><p data-en="Yes. Customers mention the meat is cooked well and delivered to the exact location.">Boleh. Pelanggan menyebut daging dimasak dengan sedap dan dihantar tepat ke lokasi.</p></details><details><summary><span data-en="Can I come and learn to slaughter?">Boleh datang tengok dan belajar sembelih?</span></summary><p data-en="Yes. Send a message first to set a visit time.">Boleh. Hantar mesej dahulu untuk tetapkan masa lawatan.</p></details><details><summary><span data-en="How do I know this page is official?">Bagaimana nak pastikan page ini rasmi?</span></summary><p data-en="Google Maps: Ladang Ternakan Ismail. WhatsApp: 011-2809 6559.">Google Maps: Ladang Ternakan Ismail. WhatsApp: 011-2809 6559.</p></details>
-<div class="band" style="margin-top:34px"><h2 style="font-size:clamp(26px,4.6vw,36px)" data-en="Your child’s aqiqah, calm and complete.">Akikah anak, biar tenang dan sempurna.</h2><p data-en="Book early on WhatsApp.">Tempah awal di WhatsApp.</p><a class="btn pri" href="https://wa.me/601128096559" rel="noopener" data-en="WhatsApp us now">WhatsApp kami sekarang</a></div>
+<details><summary><span data-en="Can you deliver cooked meat?">Boleh hantar daging yang dah dimasak?</span></summary><p data-en="Yes. Customers mention the meat is cooked well and delivered to the exact location.">Boleh. Pelanggan menyebut daging dimasak dengan sedap dan dihantar tepat ke lokasi.</p></details>
+<details><summary><span data-en="Can I come and learn to slaughter?">Boleh datang tengok dan belajar sembelih?</span></summary><p data-en="Yes. Send a message first to set a visit time.">Boleh. Hantar mesej dahulu untuk tetapkan masa lawatan.</p></details>
+<details><summary><span data-en="How much does it cost?">Berapa harganya?</span></summary><p data-en="The price depends on the animal and service. Send your choice on WhatsApp and we will quote.">Harga bergantung pada haiwan dan servis. Hantar pilihan anda di WhatsApp dan kami akan beri sebut harga.</p></details>
+<details><summary><span data-en="How do I know this page is official?">Bagaimana nak pastikan page ini rasmi?</span></summary><p data-en="Google Maps: Ladang Ternakan Ismail. WhatsApp: 011-2809 6559.">Google Maps: Ladang Ternakan Ismail. WhatsApp: 011-2809 6559.</p></details>
+</div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+<div class="band rv"><img src="img/px-belajar.jpg" width="1100" height="1650" loading="lazy" alt="" style="object-position:50% 30%"><h2 data-en="Your child’s aqiqah, calm and complete.">Akikah anak, biar tenang dan sempurna.</h2><p data-en="Book early on WhatsApp, especially before the korban season.">Tempah awal di WhatsApp, terutama sebelum musim korban.</p><a class="btn hay" href="https://wa.me/601128096559" rel="noopener" data-en="WhatsApp us now">WhatsApp kami sekarang</a></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-<div><b style="color:#fff;font-size:18px">Ladang Ternakan Ismail</b><p style="margin:6px 0 0">Ladang Ternakan Ismail (Gombak Farming Sdn Bhd)<br>Kampung Tengah, Lembah Gombak, Selangor</p></div>
-<div><b style="color:#fff" data-en="Contact">Hubungi</b><p style="margin:6px 0 0">WhatsApp <a href="https://wa.me/601128096559">011-2809 6559</a></p></div>
-<div><small data-en="Design sample by Hasfi. Photos and details are taken from this business's public Instagram and must be confirmed by the business.">Contoh reka bentuk oleh Hasfi. Gambar dan butiran diambil daripada Instagram awam perniagaan ini dan perlu disahkan oleh pihak perniagaan.</small></div>
+<div><b style="font:800 22px var(--f-disp)">Ladang Ternakan Ismail</b><p style="margin:8px 0 0">Gombak Farming Trading<br>Kampung Tengah, Lembah Gombak, Selangor</p></div>
+<div><b data-en="Contact">Hubungi</b><p style="margin:8px 0 0">WhatsApp <a href="https://wa.me/601128096559">011-2809 6559</a></p></div>
+<div><small data-en="Design sample by Hasfi. Farm photos are from this business's public Instagram; other photos are sample photos from Pexels. All details must be confirmed by the business.">Contoh reka bentuk oleh Hasfi. Gambar ladang daripada Instagram awam perniagaan ini; gambar lain ialah foto contoh daripada Pexels. Semua butiran perlu disahkan oleh pihak perniagaan.</small></div>
 </div></footer>
 
-<a class="fab off" id="fab" href="https://wa.me/601128096559" rel="noopener" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span data-en="Quotation">Sebut harga</span></a>
+<a class="fab off" id="fab" href="#tool" aria-label="Tempah"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span data-en="Book now">Tempah sekarang</span></a>
 
 <script>
 let L='ms';
 const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)];
 const T=(m,e)=>L==='en'?e:m;
-const WA=n=>'https://wa.me/'+n+'?text=';
 const els=qa('[data-en]');els.forEach(e=>e.dataset.ms=e.innerHTML);
 const alts=qa('[data-en-alt]');alts.forEach(e=>e.dataset.msAlt=e.alt);
 const phs=qa('[data-en-ph]');phs.forEach(e=>e.dataset.msPh=e.placeholder);
-qa('.chip').forEach(c=>c.addEventListener('click',()=>{if(c.dataset.single){qa('.chip[data-single="'+c.dataset.single+'"]').forEach(x=>x.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true')}else c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')!=='true');upd()}));
-qa('.tool input,.tool select').forEach(e=>{e.addEventListener('input',upd);e.addEventListener('change',upd)});
-const on=g=>qa('.chip[data-g="'+g+'"][aria-pressed=true]');
-const txt=e=>e.textContent.trim();
-
-const RM=n=>'RM'+Math.round(n).toLocaleString('en-MY');
-const NAME="Ladang Ternakan Ismail",WAN="601128096559",F=[{"k": "chip", "g": "tj", "ms": "Tujuan", "en": "Purpose"}, {"k": "chip", "g": "hw", "ms": "Haiwan", "en": "Animal"}, {"k": "chip", "g": "sv", "ms": "Servis", "en": "Service"}, {"k": "text", "g": "tk", "ms": "Tarikh dan lokasi", "en": "Date and location"}],NOTE=["Harga ikut haiwan dan servis. Ladang Ismail akan sebut harga selepas anda hantar mesej.", "Price depends on the animal and service. Ladang Ismail quotes after you send the message."],GO="",CLOSE=["Boleh bantu sebut harga dan sahkan tarikh? Terima kasih.", "Could you give me a price and confirm the date? Thank you."],HEAD=["Mesej anda hampir siap", "Your message is nearly ready"];
+function pick(c){qa('.chip[data-g="'+c.dataset.g+'"]').forEach(x=>x.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true');upd()}
+qa('.chip').forEach(c=>c.addEventListener('click',()=>pick(c)));
+q('#tk').addEventListener('input',upd);
+/* kad servis pilih tujuan yang sepadan */
+const MAP=[['tj',0],['tj',1],['sv',2],['tj',3],['tj',2]];
+qa('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const m=MAP[+a.dataset.pick];pick(qa('.chip[data-g="'+m[0]+'"]')[m[1]])}));
+const NAME="Ladang Ternakan Ismail",WAN="601128096559";
+const F=[["tj","Tujuan","Purpose"],["hw","Haiwan","Animal"],["sv","Servis","Service"]];
 function upd(){
- const L=[];let tot=0,hasP=false;
- F.forEach(f=>{
-  if(f.k==='chip'){const els=on(f.g);if(els.length){L.push([T(f.ms,f.en),els.map(e=>txt(e)).join(', ')]);els.forEach(e=>{const p=+e.dataset.p||0;if(p){tot+=p;hasP=true}})}}
-  else{const v=q('#'+f.g).value.trim();if(v)L.push([T(f.ms,f.en),f.k==='date'?v.split('-').reverse().join('/'):v])}
- });
- q('#rh').textContent=hasP?T('Anggaran daripada harga iklan: ','Estimate from advertised prices: ')+RM(tot):T(HEAD[0],HEAD[1]);
- q('#ra').innerHTML='';
- q('#rl').innerHTML=L.length?L.map(x=>'<li>'+x[0]+': '+x[1]+'</li>').join(''):'<li>'+T('Pilih di sebelah kiri untuk mula.','Choose on the left to begin.')+'</li>';
- q('#rn').textContent=T(NOTE[0],NOTE[1]);
+ const rows=[];
+ F.forEach(f=>{const e=q('.chip[data-g="'+f[0]+'"][aria-pressed=true]');if(e)rows.push([T(f[1],f[2]),e.textContent.trim()])});
+ const v=q('#tk').value.trim();if(v)rows.push([T('Tarikh dan lokasi','Date and location'),v]);
+ q('#rh').textContent=T('Mesej anda hampir siap','Your message is nearly ready');
+ q('#rl').innerHTML=rows.map(x=>'<li>'+x[0]+': '+x[1].replace(/</g,'&lt;')+'</li>').join('');
+ q('#rn').textContent=T('Harga ikut haiwan dan servis. Ladang Ismail akan beri sebut harga selepas anda hantar mesej.','Price depends on the animal and service. Ladang Ismail quotes after you send the message.');
  const go=q('#go');go.textContent=T('Hantar di WhatsApp','Send on WhatsApp');
  q('#hint').textContent=T('Mesej siap ditulis. Anda hanya perlu tekan Hantar.','The message is already written. Just tap Send.');
- const m=T('Salam '+NAME+', saya ingin tanya:','Hi '+NAME+', I would like to ask:')
-  +L.map(x=>'\n• '+x[0]+': '+x[1]).join('')
-  +(hasP?T('\n• Anggaran harga iklan: ','\n• Advertised-price estimate: ')+RM(tot):'')
-  +T('\n'+CLOSE[0],'\n'+CLOSE[1]);
- go.href=WA(WAN)+encodeURIComponent(m);
+ const m=T('Salam '+NAME+', saya ingin tanya:','Hi '+NAME+', I would like to ask:')+rows.map(x=>'\n• '+x[0]+': '+x[1]).join('')+T('\nBoleh bantu sebut harga dan sahkan tarikh? Terima kasih.','\nCould you give me a price and confirm the date? Thank you.');
+ go.href='https://wa.me/'+WAN+'?text='+encodeURIComponent(m);
 }
-
-const fab=q('#fab');let inTool=false;
-function fabT(){fab.classList.toggle('off',scrollY<560||inTool)}
-new IntersectionObserver(es=>{inTool=es[0].isIntersecting;fabT()}).observe(q('#tool'));
-addEventListener('scroll',fabT,{passive:true});
+const hdr=q('#hdr'),fab=q('#fab');let inTool=false;
+function onS(){hdr.classList.toggle('solid',scrollY>40);fab.classList.toggle('off',scrollY<600||inTool)}
+new IntersectionObserver(es=>{inTool=es[0].isIntersecting;onS()}).observe(q('#tool'));
+addEventListener('scroll',onS,{passive:true});onS();
 const lang=q('#lang');
-function setL(l){L=l;document.documentElement.lang=l==='en'?'en':'ms';els.forEach(e=>e.innerHTML=l==='en'?e.dataset.en:e.dataset.ms);alts.forEach(e=>e.alt=l==='en'?e.dataset.enAlt:e.dataset.msAlt);phs.forEach(e=>e.placeholder=l==='en'?e.dataset.enPh:e.dataset.msPh);lang.textContent=l==='en'?'BM':'EN';lang.setAttribute('aria-label',l==='en'?'Tukar ke Bahasa Melayu':'Switch to English');upd();try{localStorage.setItem('L'+location.pathname,l)}catch(e){}}
+function setL(l){L=l;document.documentElement.lang=l==='en'?'en':'ms';els.forEach(e=>e.innerHTML=l==='en'?e.dataset.en:e.dataset.ms);alts.forEach(e=>e.alt=l==='en'?e.dataset.enAlt:e.dataset.msAlt);phs.forEach(e=>e.placeholder=l==='en'?e.dataset.enPh:e.dataset.msPh);lang.textContent=l==='en'?'BM':'EN';lang.setAttribute('aria-label',l==='en'?'Tukar ke Bahasa Melayu':'Switch to English');fab.setAttribute('aria-label',l==='en'?'Book':'Tempah');upd();try{localStorage.setItem('L'+location.pathname,l)}catch(e){}}
 lang.addEventListener('click',()=>setL(L==='en'?'ms':'en'));
 try{if(localStorage.getItem('L'+location.pathname)==='en')setL('en');else upd()}catch(e){upd()}
 </script>
+
 </body>
 </html>
