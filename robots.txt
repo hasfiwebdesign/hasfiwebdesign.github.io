@@ -1,2 +1,6 @@
 User-agent: *
+Allow: /$
+Allow: /portfolio/
 Disallow: /
+
+Sitemap: https://hasfiwebdesign.github.io/sitemap.xml
