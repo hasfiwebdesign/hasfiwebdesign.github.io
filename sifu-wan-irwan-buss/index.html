@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sifu Wan · Irwan Buss | Perunding Insurans Allianz, Melaka</title>
+<meta name="description" content="Irwan Buss (Sifu Wan), perunding insurans Allianz di Melaka. Semak perlindungan hayat, perubatan, kenderaan dan keluarga terus di WhatsApp. Juga membuka peluang kerjaya bersama pasukan BUSS.">
+<meta property="og:title" content="Sifu Wan · Irwan Buss">
+<meta property="og:description" content="Perunding insurans Allianz di Melaka. Semak perlindungan anda di WhatsApp.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#0b1a33">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1a33;--navy2:#13284d;--blue:#1e4fd8;--sky:#e9f0ff;--gold:#d6a84a;--gold2:#f0cf7f;--ink:#101828;--mute:#5b6577;--line:#e4e8f0;--bg:#f7f8fb;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.6vw,50px)}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.kick:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.sub{color:var(--mute);margin-top:14px;max-width:620px;font-size:17px}
+section{padding:92px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:14px;font-weight:700;font-size:15.5px;transition:.25s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+.btn-gold{background:var(--gold);color:#1b1306}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-wa{background:var(--wa);color:#fff}
+svg.i{width:20px;height:20px;flex:none}
+.demo{background:#000;color:#cfd6e4;text-align:center;font-size:13px;padding:8px 16px}
+.demo b{color:var(--gold2)}
+header{position:sticky;top:0;z-index:50;background:rgba(11,26,51,.92);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mk{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#b7862b);display:grid;place-items:center;font-family:"DM Serif Display";font-size:22px;color:var(--navy)}
+.brand b{display:block;font-size:16px}
+.brand small{font-size:12px;color:#a9b4c8}
+nav{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:#d5dcea}
+nav a:hover{color:var(--gold2)}
+header .btn{padding:11px 18px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#1d3a75 0%,transparent 60%),var(--navy);color:#fff;padding:70px 0 0;overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero .kick{color:var(--gold2)}
+.hero h1{font-size:clamp(44px,6.6vw,84px);margin-top:18px}
+.hero p{color:#c4cde0;font-size:18px;margin-top:20px;max-width:560px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .proof{display:flex;gap:28px;margin-top:38px;padding-bottom:70px;flex-wrap:wrap}
+.hero .proof div b{display:block;font-family:"DM Serif Display";font-size:34px;color:var(--gold2);line-height:1}
+.hero .proof div span{font-size:13.5px;color:#a9b4c8}
+.hero .pic{position:relative;align-self:end}
+.hero .pic img{width:100%;max-width:440px;margin-left:auto;border-radius:28px 28px 0 0;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.hero .pic .tag{position:absolute;left:0;bottom:40px;background:#fff;color:var(--ink);border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);max-width:270px}
+.hero .pic .tag i{width:40px;height:40px;border-radius:12px;background:var(--sky);color:var(--blue);display:grid;place-items:center;flex:none}
+.hero .pic .tag b{display:block;font-size:14.5px}
+.hero .pic .tag span{font-size:12.5px;color:var(--mute)}
+/* protect */
+.prot{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.pc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:.25s;cursor:pointer}
+.pc:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(30,79,216,.5)}
+.pc i{width:52px;height:52px;border-radius:16px;background:var(--sky);color:var(--blue);display:grid;place-items:center}
+.pc h3{font-size:25px;margin-top:6px}
+.pc p{color:var(--mute);font-size:15px}
+.pc .go{margin-top:auto;font-weight:700;font-size:14px;color:var(--blue)}
+.pc.dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.pc.dark p{color:#b8c3d8}.pc.dark i{background:rgba(255,255,255,.08);color:var(--gold2)}.pc.dark .go{color:var(--gold2)}
+/* calc */
+.calc-bg{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.calc{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
+.steps{margin-top:30px;display:grid;gap:18px}
+.steps>div{display:grid;grid-template-columns:46px 1fr;gap:14px}
+.steps b{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-family:"DM Serif Display";font-size:20px}
+.steps h4{font-size:17px}.steps p{color:var(--mute);font-size:15px}
+form{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:18px}
+.fl{display:grid;gap:8px}
+.fl>span{font-size:13px;font-weight:700;color:var(--navy)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;font-weight:500;cursor:pointer;transition:.2s}
+.chips input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input[type=text],select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;font:16px "Plus Jakarta Sans";background:#fff}
+input:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px}
+.range{display:flex;align-items:center;gap:12px}
+.range input{flex:1;accent-color:var(--blue)}
+.range output{min-width:92px;text-align:right;font-weight:800;color:var(--navy)}
+form .btn{width:100%;padding:16px}
+.note{font-size:13px;color:var(--mute);text-align:center}
+/* why */
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.why .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.why .pics img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.why .pics img:nth-child(2){margin-top:40px}
+.pts{display:grid;gap:16px;margin-top:28px}
+.pts>div{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.pts svg{color:var(--blue);margin-top:2px}
+.pts h4{font-size:16.5px}.pts p{color:var(--mute);font-size:14.5px}
+/* awards */
+.aw-bg{background:var(--navy);color:#fff}
+.aw-bg .kick{color:var(--gold2)}.aw-bg .sub{color:#b8c3d8}
+.awg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.awg figure{position:relative;border-radius:18px;overflow:hidden;cursor:zoom-in}
+.awg img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:.5s}
+.awg figure:hover img{transform:scale(1.04)}
+.awg figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(transparent,rgba(5,12,26,.9));font-size:13.5px;font-weight:600}
+.awg figure.w2{grid-column:span 2}
+.awg figure.w2 img{aspect-ratio:auto;height:100%}
+/* career */
+.car{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff 0%,var(--sky) 100%);border:1px solid var(--line);border-radius:32px;padding:48px;overflow:hidden}
+.car ul{list-style:none;display:grid;gap:12px;margin:24px 0 28px}
+.car li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.car li svg{color:var(--gold);margin-top:3px}
+.car .pic{position:relative}
+.car .pic img{border-radius:22px;width:100%;aspect-ratio:1;object-fit:cover}
+.car .pic .b2{position:absolute;right:-14px;bottom:-14px;width:46%;border:6px solid #fff;border-radius:18px;aspect-ratio:4/3}
+/* villa */
+.vil{display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden;background:#0f2b25;color:#fff}
+.vil img{width:100%;height:100%;object-fit:cover;min-height:300px}
+.vil .t{padding:44px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.vil .kick{color:#9fe0c9}
+.vil p{color:#c9dcd4}
+/* faq */
+.faq{max-width:800px;margin:36px auto 0}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--blue);font-size:22px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--mute);margin-top:10px}
+footer{background:#060f20;color:#9aa6bd;padding:56px 0 100px;font-size:14px}
+footer .g{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer h4{color:#fff;margin-bottom:10px}
+footer .cp{margin-top:34px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;font-size:12.5px;line-height:1.7}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--wa);color:#fff;padding:14px 20px;border-radius:999px;font-weight:700;display:flex;gap:8px;align-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.4)}
+.mbar{display:none}
+.lbx{position:fixed;inset:0;background:rgba(3,8,18,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lbx.on{display:flex}.lbx img{max-height:88vh;max-width:94vw;border-radius:10px}
+.lbx button{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:24px;cursor:pointer}
+.rv{opacity:0;transform:translateY(22px);transition:.8s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+@media(max-width:960px){
+ nav{display:none}
+ .hero .wrap,.calc,.why,.car,.vil{grid-template-columns:1fr}
+ .hero .pic img{margin:0 auto}
+ .prot{grid-template-columns:1fr 1fr}
+ .awg{grid-template-columns:1fr 1fr}
+ .awg figure.w2{grid-column:span 2}
+}
+@media(max-width:620px){
+ section{padding:68px 0}
+ .wrap{padding:0 16px}
+ header .btn{display:none}
+ .hero{padding-top:44px}
+ .hero p{font-size:16.5px}
+ .hero .cta .btn{flex:1;padding:14px 12px;font-size:15px}
+ .hero .proof{gap:20px;padding-bottom:36px}
+ .hero .proof div b{font-size:28px}
+ .hero .pic .tag{left:8px;bottom:20px}
+ .prot{grid-template-columns:1fr 1fr;gap:12px}
+ .pc{padding:18px;border-radius:18px}
+ .pc h3{font-size:20px}
+ .pc p{font-size:13.5px}
+ .pc i{width:44px;height:44px;border-radius:12px}
+ .row2{grid-template-columns:1fr}
+ form{padding:20px}
+ .car{padding:24px;border-radius:24px}
+ .car .pic .b2{right:8px}
+ .vil .t{padding:26px}
+ .fab{display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line)}
+ .mbar a{padding:13px;border-radius:12px;text-align:center;font-weight:700;font-size:15px}
+ footer{padding-bottom:110px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Contoh reka bentuk oleh <b>Hasfi Web Design</b> untuk Irwan Buss. Bukan laman rasmi Allianz.</div>
+<header><div class="wrap">
+  <a href="#" class="brand"><span class="mk">W</span><span><b>Sifu Wan</b><small>Irwan Buss · Perunding Allianz</small></span></a>
+  <nav><a href="#lindung">Perlindungan</a><a href="#semak">Semak</a><a href="#pengiktirafan">Pengiktirafan</a><a href="#kerjaya">Kerjaya</a></nav>
+  <a href="#semak" class="btn btn-gold">Semak perlindungan</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kick">Perunding insurans Allianz · Melaka</span>
+    <h1>Lindungi keluarga, <em>tenang setiap hari.</em></h1>
+    <p>Saya Irwan Buss, atau Sifu Wan. Saya bantu keluarga dan peniaga di Melaka pilih perlindungan yang betul: hayat, perubatan, kenderaan dan perniagaan. Terangkan keperluan anda, saya cadangkan pelan yang sesuai dengan bajet.</p>
+    <div class="cta"><a href="#semak" class="btn btn-gold">Semak perlindungan saya</a><a href="#kerjaya" class="btn btn-ghost">Peluang kerjaya</a></div>
+    <div class="proof">
+      <div><b>6,375</b><span>pengikut Instagram</span></div>
+      <div><b>BUSS</b><span>pasukan · We Build MDiT</span></div>
+      <div><b>AZ Pro</b><span>Special Project 2026</span></div>
+    </div>
+  </div>
+  <div class="pic">
+    <img src="img/port.jpg" alt="Irwan Buss, perunding insurans Allianz" fetchpriority="high">
+    <div class="tag"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i><div><b>Diiktiraf dalam CPC</b><span>Winners' Recognition, pasukan BUSS</span></div></div>
+  </div>
+</div></section>
+
+<section id="lindung"><div class="wrap">
+  <span class="kick">Perlindungan</span>
+  <h2>Apa yang anda <em>nak lindungi?</em></h2>
+  <p class="sub">Tekan mana-mana kad. Pilihan anda terus masuk ke borang semakan di bawah.</p>
+  <div class="prot">
+    <div class="pc rv" data-p="Hayat & keluarga"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 000-7.8z"/></svg></i><h3>Hayat & keluarga</h3><p>Pastikan keluarga terus hidup selesa jika berlaku sesuatu kepada anda.</p><span class="go">Semak →</span></div>
+    <div class="pc rv" data-p="Kad perubatan"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 9v6M9 12h6"/></svg></i><h3>Kad perubatan</h3><p>Masuk hospital tanpa risau bil. Sesuai untuk diri, pasangan dan anak.</p><span class="go">Semak →</span></div>
+    <div class="pc rv" data-p="Penyakit kritikal"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></i><h3>Penyakit kritikal</h3><p>Wang tunai sekali gus bila disahkan penyakit kritikal, untuk rawatan dan pendapatan.</p><span class="go">Semak →</span></div>
+    <div class="pc rv" data-p="Kenderaan"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M6 17l1.5-6h9L18 17M7 17v2M17 17v2"/><circle cx="8" cy="14" r=".5"/><circle cx="16" cy="14" r=".5"/></svg></i><h3>Kereta & motosikal</h3><p>Insurans kenderaan dan pembaharuan cukai jalan, diurus cepat melalui WhatsApp.</p><span class="go">Semak →</span></div>
+    <div class="pc rv" data-p="Pendidikan anak"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></i><h3>Pendidikan anak</h3><p>Simpanan berdisiplin untuk masa depan pendidikan anak-anak.</p><span class="go">Semak →</span></div>
+    <div class="pc dark rv" data-p="Perniagaan"><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></i><h3>Peniaga & majikan</h3><p>Perlindungan pekerja, orang penting syarikat dan premis perniagaan.</p><span class="go">Semak →</span></div>
+  </div>
+</div></section>
+
+<section id="semak" class="calc-bg"><div class="wrap calc">
+  <div>
+    <span class="kick">Semak perlindungan</span>
+    <h2>Tiga minit, <em>terus jelas.</em></h2>
+    <p class="sub">Isi borang ringkas ini. Mesej siap ditulis dan terus dihantar ke WhatsApp Sifu Wan. Tiada komitmen.</p>
+    <div class="steps">
+      <div><b>1</b><div><h4>Ceritakan keperluan</h4><p>Pilih apa nak dilindungi, umur dan bajet bulanan.</p></div></div>
+      <div><b>2</b><div><h4>Terima cadangan</h4><p>Sifu Wan cadangkan pelan yang sesuai, diterangkan dengan bahasa mudah.</p></div></div>
+      <div><b>3</b><div><h4>Anda buat keputusan</h4><p>Tiada desakan. Bandingkan dahulu, tanya apa sahaja.</p></div></div>
+    </div>
+  </div>
+  <form id="f">
+    <div class="fl"><span>Saya nak lindungi</span><div class="chips" id="pp">
+      <label><input type="checkbox" name="p" value="Hayat & keluarga" checked><span>Hayat & keluarga</span></label>
+      <label><input type="checkbox" name="p" value="Kad perubatan"><span>Kad perubatan</span></label>
+      <label><input type="checkbox" name="p" value="Penyakit kritikal"><span>Penyakit kritikal</span></label>
+      <label><input type="checkbox" name="p" value="Kenderaan"><span>Kenderaan</span></label>
+      <label><input type="checkbox" name="p" value="Pendidikan anak"><span>Pendidikan anak</span></label>
+      <label><input type="checkbox" name="p" value="Perniagaan"><span>Perniagaan</span></label>
+    </div></div>
+    <div class="row2">
+      <label class="fl"><span>Umur anda</span><input type="text" name="age" inputmode="numeric" placeholder="Contoh: 35"></label>
+      <label class="fl"><span>Tanggungan</span><select name="dep"><option>Bujang</option><option selected>Pasangan</option><option>Pasangan + anak</option><option>Ibu bapa juga</option></select></label>
+    </div>
+    <div class="fl"><span>Bajet sebulan</span><div class="range"><input type="range" name="bud" min="50" max="1000" step="50" value="200"><output id="bo">RM200</output></div></div>
+    <label class="fl"><span>Nama</span><input type="text" name="nm" placeholder="Nama anda" required></label>
+    <button class="btn btn-wa" type="submit"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>Hantar ke WhatsApp Sifu Wan</button>
+    <p class="note">Maklumat hanya digunakan untuk membalas pertanyaan anda.</p>
+  </form>
+</div></section>
+
+<section><div class="wrap why">
+  <div class="pics rv"><img src="img/aw1.jpg" alt="Irwan Buss di acara Allianz bersama pasukan" loading="lazy"><img src="img/hero.jpg" alt="Potret studio Irwan Buss" loading="lazy" style="object-position:50% 30%"></div>
+  <div>
+    <span class="kick">Kenapa Sifu Wan</span>
+    <h2>Ejen yang anda <em>kenal, bukan nombor.</em></h2>
+    <div class="pts">
+      <div><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><h4>Orang Melaka, kenal Melaka</h4><p>Jumpa bersemuka di Melaka, atau berbincang terus di WhatsApp.</p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><h4>Diterangkan dengan bahasa mudah</h4><p>Faham apa yang dilindungi, apa yang tidak, sebelum anda tandatangan.</p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><h4>Bantu masa tuntutan</h4><p>Bila perlu tuntut, Sifu Wan bantu urus dokumen dan susulan.</p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><h4>Pasukan yang aktif</h4><p>Sebahagian pasukan BUSS, dengan latihan dan pengiktirafan berkala.</p></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="pengiktirafan" class="aw-bg"><div class="wrap">
+  <span class="kick">Pengiktirafan & pasukan</span>
+  <h2>Dibina bersama <em>pasukan BUSS.</em></h2>
+  <p class="sub">Acara pengiktirafan, konvensyen dan latihan bersama pasukan. Tekan gambar untuk besarkan.</p>
+  <div class="awg">
+    <figure class="rv"><img src="img/aw2.jpg" alt="Malam pengiktirafan Allianz" loading="lazy"><figcaption>Malam pengiktirafan</figcaption></figure>
+    <figure class="rv"><img src="img/aw3.jpg" alt="CPC Winners' Recognition" loading="lazy"><figcaption>CPC Winners' Recognition</figcaption></figure>
+    <figure class="w2 rv"><img src="img/team1.jpg" alt="Pasukan di CPC Conference" loading="lazy"><figcaption>CPC Conference bersama pasukan</figcaption></figure>
+    <figure class="w2 rv"><img src="img/team2.jpg" alt="Pasukan BUSS di acara tahunan" loading="lazy"><figcaption>Pasukan BUSS</figcaption></figure>
+    <figure class="rv"><img src="img/aw4.jpg" alt="Majlis anugerah" loading="lazy"><figcaption>Majlis anugerah</figcaption></figure>
+    <figure class="rv"><img src="img/aw5.jpg" alt="Majlis anugerah bersama rakan" loading="lazy"><figcaption>Bersama rakan agensi</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="kerjaya"><div class="wrap">
+  <div class="car rv">
+    <div>
+      <span class="kick">Peluang kerjaya · AZ Pro Special Project 2026</span>
+      <h2 style="margin-top:12px">Bina kerjaya <em>tanpa sempadan.</em></h2>
+      <p class="sub">Sifu Wan sedang membina pasukan baharu melalui Speed System. Sesuai untuk yang mahu pendapatan tambahan atau kerjaya sepenuh masa.</p>
+      <ul>
+        <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Latihan dari asas, termasuk persediaan peperiksaan lesen ejen</li>
+        <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Bimbingan terus daripada Sifu Wan dan pasukan BUSS</li>
+        <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Masa kerja fleksibel, sesuai untuk yang bekerja atau berniaga</li>
+      </ul>
+      <a class="btn btn-navy" href="https://wa.me/60122525396?text=Saya%20nak%20join%20Sifu%20Wan" target="_blank" rel="noopener">Saya nak join Sifu Wan</a>
+    </div>
+    <div class="pic"><img src="img/azpro.jpg" alt="AZ Pro Presentation, Rise Resilient Return Stronger" loading="lazy"><img class="b2" src="img/kick.jpg" alt="Kick off Recruit and Grow" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="vil rv">
+    <img src="https://hasfiwebdesign.github.io/villa-staycation-melaka/img/ig_dd26.jpg" alt="Dedaun Villa Staycation Melaka" loading="lazy">
+    <div class="t">
+      <span class="kick">Juga usahawan</span>
+      <h2>Villa Staycation <em style="color:#9fe0c9">Melaka.</em></h2>
+      <p>Selain insurans, Sifu Wan mengurus Villa Anjung Mahligai dan Dedaun Villa, dua villa kolam persendirian untuk keluarga dan rombongan.</p>
+      <a class="btn btn-gold" style="align-self:flex-start" href="https://hasfiwebdesign.github.io/villa-staycation-melaka/" target="_blank" rel="noopener">Lihat villa</a>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div style="text-align:center"><span class="kick">Soalan lazim</span><h2 style="margin-top:10px">Sebelum anda <em>bertanya.</em></h2></div>
+  <div class="faq">
+    <details><summary>Perlu bayar untuk semakan?</summary><p>Tidak. Semakan dan cadangan pelan adalah percuma, tiada komitmen.</p></details>
+    <details><summary>Boleh jumpa bersemuka?</summary><p>Boleh, di sekitar Melaka. Atau berbincang terus melalui WhatsApp dan panggilan video.</p></details>
+    <details><summary>Saya dah ada polisi. Boleh semak semula?</summary><p>Boleh. Hantar maklumat polisi sedia ada, Sifu Wan bantu semak sama ada perlindungan masih mencukupi.</p></details>
+    <details><summary>Bagaimana nak sertai pasukan?</summary><p>Tekan butang "Saya nak join Sifu Wan" di bahagian Kerjaya. Sifu Wan akan terangkan langkah seterusnya.</p></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="g">
+    <div><h4>Sifu Wan · Irwan Buss</h4><p>Perunding insurans Allianz, Melaka</p></div>
+    <div><h4>Hubungi</h4><p>WhatsApp: <a href="https://wa.me/60122525396" target="_blank" rel="noopener">012-252 5396</a><br>Instagram: <a href="https://www.instagram.com/irwanbuss/" target="_blank" rel="noopener">@irwanbuss</a></p></div>
+  </div>
+  <div class="cp">Laman peribadi perunding. Allianz ialah tanda dagangan pemiliknya. Produk tertakluk kepada terma, syarat dan kelayakan. Semua maklumat perlu disahkan oleh perunding sebelum pembelian.<br>Contoh reka bentuk oleh <a href="https://hasfiwebdesign.github.io/portfolio/" target="_blank" rel="noopener">Hasfi Web Design</a>.</div>
+</div></footer>
+
+<a class="fab" href="https://wa.me/60122525396?text=Salam%20Sifu%20Wan%2C%20saya%20nak%20tanya%20tentang%20perlindungan." target="_blank" rel="noopener">WhatsApp</a>
+<div class="mbar"><a href="#semak" style="background:var(--gold);color:#1b1306">Semak</a><a href="https://wa.me/60122525396?text=Salam%20Sifu%20Wan%2C%20saya%20nak%20tanya%20tentang%20perlindungan." target="_blank" rel="noopener" style="background:var(--wa);color:#fff">WhatsApp</a></div>
+<div class="lbx" id="lbx"><button aria-label="Tutup">×</button><img alt=""></div>
+<script>
+const f=document.getElementById('f'),bo=document.getElementById('bo');
+f.bud.oninput=()=>bo.textContent='RM'+f.bud.value+(f.bud.value=='1000'?'+':'');
+document.querySelectorAll('.pc').forEach(c=>c.onclick=()=>{f.querySelectorAll('input[name=p]').forEach(x=>x.checked=x.value===c.dataset.p);document.getElementById('semak').scrollIntoView({behavior:'smooth'})});
+f.onsubmit=e=>{e.preventDefault();const ps=[...f.querySelectorAll('input[name=p]:checked')].map(x=>x.value);
+const m='Salam Sifu Wan, saya '+f.nm.value.trim()+'.\nSaya nak semak perlindungan:\n\n• Nak lindungi: '+(ps.join(', ')||'-')+'\n• Umur: '+(f.age.value||'-')+'\n• Tanggungan: '+f.dep.value+'\n• Bajet sebulan: '+bo.textContent+'\n\nBoleh cadangkan pelan yang sesuai?';
+window.open('https://wa.me/60122525396?text='+encodeURIComponent(m),'_blank')};
+const lb=document.getElementById('lbx');document.querySelectorAll('.awg img').forEach(i=>i.onclick=()=>{lb.querySelector('img').src=i.src;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
