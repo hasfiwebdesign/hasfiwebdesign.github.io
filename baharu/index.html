@@ -45,10 +45,32 @@ h1 em{font-size:1.08em;letter-spacing:-1px}
 .bukti{display:flex;gap:32px;margin-top:44px;flex-wrap:wrap}
 .bukti div{font-size:13px;color:var(--redup);font-weight:500;line-height:1.35}
 .bukti b{display:block;font-size:28px;color:var(--teks);font-weight:700;letter-spacing:-.8px}
-#pentas{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/4.6;background:#151517;box-shadow:0 40px 90px rgba(120,50,10,.25),0 0 0 1px rgba(31,18,10,.06)}
-#pentas video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;object-position:74% 50%;will-change:transform}
-#pentas .lencana{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:16px;padding:12px 16px;font-size:13px;color:var(--lembut);box-shadow:0 10px 30px rgba(0,0,0,.2)}
-#pentas .lencana b{display:block;color:var(--teks);font-size:15px}
+#pentas{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/4.4;background:radial-gradient(120% 90% at 30% 20%,#FFF4E6 0,#FFE2C4 45%,#FFC99A 100%);box-shadow:0 40px 90px rgba(120,50,10,.18),0 0 0 1px rgba(31,18,10,.05)}
+#pentas::before{content:"";position:absolute;width:70%;aspect-ratio:1;left:-10%;bottom:-25%;border-radius:50%;background:radial-gradient(circle,rgba(255,106,31,.35),transparent 65%);filter:blur(10px)}
+.h-tel{position:absolute;left:9%;top:7%;width:46%;aspect-ratio:9/19.2;border-radius:15% / 7%;padding:1.1%;background:linear-gradient(135deg,#f4f4f5,#a9abb0 20%,#e9e9eb 40%,#7d8086 62%,#d7d8db 82%,#8a8c91);box-shadow:0 40px 70px rgba(90,40,10,.3);transform:rotate(-4deg);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.h-bz{width:100%;height:100%;border-radius:14% / 6.6%;background:#050505;padding:3.2%}
+.h-skrin{position:relative;width:100%;height:100%;border-radius:12% / 5.6%;overflow:hidden;background:#fff}
+.h-skrin::before{content:"";position:absolute;top:2.2%;left:50%;transform:translateX(-50%);width:30%;height:3.6%;border-radius:99px;background:#000;z-index:4}
+.h-skrin img{position:absolute;left:0;top:0;width:100%;display:block;transform:translateY(0)}
+.h-bar{position:absolute;left:0;right:0;bottom:0;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:5%;padding:4% 5% 6%;background:linear-gradient(transparent,rgba(255,255,255,.95) 30%)}
+.h-bar div{border-radius:10px;padding:7% 0;text-align:center;font-size:clamp(9px,1vw,12px);font-weight:700}
+.h-bar .b1{background:#b38a3e;color:#fff}.h-bar .b2{background:#25d366;color:#04210f;position:relative}
+.h-tap{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:rgba(31,18,10,.35);opacity:0;transform:scale(.4)}
+.h-tap.on{animation:tap .9s ease-out}
+@keyframes tap{0%{opacity:0;transform:scale(.4)}25%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(2.6)}}
+.h-mesej{position:absolute;right:5%;top:12%;width:52%;display:flex;flex-direction:column;gap:10px;z-index:5}
+.h-m{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:18px;padding:11px 13px;box-shadow:0 14px 34px rgba(90,40,10,.16);opacity:0;transform:translateY(-14px) scale(.96);transition:opacity .45s,transform .55s cubic-bezier(.2,.9,.3,1.2)}
+.h-m.on{opacity:1;transform:none}
+.h-m i{flex:none;width:30px;height:30px;border-radius:8px;background:#25d366;display:grid;place-items:center}
+.h-m i svg{width:18px;height:18px;color:#fff}
+.h-m b{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;font-weight:600;color:var(--teks)}
+.h-m b small{font-weight:500;color:var(--redup);font-size:11px}
+.h-m p{font-size:12.5px;line-height:1.35;color:var(--lembut);margin-top:2px}
+.h-kira{position:absolute;right:5%;bottom:7%;z-index:5;display:flex;align-items:center;gap:10px;background:var(--teks);color:#fff;border-radius:99px;padding:10px 16px 10px 12px;font-size:13.5px;font-weight:600;box-shadow:0 14px 30px rgba(31,18,10,.25);opacity:0;transform:translateY(10px);transition:all .5s}
+.h-kira.on{opacity:1;transform:none}
+.h-kira span{width:26px;height:26px;border-radius:50%;background:#25d366;color:#04210f;display:grid;place-items:center;font-size:13px;font-weight:700}
+.h-lbl{position:absolute;left:9%;bottom:4%;z-index:5;font-size:12px;color:#7a4a2a;font-weight:500}
+.h-pudar{transition:opacity .6s}.h-pudar.off{opacity:0}
 
 .cuba{padding:100px 0 120px;position:relative}
 .cuba .kepala{max-width:660px;margin-bottom:48px}
@@ -107,7 +129,7 @@ h2 em{font-size:1.08em}
 @media (max-width:900px){
  nav a.teks{display:none}
  .hero .bal{grid-template-columns:1fr;gap:34px}
- #pentas{order:-1;aspect-ratio:4/3.4}
+ #pentas{order:-1;aspect-ratio:4/4}
  .grid{grid-template-columns:1fr;gap:36px}
  .telefon-wrap{position:relative;top:0;order:-1}
  .telefon{max-width:270px;transform:none}
@@ -116,8 +138,7 @@ h2 em{font-size:1.08em}
  .hero{padding:88px 0 40px}
  h1{letter-spacing:-1.8px}
  #pentas{border-radius:24px}
- #pentas .lencana{display:none}
- #pentas video{object-position:70% 60%}
+ .h-mesej{width:56%;right:3%;gap:7px}.h-m{padding:8px 10px;border-radius:14px}.h-m p,.h-m b{font-size:11px}.h-m i{width:24px;height:24px}.h-lbl{display:none}
  .bukti{gap:22px;margin-top:32px}
  .bukti b{font-size:23px}
  .panel{padding:22px;border-radius:22px}
@@ -160,7 +181,12 @@ h2 em{font-size:1.08em}
    <div><b>24 hrs</b>from payment<br>to live</div>
   </div>
  </div>
- <div id="pentas" aria-hidden="true"><div class="lencana"><b>Your business in, website out.</b>A free sample before you pay</div></div>
+ <div id="pentas" aria-hidden="true"><div class="h-pudar" id="hp">
+  <div class="h-tel"><div class="h-bz"><div class="h-skrin"><img src="sj-skrin.jpg" alt="" id="hsk"><div class="h-bar"><div class="b1">Semak tarikh</div><div class="b2">WhatsApp<span class="h-tap" id="htap"></span></div></div></div></div></div>
+  <div class="h-mesej" id="hm"></div>
+  <div class="h-kira" id="hk"><span>12</span>new WhatsApp chats today</div>
+  <div class="h-lbl">Live client site · Sireh Junjung Banquet Hall</div>
+ </div></div>
  </div>
 </section>
 
@@ -196,14 +222,31 @@ h2 em{font-size:1.08em}
 const kepala=document.getElementById('kepala');
 addEventListener('scroll',()=>kepala.classList.toggle('pekat',scrollY>40),{passive:true});
 
-/* ---------- video hero ---------- */
+/* ---------- hero: website -> WhatsApp ---------- */
 (function(){
- const box=document.getElementById('pentas');const m=matchMedia('(max-width:720px)').matches;
- const v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.autoplay=true;v.setAttribute('muted','');v.setAttribute('playsinline','');
- v.poster='hero-poster.jpg';v.src=m?'hero-m.mp4':'hero.mp4';box.appendChild(v);v.play().catch(()=>{});
- if(matchMedia('(prefers-reduced-motion:reduce)').matches){v.pause();}
- let tx=0,ty=0,x=0,y=0;addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5);ty=(e.clientY/innerHeight-.5)},{passive:true});
- (function f(){x+=(tx-x)*.05;y+=(ty-y)*.05;const s=Math.min(scrollY/innerHeight,1);v.style.transform=`translate3d(${-x*14}px,${-y*10}px,0) scale(${1+s*.05})`;requestAnimationFrame(f)})();
+ const M=[['Aina','Salam, Grand Hall masih kosong 12 Disember?'],['Encik Hafiz','Nak tempah 300 pax untuk resepsi. Boleh hantar pakej?'],['Siti Nur','Boleh datang tengok dewan Sabtu ni?'],['Kak Ros','Pakej katering 40 meja berapa ya?']];
+ const hm=document.getElementById('hm'),img=document.getElementById('hsk'),tap=document.getElementById('htap'),hk=document.getElementById('hk'),hp=document.getElementById('hp');
+ const kurang=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ hm.innerHTML=M.map(m=>`<div class="h-m"><i><svg><use href="#wa"/></svg></i><div><b>${m[0]}<small>now</small></b><p>${m[1]}</p></div></div>`).join('');
+ const els=[...hm.children];
+ const T=[];const at=(ms,f)=>T.push(setTimeout(f,ms));
+ function main(){
+  T.splice(0).forEach(clearTimeout);
+  hp.classList.remove('off');els.forEach(e=>e.classList.remove('on'));hk.classList.remove('on');
+  img.style.transition='none';img.style.transform='translateY(0)';void img.offsetWidth;
+  const sk=img.parentElement.clientHeight,ih=img.clientHeight,jarak=Math.max(0,Math.min(ih-sk,ih*.42));
+  if(kurang){els.forEach(e=>e.classList.add('on'));hk.classList.add('on');return}
+  at(400,()=>{img.style.transition='transform 4.2s cubic-bezier(.45,.05,.25,1)';img.style.transform=`translateY(${-jarak}px)`});
+  at(4900,()=>{tap.classList.remove('on');void tap.offsetWidth;tap.classList.add('on')});
+  els.forEach((e,i)=>at(5500+i*1100,()=>e.classList.add('on')));
+  at(5500+M.length*1100,()=>hk.classList.add('on'));
+  at(12400,()=>hp.classList.add('off'));
+  at(13100,main);
+ }
+ if(img.complete)main();else img.onload=main;
+ const tel=document.querySelector('.h-tel');let tx=0,ty=0,x=0,y=0;
+ addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5},{passive:true});
+ (function f(){x+=(tx-x)*.06;y+=(ty-y)*.06;tel.style.transform=`rotate(${-4+x*4}deg) translate3d(${x*10}px,${y*8}px,0)`;requestAnimationFrame(f)})();
 })();
 
 /* ---------- pratonton bisnes ---------- */
