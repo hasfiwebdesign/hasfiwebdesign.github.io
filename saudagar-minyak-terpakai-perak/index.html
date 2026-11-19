@@ -356,19 +356,7 @@ function setL(l){L=l;document.documentElement.lang=l==='en'?'en':'ms';els.forEac
 lang.addEventListener('click',()=>setL(L==='en'?'ms':'en'));
 try{if(localStorage.getItem('L'+location.pathname)==='en')setL('en');else upd()}catch(e){upd()}
 </script>
-<script>
-(()=>{const U='https://cqokowzzgseuvhcgpktj.supabase.co/rest/v1/hwd_klik',K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxb2tvd3p6Z3NldXZoY2dwa3RqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY5NzE5MDgsImV4cCI6MjEwMjU0NzkwOH0.AjFtow8RscN0KpIrWNrHCQu-cztcjd_ojTKZyY5GTg8',P=new URLSearchParams(location.search);
-let saya=false;try{if(P.has('saya'))localStorage.setItem('hwd_saya','1');saya=localStorage.getItem('hwd_saya')==='1'}catch(e){}
-const uji=P.has('uji'),hidup=location.pathname==='/'&&!saya;if(!hidup&&!uji)return;
-const laman=uji?'uji':'minyakmasakterpakaiperak',peranti=matchMedia('(pointer:coarse)').matches?'telefon':'komputer';
-let sumber='';try{sumber=document.referrer?new URL(document.referrer).hostname:''}catch(e){}if(P.get('dari'))sumber='dari='+P.get('dari');
-const hantar=jenis=>{try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({laman,jenis,sumber:sumber.slice(0,120)||null,peranti})}).catch(()=>{})}catch(e){}};
-try{if(!sessionStorage.getItem('hwd_l')){sessionStorage.setItem('hwd_l','1');hantar('lawat')}}catch(e){hantar('lawat')}
-document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.href||'';
- if(h.includes('wa.me/')){if((a.id==='go'||a.id==='mbgo')&&!h.includes('?text='))return;hantar(a.id==='go'||a.id==='mbgo'?'wa_kira':'wa')}
- else if(h.includes('google.com/maps'))hantar('peta');else if(h.includes('instagram.com'))hantar('ig');else if(h.includes('tiktok.com'))hantar('tiktok')},true);
-})();
-</script>
+
 
 <script>(function(){var c=document.getElementById("pdc"),g=document.getElementById("go"),l=c.closest("label");g.addEventListener("click",function(e){if(!c.checked){e.preventDefault();e.stopImmediatePropagation();l.classList.add("need");l.scrollIntoView({block:"center",behavior:"smooth"})}},true);c.addEventListener("change",function(){l.classList.remove("need")})})();</script></body>
 </html>
