@@ -6,7 +6,10 @@
 <title>Madu Fadli Maliki | Madu tualang dipanjat sendiri, Kota Bharu</title>
 <meta name="description" content="Madu tualang, gelam, kelulut dan madu gua batu kapur yang dipanjat dan dituai sendiri oleh Fadli Maliki. Tanpa orang tengah, harga pemanjat. Tempah melalui WhatsApp atau TikTok Shop.">
 <meta property="og:title" content="Madu Fadli Maliki: dari pokok tualang terus ke rumah anda">
-<meta property="og:image" content="img/comb.jpg">
+<meta property="og:image" content="https://hasfiwebdesign.github.io/madu-fadli-maliki/v3/img/fadli-hero.jpg">
+<meta property="og:url" content="https://hasfiwebdesign.github.io/madu-fadli-maliki/v3/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0c1a12">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -15,7 +18,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--krim);color:var(--teks);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:72px}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.08;letter-spacing:-.01em}
 .wrap{width:min(1160px,100% - 32px);margin-inline:auto}
@@ -39,7 +42,7 @@ nav .wrap{display:flex;align-items:center;gap:14px;height:64px}
 @media(max-width:900px){.nl{display:none}nav .btn{padding:10px 16px;font-size:14px}.dk{display:none}.brand small{white-space:nowrap}}
 /* hero */
 .hero{position:relative;min-height:calc(100svh - 94px);display:flex;align-items:center;overflow:hidden;color:#fff;background:var(--hutan)}
-.hero .bg{position:absolute;inset:0;background:url(img/hero.jpg) center/cover;animation:kb 26s ease-in-out infinite alternate}
+.hero .bg{position:absolute;inset:0;background:url(img/hero.webp) center/cover;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,1%)}}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,14,9,.92) 0%,rgba(6,14,9,.7) 45%,rgba(6,14,9,.25) 100%),linear-gradient(0deg,rgba(6,14,9,.85),transparent 40%)}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:56px 0}
@@ -163,7 +166,7 @@ section{padding:92px 0}
 @media(max-width:900px){.yakin{grid-template-columns:1fr}}
 /* musim */
 .musim{position:relative;color:#fff;overflow:hidden;background:var(--hutan)}
-.musim .bg{position:absolute;inset:0;background:url(img/gunung.jpg) center/cover;opacity:.35}
+.musim .bg{position:absolute;inset:0;background:url(img/gunung.webp) center/cover;opacity:.35}
 .musim .wrap{position:relative}
 .bulan{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;margin-top:10px}
 .bulan div{border-radius:10px;padding:14px 4px;text-align:center;font-weight:800;font-size:13px}
@@ -203,7 +206,7 @@ details[open] summary:after{content:"–"}
 details p{color:var(--kelabu);margin-top:10px;font-size:15px}
 @media(max-width:900px){.lokasi{grid-template-columns:1fr}}
 /* band + footer */
-.band{background:linear-gradient(rgba(12,26,18,.78),rgba(12,26,18,.9)),url(img/canopy.jpg) center/cover;color:#fff;text-align:center;padding:100px 0}
+.band{background:linear-gradient(rgba(12,26,18,.78),rgba(12,26,18,.9)),url(img/canopy.webp) center/cover;color:#fff;text-align:center;padding:100px 0}
 .band h2{font-size:clamp(32px,5vw,58px);max-width:820px;margin:0 auto 16px}
 .band p{color:#ddd5bf;margin-bottom:26px}
 .band .cta{justify-content:center}
@@ -216,19 +219,32 @@ footer a:hover{color:var(--madu2)}
 @media(max-width:800px){footer .wrap{grid-template-columns:1fr}}
 /* bar bawah */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(7,15,10,.96);border-top:1px solid rgba(242,165,22,.3)}
-.bar .btn{flex:1;padding:12px 10px;font-size:14.5px}
+.bar .btn{flex:1;padding:12px 10px;font-size:14.5px;white-space:nowrap}
 @media(min-width:901px){.bar{display:none}body{padding-bottom:0}}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a:focus-visible,button:focus-visible,summary:focus-visible,.galeri img:focus-visible{outline:3px solid var(--madu);outline-offset:3px}
+.galeri img:hover{filter:brightness(1.08)}
+.lbx,.lbn{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:50%;width:48px;height:48px;font-size:26px;cursor:pointer;display:grid;place-items:center}
+.lbx{top:16px;right:16px;font-size:20px}.lbp{left:12px;top:50%}.lbs{right:12px;top:50%}
+.lbc{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:14px;padding:0 60px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:var(--hutan);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.25s;z-index:70;width:max-content;max-width:calc(100% - 24px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}.toast a{color:var(--madu2);margin-left:10px}
+@media(min-width:901px){.toast{bottom:28px}}
+.ralat{outline:2px solid #e25822!important}
+.lk a.vid{display:inline-block;margin-top:8px;color:var(--madu2);font-weight:700;font-size:13.5px;text-decoration:none}
+.lk a.vid:hover{text-decoration:underline}
 .rv.in{opacity:1;transform:none}
 @media(max-width:700px){.pr .hg s{display:block;margin:2px 0 0}.pr button{padding:9px 8px;font-size:13px}.pr h3{font-size:16.5px}.pr p{font-size:13px}.pr .isi{padding:13px}.pr .hg b{font-size:23px}.pr .lbl{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.hero .bg,.mq div{animation:none}.rv{opacity:1;transform:none}}
 </style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 <div class="demo">Contoh reka bentuk laman web oleh Hasfi Web Design untuk Madu Fadli Maliki. Bukan laman rasmi.</div>
 
 <nav><div class="wrap">
-  <a class="brand" href="#"><img src="img/logo.png" alt="Logo Madu Fadli Maliki"><span><b>Fadli Maliki</b><small>Madu hutan · Kota Bharu</small></span></a>
+  <a class="brand" href="#"><img width="351" height="400" src="img/logo.webp" alt="Logo Madu Fadli Maliki"><span><b>Fadli Maliki</b><small>Madu hutan · Kota Bharu</small></span></a>
   <div class="nl"><a href="#siapa">Siapa Fadli</a><a href="#proses">Proses</a><a href="#madu">Madu</a><a href="#order">Tempahan</a><a href="#kedai">Kedai</a></div>
   <a class="btn b-madu" href="#order" style="white-space:nowrap">Tempah<span class="dk"> sekarang</span></a>
 </div></nav>
@@ -251,9 +267,9 @@ footer a:hover{color:var(--madu2)}
       </div>
     </div>
     <div class="kad-fadli">
-      <div class="foto"><img src="img/fadli-hero.jpg" alt="Fadli Maliki tersenyum memegang sarang madu tualang" fetchpriority="high"></div>
+      <div class="foto"><img width="540" height="638" src="img/fadli-hero.webp" alt="Fadli Maliki tersenyum memegang sarang madu tualang" fetchpriority="high"></div>
       <span class="live">● LIVE hampir setiap hari</span>
-      <div class="tag"><img src="img/logo.png" alt="Logo Fadli Maliki" style="object-fit:contain;background:#13261a;padding:4px"><span><b>Fadli Maliki</b><small>Pemanjat tualang, Panchor Kemumin, Kota Bharu</small></span></div>
+      <div class="tag"><img width="351" height="400" src="img/logo.webp" alt="Logo Fadli Maliki" style="object-fit:contain;background:#13261a;padding:4px"><span><b>Fadli Maliki</b><small>Pemanjat tualang, Panchor Kemumin, Kota Bharu</small></span></div>
     </div>
   </div>
 </header>
@@ -265,9 +281,9 @@ footer a:hover{color:var(--madu2)}
 
 <section id="siapa"><div class="wrap siapa">
   <div class="kolaj rv">
-    <img src="img/bottles.jpg" alt="Fadli Maliki di hutan dengan botol madu">
-    <img src="img/rope.jpg" alt="Fadli menunjukkan tali keselamatan sebelum memanjat">
-    <img src="img/glove.jpg" alt="Sarang madu dipegang dengan sarung tangan">
+    <img width="720" height="973" src="img/bottles.webp" alt="Fadli Maliki di hutan dengan botol madu">
+    <img width="720" height="973" src="img/rope.webp" alt="Fadli menunjukkan tali keselamatan sebelum memanjat">
+    <img width="720" height="973" src="img/glove.webp" alt="Sarang madu dipegang dengan sarung tangan">
   </div>
   <div class="rv">
     <span class="eyebrow">Siapa yang memanjat</span>
@@ -285,10 +301,10 @@ footer a:hover{color:var(--madu2)}
 <section id="proses" class="gelap"><div class="wrap">
   <div class="kepala rv"><span class="eyebrow">Dari pokok ke botol</span><h2>Empat langkah yang boleh tuan puan tonton sendiri.</h2><p>Kerja menuai madu tidak selalunya indah. Ada kalanya hasilnya banyak, ada kalanya sedikit, dan ada kalanya disengat lebah. Inilah prosesnya.</p></div>
   <div class="langkah">
-    <div class="lk rv"><img src="img/test.jpg" alt="Ujian keselamatan sebelum memanjat" loading="lazy"><div><b>01</b><h3>Uji keselamatan</h3><p>Tali dan buaian diuji dahulu sebelum Fadli memanjat pokok tualang.</p></div></div>
-    <div class="lk rv"><img src="img/climb.jpg" alt="Fadli memanjat pokok tualang" loading="lazy"><div><b>02</b><h3>Memanjat tualang</h3><p>Pokok tualang tumbuh tinggi di hutan bukit. Sarang lebah Apis dorsata bergantung pada dahan atasnya.</p></div></div>
-    <div class="lk rv"><img src="img/hive.jpg" alt="Sarang lebah liar di dahan pokok" loading="lazy"><div><b>03</b><h3>Menuai sarang</h3><p>Satu sarang biasanya seberat 20 hingga 30 kilogram, lalu dipotong kepada tiga atau empat bahagian supaya mudah dibawa turun.</p></div></div>
-    <div class="lk rv"><img src="img/bucket.jpg" alt="Sarang madu dimasukkan ke dalam baldi" loading="lazy"><div><b>04</b><h3>Membotolkan</h3><p>Madu dibawa turun dari bukit, ditapis, lalu diisi ke dalam botol gred makanan sebelum dipos.</p></div></div>
+    <div class="lk rv"><img width="720" height="794" src="img/test.webp" alt="Ujian keselamatan sebelum memanjat" loading="lazy"><div><b>01</b><h3>Uji keselamatan</h3><p>Tali dan buaian diuji dahulu sebelum Fadli memanjat pokok tualang.</p><a class="vid" href="https://www.tiktok.com/@fadlimaliki/video/7695765582074957064" target="_blank" rel="noopener">▶ Tonton di TikTok</a></div></div>
+    <div class="lk rv"><img width="720" height="973" src="img/climb.webp" alt="Fadli memanjat pokok tualang" loading="lazy"><div><b>02</b><h3>Memanjat tualang</h3><p>Pokok tualang tumbuh tinggi di hutan bukit. Sarang lebah Apis dorsata bergantung pada dahan atasnya.</p><a class="vid" href="https://www.tiktok.com/@fadlimalikistore/video/7653721660129856786" target="_blank" rel="noopener">▶ Tonton di TikTok</a></div></div>
+    <div class="lk rv"><img width="720" height="973" src="img/hive.webp" alt="Sarang lebah liar di dahan pokok" loading="lazy"><div><b>03</b><h3>Menuai sarang</h3><p>Satu sarang biasanya seberat 20 hingga 30 kilogram, lalu dipotong kepada tiga atau empat bahagian supaya mudah dibawa turun.</p><a class="vid" href="https://www.tiktok.com/@fadlimalikistore/video/7681483558350834952" target="_blank" rel="noopener">▶ Tonton di TikTok</a></div></div>
+    <div class="lk rv"><img width="720" height="973" src="img/bucket.webp" alt="Sarang madu dimasukkan ke dalam baldi" loading="lazy"><div><b>04</b><h3>Membotolkan</h3><p>Madu dibawa turun dari bukit, ditapis, lalu diisi ke dalam botol gred makanan sebelum dipos.</p><a class="vid" href="https://www.tiktok.com/@fadlimalikistore/video/7652531844776250640" target="_blank" rel="noopener">▶ Tonton di TikTok</a></div></div>
   </div>
 </div></section>
 
@@ -323,12 +339,12 @@ footer a:hover{color:var(--madu2)}
       </div>
       <h3>3. Butiran penerima</h3>
       <div class="medan">
-        <input id="nama" placeholder="Nama penuh" autocomplete="name">
-        <input id="tel" placeholder="Nombor telefon" inputmode="tel" autocomplete="tel">
-        <textarea id="alamat" rows="3" placeholder="Alamat penuh beserta poskod" autocomplete="street-address"></textarea>
+        <label class="sr" for="nama">Nama penuh</label><input id="nama" placeholder="Nama penuh" autocomplete="name">
+        <label class="sr" for="tel">Nombor telefon</label><input id="tel" type="tel" placeholder="Nombor telefon" inputmode="tel" autocomplete="tel">
+        <label class="sr" for="alamat">Alamat penuh beserta poskod</label><textarea id="alamat" rows="3" placeholder="Alamat penuh beserta poskod" autocomplete="street-address"></textarea>
       </div>
     </div>
-    <div class="panel ring" style="align-self:start;position:sticky;top:84px">
+    <div class="panel ring" aria-live="polite" style="align-self:start;position:sticky;top:84px">
       <h3>Ringkasan</h3>
       <ul id="item"><li>Madu belum dipilih.</li></ul>
       <div class="r"><span>Madu</span><span id="sub">RM0.00</span></div>
@@ -362,7 +378,7 @@ footer a:hover{color:var(--madu2)}
 <section><div class="wrap">
   <div class="kepala rv"><span class="eyebrow">Kata pembeli</span><h2>Daripada Dato hingga pembeli di Sarawak.</h2></div>
   <div class="testi">
-    <div class="dato rv"><img src="img/dato.jpg" alt="Dato Mustafa Kamal bersama Fadli Maliki di kedai" loading="lazy"><div><span class="lbl">Datang sendiri ke kedai</span><h3>Dato Mustafa Kamal</h3><p>Beliau datang sendiri ke kedai Fadli di Kota Bharu dan berkongsi nasihatnya di TikTok. Kata Fadli: “Ini bukan review berbayar. Saya tidak mampu bayar Dato, tapi Allah bantu hantar.”</p><a class="btn b-madu" style="margin-top:16px;padding:10px 18px" href="https://www.tiktok.com/@fadlimalikistore/video/7673344926251371794" target="_blank" rel="noopener">Tonton video</a></div></div>
+    <div class="dato rv"><img width="720" height="730" src="img/dato.webp" alt="Dato Mustafa Kamal bersama Fadli Maliki di kedai" loading="lazy"><div><span class="lbl">Datang sendiri ke kedai</span><h3>Dato Mustafa Kamal</h3><p>Beliau datang sendiri ke kedai Fadli di Kota Bharu dan berkongsi nasihatnya di TikTok. Kata Fadli: “Ini bukan review berbayar. Saya tidak mampu bayar Dato, tapi Allah bantu hantar.”</p><a class="btn b-madu" style="margin-top:16px;padding:10px 18px" href="https://www.tiktok.com/@fadlimalikistore/video/7673344926251371794" target="_blank" rel="noopener">Tonton video</a></div></div>
     <div class="komen">
       <div class="km rv"><p>“Terbaik ni inshaallah, dah kali ke-3.”</p><small>Pembeli ulangan · komen TikTok, Nov 2026</small></div>
       <div class="km rv"><p>“Madu terbaik, selamat mendarat di Sarawak. Memang sedap. 👍”</p><small>Pembeli dari Sarawak · komen TikTok, Nov 2026</small></div>
@@ -373,15 +389,15 @@ footer a:hover{color:var(--madu2)}
 
 <section style="padding-top:80px;background:var(--kertas)"><div class="wrap">
   <div class="kepala rv"><span class="eyebrow">Dari hutan</span><h2>Gambar sebenar, bukan gambar stok.</h2></div>
-  <div class="galeri" id="galeri">
-    <img src="img/giant.jpg" alt="Pokok tualang gergasi" loading="lazy">
-    <img src="img/walk.jpg" alt="Fadli meredah hutan" loading="lazy">
-    <img src="img/tray.jpg" alt="Sarang madu dalam dulang" loading="lazy">
-    <img src="img/boat.jpg" alt="Botol madu di atas perahu" loading="lazy">
-    <img src="img/climb2.jpg" alt="Memanjat pokok di hutan" loading="lazy">
-    <img src="img/flag.jpg" alt="Fadli di pokok tualang dengan Jalur Gemilang" loading="lazy">
-    <img src="img/shop.jpg" alt="Botol madu di kedai" loading="lazy">
-    <img src="img/canopy.jpg" alt="Pemandangan dari atas pokok tualang" loading="lazy">
+  <div class="galeri" id="galeri" aria-label="Galeri gambar, tekan untuk besarkan">
+    <img width="720" height="973" src="img/giant.webp" alt="Pokok tualang gergasi" loading="lazy">
+    <img width="720" height="973" src="img/walk.webp" alt="Fadli meredah hutan" loading="lazy">
+    <img width="720" height="973" src="img/tray.webp" alt="Sarang madu dalam dulang" loading="lazy">
+    <img width="720" height="973" src="img/boat.webp" alt="Botol madu di atas perahu" loading="lazy">
+    <img width="720" height="973" src="img/climb2.webp" alt="Memanjat pokok di hutan" loading="lazy">
+    <img width="720" height="973" src="img/flag.webp" alt="Fadli di pokok tualang dengan Jalur Gemilang" loading="lazy">
+    <img width="720" height="973" src="img/shop.webp" alt="Botol madu di kedai" loading="lazy">
+    <img width="720" height="973" src="img/canopy.webp" alt="Pemandangan dari atas pokok tualang" loading="lazy">
   </div>
 </div></section>
 
@@ -410,38 +426,39 @@ footer a:hover{color:var(--madu2)}
   <div><b>Madu Fadli Maliki Store</b>Panchor Kemumin, Kota Bharu, Kelantan.<br>Madu ialah makanan. Laman ini tidak membuat sebarang dakwaan perubatan.</div>
   <div><b>Tempahan</b><a href="https://wa.me/60199466763" target="_blank" rel="noopener">WhatsApp 019-946 6763</a><a href="https://fadlimalikistore.onpay.my/order/form/groupvip" target="_blank" rel="noopener">Borang VIP OnPay</a></div>
   <div><b>TikTok</b><a href="https://www.tiktok.com/@fadli.maliki" target="_blank" rel="noopener">@fadli.maliki</a><a href="https://www.tiktok.com/@fadlimaliki" target="_blank" rel="noopener">@fadlimaliki</a><a href="https://www.tiktok.com/@fadlimalikistore" target="_blank" rel="noopener">@fadlimalikistore</a></div>
-  <div class="kecil">Contoh reka bentuk oleh Hasfi Web Design. Gambar, harga, jumlah terjual dan komen diambil daripada TikTok dan TikTok Shop kedai, dan perlu disahkan oleh pihak kedai. Gambar hutan di bahagian atas: Pexels.</div>
+  <div class="kecil">© 2026 Madu Fadli Maliki Store. Contoh reka bentuk oleh Hasfi Web Design. Gambar, harga, jumlah terjual dan komen diambil daripada TikTok dan TikTok Shop kedai, dan perlu disahkan oleh pihak kedai. Gambar hutan di bahagian atas: Pexels.</div>
 </div></footer>
 
-<div class="bar"><a class="btn b-madu" href="#order">Tempah</a><a class="btn b-gelap" href="https://wa.me/60199466763" target="_blank" rel="noopener">WhatsApp</a></div>
-<div class="lb" id="lb"><img alt=""></div>
+<div class="bar"><a class="btn b-madu" href="#order" id="barT">Tempah</a><a class="btn b-gelap" href="https://wa.me/60199466763" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Paparan gambar"><button class="lbx" data-lb="x" aria-label="Tutup">✕</button><button class="lbn lbp" data-lb="-1" aria-label="Gambar sebelumnya">‹</button><img alt=""><button class="lbn lbs" data-lb="1" aria-label="Gambar seterusnya">›</button><p class="lbc"></p></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 const WA='60199466763';
 const P=[
- {id:1,n:'Kombo Madu Tualang 3 in 1',h:79.97,img:'tt-3in1.jpg',l:'Paling laris',sold:'25.4 ribu',r:'4.9',kg:1.5,d:'Pakej jimat untuk seisi keluarga dalam satu tempahan.'},
- {id:2,n:'Madu Tualang Bukit Bersarang',h:15.90,o:25,img:'tt-sarang.jpg',l:'Sarang asli',sold:'6,066',r:'4.7',kg:.5,d:'Madu bersama sarangnya dalam bekas kecil. Boleh diperah sendiri.'},
- {id:3,n:'Madu Tualang Emas 1kg',h:120,o:180,img:'tt-emas.jpg',l:'Tualang emas',sold:'4,677',r:'4.9',kg:1,d:'Madu tualang emas yang berwarna kuning, dalam botol 1kg.'},
- {id:4,n:'Madu Bunga Kaliandra 1kg',h:75.05,o:150,img:'tt-kaliandra.jpg',l:'Bunga hutan',sold:'3,310',r:'4.9',kg:1,d:'Madu daripada bunga kaliandra, dalam botol 1kg.'},
- {id:5,n:'Kombo Tualang Asli + Tualang Bukit',h:169.99,o:370,img:'tt-kombobukit.jpg',l:'Kombo 2 jenis',sold:'1,867',r:'4.9',kg:2,d:'Dua botol: Tualang Asli dan Tualang Bukit.'},
- {id:6,n:'Madu Tualang Asli 1kg',h:52.12,o:120,img:'p-tualangasli1kg.jpg',l:'Harga pemanjat',r:'4.9',kg:1,d:'Madu daripada sarang lebah liar di pokok tualang yang tinggi.'},
- {id:7,n:'Madu Tualang Bukit Premium 1kg',h:118.99,o:250,img:'p-tualangbukit1kg.jpg',l:'Gred premium',r:'4.9',kg:1,d:'Menurut Fadli, madu bukit lebih bagus daripada tualang emas biasa.'},
- {id:8,n:'Madu Hutan Gelam Hitam 1kg',h:85,o:120,img:'p-hutangelam1kg.jpg',l:'Gelam kayu hitam',r:'4.9',kg:1,d:'Madu gelam dari hutan liar, berwarna lebih gelap.'},
- {id:9,n:'Madu Lebah Batu / Gua',h:150,img:'tt-batu.jpg',l:'Sukar didapati',sold:'282',r:'5.0',kg:1,d:'Dituai daripada sarang lebah di gua dan gunung batu kapur.'},
- {id:10,n:'Madu Kelulut 500g',h:56.04,o:100,img:'p-kelulut500g.jpg',l:'Kelulut',r:'4.9',kg:.5,d:'Madu kelulut dari tanah tinggi, rasanya masam manis.'}
+ {id:1,n:'Kombo Madu Tualang 3 in 1',h:79.97,img:'tt-3in1.webp',l:'Paling laris',sold:'25.4 ribu',r:'4.9',kg:1.5,d:'Pakej jimat untuk seisi keluarga dalam satu tempahan.'},
+ {id:2,n:'Madu Tualang Bukit Bersarang',h:15.90,o:25,img:'tt-sarang.webp',l:'Sarang asli',sold:'6,066',r:'4.7',kg:.5,d:'Madu bersama sarangnya dalam bekas kecil. Boleh diperah sendiri.'},
+ {id:3,n:'Madu Tualang Emas 1kg',h:120,o:180,img:'tt-emas.webp',l:'Tualang emas',sold:'4,677',r:'4.9',kg:1,d:'Madu tualang emas yang berwarna kuning, dalam botol 1kg.'},
+ {id:4,n:'Madu Bunga Kaliandra 1kg',h:75.05,o:150,img:'tt-kaliandra.webp',l:'Bunga hutan',sold:'3,310',r:'4.9',kg:1,d:'Madu daripada bunga kaliandra, dalam botol 1kg.'},
+ {id:5,n:'Kombo Tualang Asli + Tualang Bukit',h:169.99,o:370,img:'tt-kombobukit.webp',l:'Kombo 2 jenis',sold:'1,867',r:'4.9',kg:2,d:'Dua botol: Tualang Asli dan Tualang Bukit.'},
+ {id:6,n:'Madu Tualang Asli 1kg',h:52.12,o:120,img:'p-tualangasli1kg.webp',l:'Harga pemanjat',r:'4.9',kg:1,d:'Madu daripada sarang lebah liar di pokok tualang yang tinggi.'},
+ {id:7,n:'Madu Tualang Bukit Premium 1kg',h:118.99,o:250,img:'p-tualangbukit1kg.webp',l:'Gred premium',r:'4.9',kg:1,d:'Menurut Fadli, madu bukit lebih bagus daripada tualang emas biasa.'},
+ {id:8,n:'Madu Hutan Gelam Hitam 1kg',h:85,o:120,img:'p-hutangelam1kg.webp',l:'Gelam kayu hitam',r:'4.9',kg:1,d:'Madu gelam dari hutan liar, berwarna lebih gelap.'},
+ {id:9,n:'Madu Lebah Batu / Gua',h:150,img:'tt-batu.webp',l:'Sukar didapati',sold:'282',r:'5.0',kg:1,d:'Dituai daripada sarang lebah di gua dan gunung batu kapur.'},
+ {id:10,n:'Madu Kelulut 500g',h:56.04,o:100,img:'p-kelulut500g.webp',l:'Kelulut',r:'4.9',kg:.5,d:'Madu kelulut dari tanah tinggi, rasanya masam manis.'}
 ];
 const Q={};P.forEach(p=>Q[p.id]=0);
 const RM=v=>'RM'+v.toFixed(2);
 const senarai=document.getElementById('senarai'),baris=document.getElementById('baris');
 P.forEach(p=>{
- senarai.insertAdjacentHTML('beforeend',`<div class="pr rv"><img src="img/${p.img}" alt="${p.n}" loading="lazy"><div class="isi"><span class="lbl">${p.l}</span><h3>${p.n}</h3><span class="bukti">★ ${p.r}${p.sold?` · <b>${p.sold} terjual</b>`:''}</span><p>${p.d}</p><div class="hg"><span><b>${RM(p.h)}</b>${p.o?`<s>RM${p.o}</s>`:''}</span><button data-add="${p.id}">Tambah tempahan</button><a class="tt" href="https://www.tiktok.com/@fadlimalikistore" target="_blank" rel="noopener">Beli di TikTok Shop</a></div></div></div>`);
+ senarai.insertAdjacentHTML('beforeend',`<div class="pr rv"><img src="img/${p.img}" alt="${p.n}" width="640" height="640" loading="lazy"><div class="isi"><span class="lbl">${p.l}</span><h3>${p.n}</h3><span class="bukti">★ ${p.r}${p.sold?` · <b>${p.sold} terjual</b>`:''}</span><p>${p.d}</p><div class="hg"><span><b>${RM(p.h)}</b>${p.o?`<s>RM${p.o}</s>`:''}</span><button data-add="${p.id}">Tambah tempahan</button><a class="tt" href="https://www.tiktok.com/@fadlimalikistore" target="_blank" rel="noopener">Beli di TikTok Shop</a></div></div></div>`);
  baris.insertAdjacentHTML('beforeend',`<div class="baris"><span>${p.n}<small>${RM(p.h)} seunit</small></span><div class="qty"><button aria-label="Kurang ${p.n}" data-q="${p.id}" data-d="-1">−</button><output id="q${p.id}">0</output><button aria-label="Tambah ${p.n}" data-q="${p.id}" data-d="1">+</button></div></div>`);
 });
 function pos(kg,kw){kg=Math.ceil(kg);if(!kg)return 0;if(kw==1)return 13+Math.max(0,kg-1)*10;const b=kw==2?9.5:5.5;return b+Math.max(0,kg-2)*1}
 function kira(){
  const kw=+document.querySelector('[name=kw]:checked').value;
  let sub=0,kg=0,ls=[];
- P.forEach(p=>{const q=Q[p.id];document.getElementById('q'+p.id).value=q;const b=document.querySelector(`[data-add="${p.id}"]`);b.textContent=q?`Dalam tempahan (${q})`:'Tambah tempahan';b.classList.toggle('on',q>0);if(q){sub+=q*p.h;kg+=q*p.kg;ls.push(`${q} x ${p.n} = ${RM(q*p.h)}`)}});
+ P.forEach(p=>{const q=Q[p.id];document.getElementById('q'+p.id).value=q;const b=document.querySelector(`[data-add="${p.id}"]`);b.textContent=q?`✓ Ditambah (${q})`:'Tambah tempahan';b.classList.toggle('on',q>0);if(q){sub+=q*p.h;kg+=q*p.kg;ls.push(`${q} x ${p.n} = ${RM(q*p.h)}`)}});
  const ps=pos(kg,kw),j=sub+ps;
  document.getElementById('item').innerHTML=ls.length?ls.map(x=>`<li>${x}</li>`).join(''):'<li>Madu belum dipilih.</li>';
  document.getElementById('sub').textContent=RM(sub);document.getElementById('pos').textContent=RM(ps);document.getElementById('berat').textContent=Math.ceil(kg);document.getElementById('jum').textContent=RM(j);
@@ -451,19 +468,30 @@ function kira(){
  const kwN=['Semenanjung','Sabah & Sarawak','COD Semenanjung'][kw];
  const msg=`Salam admin Fadli Maliki Store, saya ingin menempah madu:\n\n${ls.join('\n')||'-'}\n\nKawasan: ${kwN}\nAnggaran: ${RM(sub)} + pos ${RM(ps)} = ${RM(j)}\n\nNama: ${nama||'-'}\nTelefon: ${tel||'-'}\nAlamat: ${al||'-'}\n\nMohon sahkan jumlah dan cara pembayaran. Terima kasih.`;
  document.getElementById('hantar').href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+ const n=P.reduce((a,p)=>a+Q[p.id],0);
+ document.getElementById('barT').textContent=n?`${n} item · ${RM(j)}`:'Tempah';
+ window._belum=belum;
 }
+let tt;function toast(h){const e=document.getElementById('toast');e.innerHTML=h;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2600)}
 document.addEventListener('click',e=>{
- const a=e.target.closest('[data-add]');if(a){const id=+a.dataset.add;if(!Q[id])Q[id]=1;kira();if(Q[id]===1&&!a.dataset.seen){a.dataset.seen=1}return}
+ const a=e.target.closest('[data-add]');if(a){const id=+a.dataset.add;Q[id]=(Q[id]||0)+1;kira();const p=P.find(x=>x.id===id);toast(`✓ ${p.n} (${Q[id]}) ditambah <a href="#order">Lihat tempahan</a>`);return}
  const q=e.target.closest('[data-q]');if(q){const id=+q.dataset.q;Q[id]=Math.max(0,Q[id]+ +q.dataset.d);kira()}
 });
-document.querySelectorAll('[name=kw],#nama,#tel,#alamat').forEach(el=>el.addEventListener('input',kira));
+document.querySelectorAll('[name=kw],#nama,#tel,#alamat').forEach(el=>el.addEventListener('input',()=>{el.classList.remove('ralat');kira()}));
+document.getElementById('hantar').addEventListener('click',e=>{const b=window._belum||[];if(!b.length)return;e.preventDefault();const m={madu:'#senarai',nama:'#nama',telefon:'#tel',alamat:'#alamat'};const f=b[0];if(f==='madu'){document.getElementById('madu').scrollIntoView({behavior:'smooth'});toast('Sila pilih madu dahulu');return}b.forEach(k=>k!=='madu'&&document.querySelector(m[k]).classList.add('ralat'));document.querySelector(m[f]).focus();toast('Sila lengkapkan: '+b.join(', '))});
 kira();
-const lb=document.getElementById('lb');
-document.getElementById('galeri').addEventListener('click',e=>{if(e.target.tagName==='IMG'){lb.querySelector('img').src=e.target.src;lb.querySelector('img').alt=e.target.alt;lb.classList.add('on')}});
-lb.addEventListener('click',()=>lb.classList.remove('on'));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const lb=document.getElementById('lb'),G=[...document.querySelectorAll('#galeri img')],LI=lb.querySelector('img');let gi=0,last;
+G.forEach((g,i)=>{g.tabIndex=0;g.setAttribute('role','button');g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();buka(i)}})});
+function tunjuk(i){gi=(i+G.length)%G.length;LI.src=G[gi].src;LI.alt=G[gi].alt;lb.querySelector('.lbc').textContent=`${G[gi].alt} · ${gi+1}/${G.length}`}
+function buka(i){last=document.activeElement;tunjuk(i);lb.classList.add('on');lb.querySelector('.lbx').focus()}
+function tutup(){lb.classList.remove('on');last&&last.focus()}
+document.getElementById('galeri').addEventListener('click',e=>{if(e.target.tagName==='IMG')buka(G.indexOf(e.target))});
+lb.addEventListener('click',e=>{const b=e.target.closest('[data-lb]');if(b){b.dataset.lb==='x'?tutup():tunjuk(gi+ +b.dataset.lb);return}if(e.target===lb)tutup()});
+let tx=0;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)tunjuk(gi+(d<0?1:-1))});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')tutup();if(e.key==='ArrowRight')tunjuk(gi+1);if(e.key==='ArrowLeft')tunjuk(gi-1)});
+if(!('IntersectionObserver' in window))document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+const io=window.IntersectionObserver&&new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+io&&document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
