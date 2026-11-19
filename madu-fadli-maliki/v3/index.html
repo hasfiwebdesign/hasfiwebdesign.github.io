@@ -65,6 +65,18 @@ nav .wrap{display:flex;align-items:center;gap:14px;height:64px}
 .kad-fadli .tag small{font-size:12.5px;color:var(--kelabu)}
 .kad-fadli .live{position:absolute;top:16px;right:16px;background:#fe2c55;color:#fff;font-weight:800;font-size:12px;padding:6px 12px;border-radius:999px;letter-spacing:.06em}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding:40px 0 48px}.kad-fadli{width:min(320px,86%)}.kad-fadli .tag{left:-10px}}
+.duo{position:relative;justify-self:end;width:min(420px,100%);margin:0 20px 40px 0}
+.duo .botol{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,201,77,.35);transform:rotate(1.5deg)}
+.duo .botol img{width:100%;height:100%;object-fit:cover}
+.duo .botol:after{content:"";position:absolute;inset:0;border-radius:28px;background:linear-gradient(180deg,rgba(255,190,80,.10),transparent 35%,rgba(0,0,0,.25))}
+.duo .live{position:absolute;top:18px;right:14px;background:#fe2c55;color:#fff;font-weight:800;font-size:12px;padding:6px 12px;border-radius:999px;letter-spacing:.04em;box-shadow:0 6px 18px rgba(254,44,85,.4)}
+.duo .harga{position:absolute;left:-28px;top:20%;background:rgba(12,26,18,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,201,77,.5);color:#fff;text-decoration:none;border-radius:16px;padding:10px 16px;display:flex;flex-direction:column;line-height:1.2;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.duo .harga small{font-size:11.5px;color:#e6dfcc}.duo .harga b{font-family:'Fraunces',serif;font-size:26px;color:var(--madu2)}
+.duo .muka{position:absolute;left:-46px;bottom:-40px;width:46%;margin:0;background:var(--krim);padding:8px 8px 10px;border-radius:20px;transform:rotate(-5deg);box-shadow:0 24px 50px rgba(0,0,0,.5)}
+.duo .muka img{border-radius:14px;aspect-ratio:1/1.05;object-fit:cover;object-position:center 15%;width:100%}
+.duo .muka figcaption{color:var(--kelabu);font-size:11.5px;line-height:1.3;padding:8px 4px 0}
+.duo .muka b{display:block;font-family:'Fraunces',serif;color:var(--teks);font-size:16px}
+@media(max-width:900px){.duo{justify-self:center;width:min(340px,82%);margin:0 0 46px 30px}.duo .muka{left:-34px;width:48%}.duo .harga{left:auto;top:auto;right:-14px;bottom:22px;padding:8px 12px}.duo .harga b{font-size:22px}}
 /* marquee */
 .mq{background:var(--madu);color:#1b1200;overflow:hidden;padding:14px 0;font-weight:800;font-family:'Fraunces',serif;font-size:20px}
 .mq div{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:mq 38s linear infinite}
@@ -266,10 +278,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.galeri img:focus-vis
         <span><b>4.9 ★</b> TikTok Shop</span>
       </div>
     </div>
-    <div class="kad-fadli">
-      <div class="foto"><img width="540" height="638" src="img/fadli-hero.webp" alt="Fadli Maliki tersenyum memegang sarang madu tualang" fetchpriority="high"></div>
+    <div class="duo">
+      <div class="botol"><img width="880" height="1100" src="img/botol-hero.webp" alt="Botol Madu Hutan Gelam Fadli Maliki di atas perahu kayu di sungai" fetchpriority="high"></div>
       <span class="live">● LIVE hampir setiap hari</span>
-      <div class="tag"><img width="351" height="400" src="img/logo.webp" alt="Logo Fadli Maliki" style="object-fit:contain;background:#13261a;padding:4px"><span><b>Fadli Maliki</b><small>Pemanjat tualang, Panchor Kemumin, Kota Bharu</small></span></div>
+      <a class="harga" href="#madu"><small>Madu Hutan Gelam Hitam 1kg</small><b>RM85</b></a>
+      <figure class="muka"><img width="540" height="638" src="img/fadli-hero.webp" alt="Fadli Maliki tersenyum memegang sarang madu tualang"><figcaption><b>Fadli Maliki</b>Pemanjat tualang, Kota Bharu</figcaption></figure>
     </div>
   </div>
 </header>
