@@ -6,19 +6,19 @@
 <title>Hasfi Web Design · Dari Media Sosial ke Website</title>
 <meta name="description" content="Website untuk peniaga yang jual di media sosial: gambar, harga, lokasi dan tempahan WhatsApp dalam satu halaman. Domain sendiri, didaftarkan di Google. Contoh website percuma untuk bisnes tuan.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#140b08">
+<meta name="theme-color" content="#fbf7f1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#140b08;--kad:#21130d;--garis:#3a2418;--teks:#f6ece2;--lembut:#c9b3a2;--api:#ff7a2f;--emas:#ffc24d;--merah:#e8341c;--wa:#25d366}
+:root{--bg:#fbf7f1;--kad:#ffffff;--garis:#eadccc;--teks:#1f140e;--lembut:#6b5647;--api:#ff7a2f;--emas:#ffc24d;--merah:#e8341c;--wa:#25d366}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--teks);font:16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .bal{max-width:1120px;margin:0 auto;padding:0 16px}
-.grad{background:linear-gradient(90deg,var(--emas),var(--api) 60%,var(--merah));-webkit-background-clip:text;background-clip:text;color:transparent}
-.label{color:var(--emas);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase}
+.grad{background:linear-gradient(90deg,#f59a1c,var(--api) 55%,var(--merah));-webkit-background-clip:text;background-clip:text;color:transparent}
+.label{color:#d9611c;font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase}
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:14px 24px;border-radius:99px;white-space:nowrap;transition:.25s}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 30px -12px rgba(37,211,102,.7)}
 .btn-wa:hover{transform:translateY(-2px)}
@@ -27,7 +27,7 @@ img{display:block;max-width:100%}
 .i{width:20px;height:20px;flex:none}
 
 /* header */
-header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(20,11,8,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(58,36,24,.6)}
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(251,247,241,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--garis)}
 header .bal{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
 .jenama{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.3px}
 .jenama svg{width:26px;height:32px}
@@ -35,8 +35,8 @@ header .btn{padding:10px 18px;font-size:14.5px}
 
 /* hero */
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 60px}
-.hero:before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-250px;background:radial-gradient(circle,rgba(255,122,47,.28),transparent 62%);pointer-events:none}
-.hero:after{content:"";position:absolute;width:700px;height:700px;left:-320px;bottom:-320px;background:radial-gradient(circle,rgba(255,194,77,.14),transparent 62%);pointer-events:none}
+.hero:before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-250px;background:radial-gradient(circle,rgba(255,122,47,.22),transparent 62%);pointer-events:none}
+.hero:after{content:"";position:absolute;width:700px;height:700px;left:-320px;bottom:-320px;background:radial-gradient(circle,rgba(255,194,77,.25),transparent 62%);pointer-events:none}
 .hero .bal{position:relative;z-index:1}
 .hero h1{font-size:clamp(40px,7.2vw,86px);line-height:1.02;letter-spacing:-.045em;font-weight:800;max-width:980px;margin-top:18px}
 .hero p{color:var(--lembut);font-size:clamp(17px,2vw,20px);max-width:620px;margin-top:22px}
@@ -52,18 +52,18 @@ header .btn{padding:10px 18px;font-size:14.5px}
 .kap{position:relative;height:320px}
 .kap article{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s;pointer-events:none}
 .kap article.on{opacity:1;transform:none}
-.kap .no{font-weight:800;font-size:13px;letter-spacing:2px;color:var(--emas);text-transform:uppercase}
+.kap .no{font-weight:800;font-size:13px;letter-spacing:2px;color:#d9611c;text-transform:uppercase}
 .kap h2{font-size:clamp(30px,4.2vw,52px);line-height:1.06;letter-spacing:-.035em;font-weight:800;margin-top:12px}
 .kap p{color:var(--lembut);font-size:17.5px;margin-top:16px;max-width:460px}
 .titik{display:flex;gap:8px;margin-top:28px}
 .titik b{width:28px;height:4px;border-radius:2px;background:var(--garis);transition:.4s}
 .titik b.on{background:var(--api);width:44px}
-.ilus{font-size:11.5px;color:#8a7262;margin-top:14px}
+.ilus{font-size:11.5px;color:#9a8270;margin-top:14px}
 
 .ruang{position:relative;height:100%;display:flex;align-items:center;justify-content:center}
-.ruang:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,47,.22),transparent 65%);transition:background .6s}
+.ruang:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,47,.2),transparent 65%);transition:background .6s}
 .ruang.hijau:before{background:radial-gradient(circle,rgba(37,211,102,.2),transparent 65%)}
-.tel{position:relative;width:300px;height:620px;border-radius:46px;background:#0b0604;padding:11px;box-shadow:0 0 0 1.5px #3a2418,0 40px 80px -20px rgba(0,0,0,.8),inset 0 0 0 2px #241510;transform-origin:center center;flex:none}
+.tel{position:relative;width:300px;height:620px;border-radius:46px;background:#0b0604;padding:11px;box-shadow:0 0 0 1.5px #2a1a12,0 40px 80px -24px rgba(60,30,10,.45),inset 0 0 0 2px #241510;transform-origin:center center;flex:none}
 .tel:before{content:"";position:absolute;top:20px;left:50%;width:92px;height:26px;margin-left:-46px;border-radius:20px;background:#000;z-index:9}
 .skrin{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#fff;color:#1b1b1b}
 
@@ -91,7 +91,7 @@ header .btn{padding:10px 18px;font-size:14.5px}
 .dm{position:absolute;right:-26px;top:118px;z-index:12;background:#fff;color:#1b1b1b;border-radius:18px;padding:12px 14px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);display:flex;gap:10px;align-items:center;font-size:13px;line-height:1.3;opacity:0;width:200px}
 .dm .bil{width:34px;height:34px;border-radius:50%;background:var(--merah);color:#fff;font-weight:800;display:grid;place-items:center;flex:none;font-size:14px}
 .dm small{color:#888}
-.tenggelam{position:absolute;left:-36px;bottom:120px;z-index:12;background:#2a1810;border:1px solid #4a2c1c;color:var(--teks);border-radius:14px;padding:10px 14px;font-size:13px;opacity:0;width:190px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6)}
+.tenggelam{position:absolute;left:-36px;bottom:120px;z-index:12;background:#2a1810;border:1px solid #4a2c1c;color:#f6ece2;border-radius:14px;padding:10px 14px;font-size:13px;opacity:0;width:190px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6)}
 
 /* lapisan website */
 .laman{position:absolute;inset:0;background:#fbf6ef;font-size:12px;opacity:0}
@@ -148,42 +148,42 @@ section.biasa{padding:110px 0}
 .biasa .sub{color:var(--lembut);font-size:18px;max-width:640px;margin-top:16px}
 .banding{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
 .banding>div{border-radius:24px;padding:28px;border:1px solid var(--garis);background:var(--kad)}
-.banding>div.baik{background:linear-gradient(160deg,#2a160c,#1a0e09);border-color:#6a3a1c;box-shadow:0 30px 60px -30px rgba(255,122,47,.45)}
+.banding>div.baik{background:linear-gradient(160deg,#fff4ea,#ffffff);border-color:#f3b98c;box-shadow:0 30px 60px -30px rgba(255,122,47,.45)}
 .banding h3{font-size:22px;letter-spacing:-.4px}
 .banding ul{list-style:none;margin-top:16px;display:grid;gap:12px}
 .banding li{display:flex;gap:10px;color:var(--lembut)}
-.banding li:before{content:"✕";color:#a0705a;font-weight:800;flex:none}
+.banding li:before{content:"✕";color:#c8a08a;font-weight:800;flex:none}
 .banding .baik li{color:var(--teks)}
 .banding .baik li:before{content:"✓";color:var(--wa)}
 .porto{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
 .pk{background:var(--kad);border:1px solid var(--garis);border-radius:24px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
-.pk:hover{transform:translateY(-4px);border-color:#6a3a1c}
-.pk .gb{aspect-ratio:4/3;overflow:hidden;background:#000}
+.pk:hover{transform:translateY(-4px);border-color:#f3b98c;box-shadow:0 24px 50px -30px rgba(120,60,20,.35)}
+.pk .gb{aspect-ratio:4/3;overflow:hidden;background:#f1e7dc}
 .pk .gb img{width:100%;height:100%;object-fit:cover;object-position:top}
 .pk .bd{padding:18px 20px 22px}
 .pk h3{font-size:18px;letter-spacing:-.3px}
 .pk p{color:var(--lembut);font-size:14.5px;margin-top:4px}
-.pk .lk{display:inline-block;margin-top:12px;color:var(--emas);font-weight:700;font-size:14px}
-.testi{margin-top:26px;border-radius:24px;padding:30px;background:linear-gradient(120deg,#2a160c,#140b08);border:1px solid #4a2c1c;font-size:clamp(20px,2.6vw,28px);font-weight:700;letter-spacing:-.4px;line-height:1.3}
+.pk .lk{display:inline-block;margin-top:12px;color:#d9611c;font-weight:700;font-size:14px}
+.testi{margin-top:26px;border-radius:24px;padding:30px;background:linear-gradient(120deg,#fff1e4,#ffffff);border:1px solid #f3cfae;font-size:clamp(20px,2.6vw,28px);font-weight:700;letter-spacing:-.4px;line-height:1.3}
 .testi cite{display:block;font-style:normal;font-size:14.5px;color:var(--lembut);font-weight:500;margin-top:12px;letter-spacing:0}
 .langkah{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
 .langkah div{border-top:2px solid var(--garis);padding-top:20px}
-.langkah b{font-size:15px;color:var(--emas)}
+.langkah b{font-size:15px;color:#d9611c}
 .langkah h3{font-size:21px;margin-top:8px;letter-spacing:-.3px}
 .langkah p{color:var(--lembut);margin-top:6px}
 .harga{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px;max-width:860px}
 .hg{border-radius:24px;padding:30px;border:1px solid var(--garis);background:var(--kad);position:relative}
-.hg.utama{border-color:var(--api);background:linear-gradient(160deg,#2c160b,#1a0e09)}
+.hg.utama{border-color:var(--api);background:linear-gradient(160deg,#fff4ea,#ffffff);box-shadow:0 30px 60px -34px rgba(255,122,47,.5)}
 .hg .tag{position:absolute;top:-12px;left:24px;background:var(--api);color:#fff;font-size:12px;font-weight:800;padding:4px 12px;border-radius:99px}
 .hg h3{font-size:20px}
 .hg .rm{font-size:46px;font-weight:800;letter-spacing:-1.5px;margin-top:8px;line-height:1}
-.hg .rm s{font-size:18px;color:#8a7262;font-weight:600;margin-left:8px;letter-spacing:0}
+.hg .rm s{font-size:18px;color:#a88f7c;font-weight:600;margin-left:8px;letter-spacing:0}
 .hg ul{list-style:none;margin-top:18px;display:grid;gap:9px;color:var(--lembut);font-size:15px}
 .hg li:before{content:"✓  ";color:var(--wa);font-weight:800}
 .ans{margin-top:20px;color:var(--lembut);max-width:860px;font-size:15.5px}
 .ans b{color:var(--teks)}
 .akhir{text-align:center;padding:120px 0;position:relative;overflow:hidden}
-.akhir:before{content:"";position:absolute;width:800px;height:800px;left:50%;top:50%;margin:-400px 0 0 -400px;background:radial-gradient(circle,rgba(255,122,47,.25),transparent 60%)}
+.akhir:before{content:"";position:absolute;width:800px;height:800px;left:50%;top:50%;margin:-400px 0 0 -400px;background:radial-gradient(circle,rgba(255,122,47,.18),transparent 60%)}
 .akhir .bal{position:relative}
 .akhir h2{margin:14px auto 0}
 .akhir .sub{margin:16px auto 0}
