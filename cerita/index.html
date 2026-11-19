@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hasfi Web Design · Dari Media Sosial ke Website</title>
+<meta name="description" content="Website untuk peniaga yang jual di media sosial: gambar, harga, lokasi dan tempahan WhatsApp dalam satu halaman. Domain sendiri, didaftarkan di Google. Contoh website percuma untuk bisnes tuan.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#140b08">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#140b08;--kad:#21130d;--garis:#3a2418;--teks:#f6ece2;--lembut:#c9b3a2;--api:#ff7a2f;--emas:#ffc24d;--merah:#e8341c;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--teks);font:16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.bal{max-width:1120px;margin:0 auto;padding:0 16px}
+.grad{background:linear-gradient(90deg,var(--emas),var(--api) 60%,var(--merah));-webkit-background-clip:text;background-clip:text;color:transparent}
+.label{color:var(--emas);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:14px 24px;border-radius:99px;white-space:nowrap;transition:.25s}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 30px -12px rgba(37,211,102,.7)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-garis{border:1.5px solid var(--garis);color:var(--teks)}
+.btn-garis:hover{border-color:var(--api)}
+.i{width:20px;height:20px;flex:none}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(20,11,8,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(58,36,24,.6)}
+header .bal{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.jenama{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.3px}
+.jenama svg{width:26px;height:32px}
+header .btn{padding:10px 18px;font-size:14.5px}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 60px}
+.hero:before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-250px;background:radial-gradient(circle,rgba(255,122,47,.28),transparent 62%);pointer-events:none}
+.hero:after{content:"";position:absolute;width:700px;height:700px;left:-320px;bottom:-320px;background:radial-gradient(circle,rgba(255,194,77,.14),transparent 62%);pointer-events:none}
+.hero .bal{position:relative;z-index:1}
+.hero h1{font-size:clamp(40px,7.2vw,86px);line-height:1.02;letter-spacing:-.045em;font-weight:800;max-width:980px;margin-top:18px}
+.hero p{color:var(--lembut);font-size:clamp(17px,2vw,20px);max-width:620px;margin-top:22px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.skrol{margin-top:56px;display:flex;align-items:center;gap:12px;color:var(--lembut);font-size:14px}
+.skrol i{width:22px;height:36px;border:2px solid var(--garis);border-radius:12px;position:relative}
+.skrol i:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--api);animation:jatuh 1.6s infinite}
+@keyframes jatuh{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+
+/* cerita */
+.cerita{height:620vh;position:relative}
+.pentas{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;max-width:1120px;margin:0 auto;padding:64px 16px 0}
+.kap{position:relative;height:320px}
+.kap article{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s;pointer-events:none}
+.kap article.on{opacity:1;transform:none}
+.kap .no{font-weight:800;font-size:13px;letter-spacing:2px;color:var(--emas);text-transform:uppercase}
+.kap h2{font-size:clamp(30px,4.2vw,52px);line-height:1.06;letter-spacing:-.035em;font-weight:800;margin-top:12px}
+.kap p{color:var(--lembut);font-size:17.5px;margin-top:16px;max-width:460px}
+.titik{display:flex;gap:8px;margin-top:28px}
+.titik b{width:28px;height:4px;border-radius:2px;background:var(--garis);transition:.4s}
+.titik b.on{background:var(--api);width:44px}
+.ilus{font-size:11.5px;color:#8a7262;margin-top:14px}
+
+.ruang{position:relative;height:100%;display:flex;align-items:center;justify-content:center}
+.ruang:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,47,.22),transparent 65%);transition:background .6s}
+.ruang.hijau:before{background:radial-gradient(circle,rgba(37,211,102,.2),transparent 65%)}
+.tel{position:relative;width:300px;height:620px;border-radius:46px;background:#0b0604;padding:11px;box-shadow:0 0 0 1.5px #3a2418,0 40px 80px -20px rgba(0,0,0,.8),inset 0 0 0 2px #241510;transform-origin:center center;flex:none}
+.tel:before{content:"";position:absolute;top:20px;left:50%;width:92px;height:26px;margin-left:-46px;border-radius:20px;background:#000;z-index:9}
+.skrin{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#fff;color:#1b1b1b}
+
+/* lapisan media sosial */
+.feed{position:absolute;inset:0;background:#fff;font-size:12.5px}
+.feed .atas{position:absolute;inset:0 0 auto;height:86px;padding:46px 14px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;background:#fff;z-index:3;font-weight:800;font-size:15px}
+.feed .atas span{display:flex;gap:12px}
+.feed .atas span i{width:20px;height:20px;border:2px solid #222;border-radius:6px;display:block}
+.feed .gulung{position:absolute;inset:86px 0 0;will-change:transform}
+.post{padding:10px 0 4px}
+.post .hd{display:flex;align-items:center;gap:8px;padding:0 12px 8px;font-weight:700}
+.post .av{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--emas),var(--api));padding:2px}
+.post .av b{display:block;width:100%;height:100%;border-radius:50%;background:#fff url(img/k3.jpg) center/cover;border:2px solid #fff}
+.post .hd small{font-weight:500;color:#888;margin-left:auto}
+.post img{width:100%;aspect-ratio:1;object-fit:cover}
+.post .ak{display:flex;gap:14px;padding:8px 12px 2px;font-size:17px}
+.post .sk{padding:2px 12px;font-weight:700}
+.post .cap{padding:0 12px;color:#333}
+.komen{padding:6px 12px 0;display:grid;gap:6px}
+.komen div{display:flex;gap:8px;align-items:flex-start;opacity:0;transform:translateY(8px);transition:.35s}
+.komen div.on{opacity:1;transform:none}
+.komen i{width:22px;height:22px;border-radius:50%;flex:none;background:#ddd}
+.komen p{background:#f2f2f2;border-radius:12px;padding:6px 10px;line-height:1.35}
+.komen p b{display:block;font-size:11px}
+.dm{position:absolute;right:-26px;top:118px;z-index:12;background:#fff;color:#1b1b1b;border-radius:18px;padding:12px 14px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);display:flex;gap:10px;align-items:center;font-size:13px;line-height:1.3;opacity:0;width:200px}
+.dm .bil{width:34px;height:34px;border-radius:50%;background:var(--merah);color:#fff;font-weight:800;display:grid;place-items:center;flex:none;font-size:14px}
+.dm small{color:#888}
+.tenggelam{position:absolute;left:-36px;bottom:120px;z-index:12;background:#2a1810;border:1px solid #4a2c1c;color:var(--teks);border-radius:14px;padding:10px 14px;font-size:13px;opacity:0;width:190px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6)}
+
+/* lapisan website */
+.laman{position:absolute;inset:0;background:#fbf6ef;font-size:12px;opacity:0}
+.url{position:absolute;inset:0 0 auto;height:78px;padding:44px 12px 0;background:#f1e9df;z-index:3}
+.url div{background:#fff;border-radius:10px;height:26px;display:flex;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:12px;color:#3a2a1e;transition:.4s}
+.url div.kilat{box-shadow:0 0 0 2px var(--wa)}
+.url svg{width:11px;height:11px}
+.blok{position:absolute;left:10px;right:10px;will-change:transform,opacity}
+.wire{position:absolute;left:10px;right:10px;border:1.5px dashed #d9a66a;border-radius:12px;opacity:0}
+.b-nav{top:86px;height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+.b-nav b{font-size:15px;font-weight:800;letter-spacing:-.3px;color:#3a1d0c}
+.b-nav span{display:flex;gap:10px;color:#8a6a52;font-weight:600;font-size:11px}
+.b-hero{top:124px;height:178px;border-radius:16px;overflow:hidden}
+.b-hero img{width:100%;height:100%;object-fit:cover}
+.b-hero div{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.72));color:#fff;padding:12px;display:flex;flex-direction:column;justify-content:flex-end}
+.b-hero h4{font-size:19px;line-height:1.1;letter-spacing:-.4px;font-weight:800}
+.b-hero small{opacity:.9;margin-top:3px}
+.b-rate{top:310px;height:30px;display:flex;align-items:center;gap:6px;background:#fff;border-radius:10px;padding:0 10px;font-weight:700;color:#3a2a1e;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.b-rate em{color:#f4a51c;font-style:normal;letter-spacing:1px}
+.b-menu{top:348px;height:150px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px}
+.b-menu div{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.b-menu img{width:100%;height:38px;object-fit:cover}
+.b-menu p{padding:3px 7px 4px;font-weight:700;line-height:1.2;font-size:10.5px;color:#2a1d14;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.b-menu p span{display:block;color:var(--api);font-weight:800}
+.b-lok{top:506px;height:28px;display:flex;align-items:center;gap:6px;color:#6d5442;font-weight:600;font-size:11px;padding:0 4px}
+.b-wa{top:540px;height:44px;border-radius:14px;background:var(--wa);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 10px 20px -8px rgba(37,211,102,.8)}
+
+/* kad google */
+.goo{position:absolute;left:-150px;bottom:84px;z-index:12;width:290px;background:#fff;color:#202124;border-radius:18px;padding:14px;box-shadow:0 24px 50px -14px rgba(0,0,0,.7);opacity:0;font-size:12.5px}
+.goo .cari{display:flex;align-items:center;gap:8px;border:1px solid #dfe1e5;border-radius:99px;padding:7px 12px;font-size:13px}
+.goo .cari svg{width:14px;height:14px;flex:none}
+.goo .cari span:after{content:"|";animation:kelip 1s steps(1) infinite;color:#1a73e8;margin-left:1px}
+@keyframes kelip{50%{opacity:0}}
+.goo .hasil{margin-top:12px;opacity:0;transition:.4s}
+.goo .hasil.on{opacity:1}
+.goo .dom{color:#4d5156;font-size:11.5px;display:flex;align-items:center;gap:6px}
+.goo .dom i{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--emas),var(--api));display:block}
+.goo h5{color:#1a0dab;font-size:15px;font-weight:500;margin-top:3px}
+.goo .bt{color:#e7711b;font-size:12px}
+
+/* notifikasi WA */
+.notis{position:absolute;left:8px;right:8px;z-index:8;background:rgba(255,255,255,.97);border-radius:18px;padding:10px 12px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 12px 30px -10px rgba(0,0,0,.45);opacity:0;font-size:12px;line-height:1.35;backdrop-filter:blur(10px)}
+.notis .ik{width:30px;height:30px;border-radius:8px;background:var(--wa);display:grid;place-items:center;flex:none}
+.notis .ik svg{width:18px;height:18px}
+.notis b{display:block;font-size:12.5px}
+.notis small{color:#777;margin-left:auto;white-space:nowrap}
+.kira{position:absolute;right:-40px;bottom:150px;z-index:12;background:#0f2a1a;border:1px solid #1f5a36;border-radius:18px;padding:14px 18px;opacity:0;box-shadow:0 18px 40px -12px rgba(0,0,0,.6)}
+.kira b{display:block;font-size:34px;line-height:1;font-weight:800;color:#5ef29a;letter-spacing:-1px}
+.kira span{font-size:12.5px;color:#bfe9cf}
+
+/* seksyen biasa */
+section.biasa{padding:110px 0}
+.biasa h2{font-size:clamp(32px,5vw,56px);line-height:1.05;letter-spacing:-.04em;font-weight:800;margin-top:14px;max-width:820px}
+.biasa .sub{color:var(--lembut);font-size:18px;max-width:640px;margin-top:16px}
+.banding{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+.banding>div{border-radius:24px;padding:28px;border:1px solid var(--garis);background:var(--kad)}
+.banding>div.baik{background:linear-gradient(160deg,#2a160c,#1a0e09);border-color:#6a3a1c;box-shadow:0 30px 60px -30px rgba(255,122,47,.45)}
+.banding h3{font-size:22px;letter-spacing:-.4px}
+.banding ul{list-style:none;margin-top:16px;display:grid;gap:12px}
+.banding li{display:flex;gap:10px;color:var(--lembut)}
+.banding li:before{content:"✕";color:#a0705a;font-weight:800;flex:none}
+.banding .baik li{color:var(--teks)}
+.banding .baik li:before{content:"✓";color:var(--wa)}
+.porto{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.pk{background:var(--kad);border:1px solid var(--garis);border-radius:24px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.pk:hover{transform:translateY(-4px);border-color:#6a3a1c}
+.pk .gb{aspect-ratio:4/3;overflow:hidden;background:#000}
+.pk .gb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.pk .bd{padding:18px 20px 22px}
+.pk h3{font-size:18px;letter-spacing:-.3px}
+.pk p{color:var(--lembut);font-size:14.5px;margin-top:4px}
+.pk .lk{display:inline-block;margin-top:12px;color:var(--emas);font-weight:700;font-size:14px}
+.testi{margin-top:26px;border-radius:24px;padding:30px;background:linear-gradient(120deg,#2a160c,#140b08);border:1px solid #4a2c1c;font-size:clamp(20px,2.6vw,28px);font-weight:700;letter-spacing:-.4px;line-height:1.3}
+.testi cite{display:block;font-style:normal;font-size:14.5px;color:var(--lembut);font-weight:500;margin-top:12px;letter-spacing:0}
+.langkah{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.langkah div{border-top:2px solid var(--garis);padding-top:20px}
+.langkah b{font-size:15px;color:var(--emas)}
+.langkah h3{font-size:21px;margin-top:8px;letter-spacing:-.3px}
+.langkah p{color:var(--lembut);margin-top:6px}
+.harga{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px;max-width:860px}
+.hg{border-radius:24px;padding:30px;border:1px solid var(--garis);background:var(--kad);position:relative}
+.hg.utama{border-color:var(--api);background:linear-gradient(160deg,#2c160b,#1a0e09)}
+.hg .tag{position:absolute;top:-12px;left:24px;background:var(--api);color:#fff;font-size:12px;font-weight:800;padding:4px 12px;border-radius:99px}
+.hg h3{font-size:20px}
+.hg .rm{font-size:46px;font-weight:800;letter-spacing:-1.5px;margin-top:8px;line-height:1}
+.hg .rm s{font-size:18px;color:#8a7262;font-weight:600;margin-left:8px;letter-spacing:0}
+.hg ul{list-style:none;margin-top:18px;display:grid;gap:9px;color:var(--lembut);font-size:15px}
+.hg li:before{content:"✓  ";color:var(--wa);font-weight:800}
+.ans{margin-top:20px;color:var(--lembut);max-width:860px;font-size:15.5px}
+.ans b{color:var(--teks)}
+.akhir{text-align:center;padding:120px 0;position:relative;overflow:hidden}
+.akhir:before{content:"";position:absolute;width:800px;height:800px;left:50%;top:50%;margin:-400px 0 0 -400px;background:radial-gradient(circle,rgba(255,122,47,.25),transparent 60%)}
+.akhir .bal{position:relative}
+.akhir h2{margin:14px auto 0}
+.akhir .sub{margin:16px auto 0}
+.akhir .btn{margin-top:30px;font-size:17px;padding:17px 30px}
+footer{border-top:1px solid var(--garis);padding:28px 0 40px;color:#8a7262;font-size:14px}
+footer .bal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.muncul{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.muncul.on{opacity:1;transform:none}
+
+@media(max-width:900px){
+ .pentas{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:0;padding-top:72px}
+ .kap{height:200px}
+ .kap h2{font-size:clamp(25px,6.6vw,34px)}
+ .kap p{font-size:15px;margin-top:10px}
+ .titik{margin-top:14px}
+ .ilus{display:none}
+ .ruang{align-items:flex-start;padding-top:4px}
+ .ruang:before{top:0}
+ .ruang:before{width:360px;height:360px}
+ .dm{right:-14px}.tenggelam{left:-12px}.goo{left:-24px;width:250px}.kira{right:-14px}
+ .banding,.porto,.langkah,.harga{grid-template-columns:1fr}
+ section.biasa{padding:80px 0}
+}
+@media(max-width:600px){.hero .cta .btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+
+<header><div class="bal">
+  <a class="jenama" href="/"><svg viewBox="0 0 45 55" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#E8341C"/><stop offset=".55" stop-color="#FF7A2F"/><stop offset="1" stop-color="#FFC24D"/></linearGradient></defs><path d="M24 1C26 11 38 17 38 33C38 45 32 53 22 53C11 53 5 45 5 35C5 26 10 21 13 15C15 21 17 24 20 25C20 17 20 9 24 1Z" fill="url(#g)"/><path d="M22 28C25 34 30 37 30 43C30 48 27 51 22 51C17 51 14 48 14 44C14 40 17 38 18 34C19 36 20 37 21 37C21 34 21 31 22 28Z" fill="#FFE7A3"/></svg><span>Hasfi <b class="grad">Web Design</b></span></a>
+  <a class="btn btn-wa" href="https://wa.me/60138386146?text=Salam%20Hasfi%2C%20saya%20nak%20tengok%20contoh%20website%20untuk%20bisnes%20saya." target="_blank" rel="noopener">WhatsApp</a>
+</div></header>
+
+<section class="hero"><div class="bal">
+  <span class="label">Untuk peniaga yang jual di media sosial</span>
+  <h1>Dari media sosial, ke website yang buat pelanggan <span class="grad">yakin.</span></h1>
+  <p>Facebook, Instagram dan TikTok bawa orang kenal bisnes tuan. Website pula buat mereka percaya, faham harga, dan terus tempah.</p>
+  <div class="cta"><a class="btn btn-wa" href="https://wa.me/60138386146?text=Salam%20Hasfi%2C%20saya%20nak%20contoh%20website%20percuma%20untuk%20bisnes%20saya." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>Minta contoh percuma</a><a class="btn btn-garis" href="#cerita">Lihat bagaimana</a></div>
+  <div class="skrol"><i></i>Skrol perlahan untuk lihat ceritanya</div>
+</div></section>
+
+<section class="cerita" id="cerita">
+ <div class="pentas">
+  <div>
+   <div class="kap" id="kap">
+    <article class="on"><span class="no">01 · Sekarang</span><h2>Bisnes tuan hidup di <span class="grad">media sosial.</span></h2><p>Gambar cantik, ramai suka. Tapi setiap post, soalan yang sama berulang: harga berapa, lokasi kat mana.</p></article>
+    <article><span class="no">02 · Masalahnya</span><h2>Pelanggan tenggelam dalam <span class="grad">komen dan DM.</span></h2><p>Post semalam dah hilang di bawah. Mesej lambat dibalas, pelanggan beli di tempat lain, dan tuan tak pun tahu.</p></article>
+    <article><span class="no">03 · Kami bina</span><h2>Yang bertaburan, kami susun jadi <span class="grad">satu website.</span></h2><p>Gambar, harga, lokasi dan waktu buka dalam satu halaman. Pelanggan dapat jawapan sendiri sebelum mesej.</p></article>
+    <article><span class="no">04 · Nampak pro</span><h2>Domain sendiri. <span class="grad">Ada di Google.</span></h2><p>Kami daftarkan website tuan di Google, supaya orang yang mencari boleh jumpa pautan yang nampak boleh dipercayai.</p></article>
+    <article><span class="no">05 · Hasilnya</span><h2>Tempahan lengkap terus ke <span class="grad">WhatsApp.</span></h2><p>Pelanggan pilih produk, tarikh dan kuantiti di website. Mesej sampai dengan maklumat penuh, tuan cuma sahkan.</p></article>
+   </div>
+   <div class="titik" id="titik"><b class="on"></b><b></b><b></b><b></b><b></b></div>
+   <p class="ilus">Ilustrasi: contoh kedai kek rekaan.</p>
+  </div>
+
+  <div class="ruang" id="ruang">
+   <div class="tel" id="tel">
+    <div class="skrin">
+     <!-- media sosial -->
+     <div class="feed" id="feed">
+      <div class="atas">Suapan<span><i></i><i></i></span></div>
+      <div class="gulung" id="gulung">
+       <div class="post">
+        <div class="hd"><span class="av"><b></b></span>kekmakton<small>2 jam</small></div>
+        <img src="img/k1.jpg" alt="">
+        <div class="ak">♡ 💬 ↗</div>
+        <div class="sk">248 suka</div>
+        <div class="cap"><b>kekmakton</b> Red velvet baru keluar oven 🎂</div>
+        <div class="komen" id="komen">
+         <div><i style="background:#f6c9a8"></i><p><b>aina_r</b>PM harga 🙏</p></div>
+         <div><i style="background:#b9d7f0"></i><p><b>farid.z</b>Lokasi kat mana?</p></div>
+         <div><i style="background:#d8c3f0"></i><p><b>liyana88</b>Boleh hantar Cheras?</p></div>
+         <div><i style="background:#c3f0d0"></i><p><b>mira.k</b>Ada menu penuh tak?</p></div>
+         <div><i style="background:#f0e3b9"></i><p><b>hakim_b</b>Dah PM semalam, tak balas lagi 😢</p></div>
+        </div>
+       </div>
+       <div class="post"><div class="hd"><span class="av"><b></b></span>kekmakton<small>1 hari</small></div><img src="img/k2.jpg" alt=""><div class="sk">173 suka</div></div>
+       <div class="post"><div class="hd"><span class="av"><b></b></span>kekmakton<small>3 hari</small></div><img src="img/k5.jpg" alt=""></div>
+      </div>
+     </div>
+
+     <!-- website -->
+     <div class="laman" id="laman">
+      <div class="url"><div id="url"><svg viewBox="0 0 24 24" fill="none" stroke="#1e8e3e" stroke-width="3"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>kekmakton.com</div></div>
+      <div class="wire" style="top:86px;height:34px"></div><div class="wire" style="top:124px;height:178px"></div><div class="wire" style="top:310px;height:30px"></div><div class="wire" style="top:348px;height:150px"></div><div class="wire" style="top:506px;height:28px"></div><div class="wire" style="top:540px;height:44px"></div>
+      <div class="blok b-nav" data-dx="-60" data-dy="-40" data-r="-8"><b>Kek Mak Ton</b><span>Menu Lokasi Tempah</span></div>
+      <div class="blok b-hero" data-dx="80" data-dy="-90" data-r="10"><img src="img/k3.jpg" alt=""><div><h4>Kek segar,<br>dibakar setiap pagi.</h4><small>Tempah 2 hari lebih awal</small></div></div>
+      <div class="blok b-rate" data-dx="-90" data-dy="30" data-r="-12"><em>★★★★★</em> 4.9 · 126 ulasan Google</div>
+      <div class="blok b-menu" data-dx="100" data-dy="60" data-r="9"><div><img src="img/k1.jpg" alt=""><p>Red velvet 1kg<span>RM85</span></p></div><div><img src="img/k2.jpg" alt=""><p>Kek karamel<span>RM70</span></p></div><div><img src="img/k4.jpg" alt=""><p>Kek coklat<span>RM12</span></p></div><div><img src="img/k5.jpg" alt=""><p>Kek strawberi<span>RM95</span></p></div></div>
+      <div class="blok b-lok" data-dx="-70" data-dy="80" data-r="-6">📍 Cheras · Buka 9 pagi – 7 petang</div>
+      <div class="blok b-wa" data-dx="0" data-dy="120" data-r="0"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>Tempah di WhatsApp</div>
+     </div>
+
+     <!-- notifikasi -->
+     <div class="notis" style="top:52px"><span class="ik"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg></span><div><b>Aina · Tempahan baharu</b>Red velvet 1kg · Sabtu, 3 petang · Ambil sendiri</div><small>kini</small></div>
+     <div class="notis" style="top:128px"><span class="ik"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg></span><div><b>Farid · Tempahan baharu</b>Kek karamel x2 · Ahad · Hantar ke Cheras</div><small>2 min</small></div>
+     <div class="notis" style="top:204px"><span class="ik"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg></span><div><b>Liyana · Tempahan baharu</b>Kek hari jadi · 28 Nov · Tulis "Selamat 7 Tahun Adam"</div><small>9 min</small></div>
+    </div>
+   </div>
+   <div class="dm" id="dm"><span class="bil">17</span><div><b>Mesej belum dibalas</b><br><small>Paling lama: semalam</small></div></div>
+   <div class="tenggelam" id="tenggelam">⬇ Post semalam dah tenggelam. Pelanggan baharu tak nampak harga.</div>
+   <div class="goo" id="goo"><div class="cari"><svg viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span id="taip"></span></div><div class="hasil" id="hasil"><div class="dom"><i></i>kekmakton.com</div><h5>Kek Mak Ton · Kedai Kek di Cheras</h5><div class="bt">★★★★★ <span style="color:#4d5156">4.9 · Tempah di WhatsApp</span></div></div></div>
+   <div class="kira" id="kira"><b id="kirab">0</b><span>tempahan lengkap minggu ini</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="biasa"><div class="bal">
+  <span class="label muncul">Kenapa perlu website</span>
+  <h2 class="muncul">Media sosial bawa orang datang. <span class="grad">Website buat mereka beli.</span></h2>
+  <div class="banding">
+   <div class="muncul"><h3>Media sosial sahaja</h3><ul><li>Harga dan menu bertaburan dalam post lama</li><li>Pelanggan kena tanya dulu, tunggu dibalas</li><li>Akaun nampak sama dengan ribuan peniaga lain</li><li>Kalau akaun disekat, semua hilang</li></ul></div>
+   <div class="baik muncul"><h3>Media sosial + website</h3><ul><li>Gambar, harga, lokasi dan waktu buka di satu tempat</li><li>Pelanggan isi pilihan, mesej lengkap masuk WhatsApp</li><li>Domain sendiri, nampak seperti syarikat yang serius</li><li>Didaftarkan di Google, milik tuan sepenuhnya</li></ul></div>
+  </div>
+</div></section>
+
+<section class="biasa" style="padding-top:20px"><div class="bal">
+  <span class="label muncul">Bukti sebenar</span>
+  <h2 class="muncul">Peniaga yang dah ada <span class="grad">website sendiri.</span></h2>
+  <p class="sub muncul">Semua ini pelanggan sebenar dan website mereka sedang live. Buka dan cuba sendiri.</p>
+  <div class="porto">
+   <a class="pk muncul" href="https://sirehjunjungbanquethall.com" target="_blank" rel="noopener"><div class="gb"><img src="../portfolio/img/sireh-junjung.jpg" alt="Website Sireh Junjung Banquet Hall" loading="lazy"></div><div class="bd"><h3>Sireh Junjung Banquet Hall</h3><p>Dewan perkahwinan, 3 cawangan. Borang semak tarikh terus ke admin cawangan.</p><span class="lk">sirehjunjungbanquethall.com ↗</span></div></a>
+   <a class="pk muncul" href="https://minyakmasakterpakaiperak.com" target="_blank" rel="noopener"><div class="gb"><img src="../portfolio/img/perak.jpg" alt="Website Saudagar Minyak Terpakai Perak" loading="lazy"></div><div class="bd"><h3>Saudagar Minyak Terpakai</h3><p>Kutipan minyak terpakai seluruh Perak, dengan kalkulator harga.</p><span class="lk">minyakmasakterpakaiperak.com ↗</span></div></a>
+   <a class="pk muncul" href="https://minyakmasakterpakaipenang.com" target="_blank" rel="noopener"><div class="gb"><img src="../portfolio/img/penang.jpg" alt="Website Minyak Masak Terpakai Penang" loading="lazy"></div><div class="bd"><h3>Minyak Masak Terpakai Penang</h3><p>Penang, Kedah dan utara Perak. Pelanggan kira harga sebelum mesej.</p><span class="lk">minyakmasakterpakaipenang.com ↗</span></div></a>
+  </div>
+  <blockquote class="testi muncul">"Alhamdulillah, ada jugak dapat customer dari website ni."<cite>Saudagar Minyak Terpakai, Perak · 19 Nov 2026</cite></blockquote>
+</div></section>
+
+<section class="biasa" style="padding-top:20px"><div class="bal">
+  <span class="label muncul">Cara kerja</span>
+  <h2 class="muncul">Tuan tengok dulu, <span class="grad">baru buat keputusan.</span></h2>
+  <div class="langkah">
+   <div class="muncul"><b>01</b><h3>Contoh percuma</h3><p>Kami siapkan contoh website guna nama dan gambar bisnes tuan sendiri.</p></div>
+   <div class="muncul"><b>02</b><h3>Semak dan ubah</h3><p>Tuan beritahu apa nak ditukar di WhatsApp. Kami ubah sampai tuan puas hati.</p></div>
+   <div class="muncul"><b>03</b><h3>Live dalam 24 jam</h3><p>Selepas deposit, website siap dengan domain sendiri dan didaftarkan di Google.</p></div>
+  </div>
+</div></section>
+
+<section class="biasa" style="padding-top:20px"><div class="bal">
+  <span class="label muncul">Harga</span>
+  <h2 class="muncul">Bayar sekali. <span class="grad">Tiada bayaran bulanan.</span></h2>
+  <div class="harga">
+   <div class="hg muncul"><h3>Asas</h3><div class="rm">RM600</div><ul><li>Website ringkas untuk bisnes tuan</li><li>Butang WhatsApp, Waze dan Google Maps</li><li>Kemas kini melalui WhatsApp</li></ul></div>
+   <div class="hg utama muncul"><span class="tag">Paling dipilih</span><h3>Komersial</h3><div class="rm">RM1,000<s>RM1,500</s></div><ul><li>Semua dalam pakej Asas</li><li>Borang tempahan atau kalkulator harga ke WhatsApp</li><li>Galeri, ulasan dan soalan lazim</li><li>Domain sendiri, didaftarkan di Google</li></ul></div>
+  </div>
+  <p class="ans muncul">Deposit 50%, baki 24 jam selepas website live. Atau ansuran: <b>deposit RM400, kemudian RM200 sebulan x 3</b>, sehingga 31 Disember 2026. Tahun kedua RM300.</p>
+</div></section>
+
+<section class="akhir"><div class="bal">
+  <span class="label muncul">Mula hari ini</span>
+  <h2 class="muncul" style="font-size:clamp(34px,5.6vw,64px);line-height:1.04;letter-spacing:-.04em;font-weight:800;max-width:860px">Nak tengok website untuk <span class="grad">bisnes tuan sendiri?</span></h2>
+  <p class="sub muncul" style="color:var(--lembut);font-size:18px;max-width:560px">Hantar nama bisnes atau pautan media sosial tuan. Kami siapkan contoh, percuma dan tanpa ikatan.</p>
+  <a class="btn btn-wa muncul" href="https://wa.me/60138386146?text=Salam%20Hasfi%2C%20saya%20nak%20contoh%20website%20percuma.%20Nama%20bisnes%20saya%3A%20" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>WhatsApp 013-838 6146</a>
+</div></section>
+
+<footer><div class="bal"><span>© 2026 Hasfi Web Design · Cheras, Selangor</span><span><a href="/portfolio/">Portfolio</a></span></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const ez=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+const cerita=$('#cerita'),tel=$('#tel'),ruang=$('#ruang'),kap=$$('#kap article'),titik=$$('#titik b');
+const komen=$$('#komen div'),feed=$('#feed'),gulung=$('#gulung'),laman=$('#laman'),blok=$$('.blok'),wire=$$('.wire');
+const dm=$('#dm'),tg=$('#tenggelam'),goo=$('#goo'),taip=$('#taip'),hasil=$('#hasil'),url=$('#url'),notis=$$('.notis'),kira=$('#kira'),kirab=$('#kirab');
+const CARI='kedai kek cheras';
+const S=[0,.17,.36,.6,.79,1];
+function muat(){
+  const mob=innerWidth<=900;
+  const ada=mob?(innerHeight-72-246):(innerHeight-100);
+  const sk=cl(ada/630,.45,1);
+  tel.style.transformOrigin=mob?'top center':'center center';
+  tel.style.transform='scale('+sk+')';
+}
+function r(p,a,b){return ez(cl((p-a)/(b-a)))}
+let last=-1;
+function lukis(){
+  const b=cerita.getBoundingClientRect();
+  const p=cl(-b.top/(b.height-innerHeight));
+  if(Math.abs(p-last)<.0005){return}last=p;
+  let s=0;for(let i=1;i<S.length;i++)if(p>=S[i])s=i;s=Math.min(s,4);
+  kap.forEach((k,i)=>k.classList.toggle('on',i===s));titik.forEach((t,i)=>t.classList.toggle('on',i===s));
+  ruang.classList.toggle('hijau',s===4);
+  // 1: komen muncul
+  komen.forEach((c,i)=>c.classList.toggle('on',p>.03+i*.035));
+  // 2: gulung tenggelam + DM
+  gulung.style.transform='translateY('+(-r(p,.19,.34)*560)+'px)';
+  const d=r(p,.2,.26)*(1-r(p,.36,.4));
+  dm.style.opacity=d;dm.style.transform='translateY('+(1-d)*14+'px) scale('+(.9+.1*d)+')';
+  const t2=r(p,.26,.32)*(1-r(p,.36,.4));
+  tg.style.opacity=t2;tg.style.transform='translateY('+(1-t2)*14+'px)';
+  // 3: bina website
+  const fo=r(p,.36,.42);
+  feed.style.opacity=1-fo;feed.style.filter='blur('+fo*6+'px)';feed.style.transform='scale('+(1-.06*fo)+')';
+  laman.style.opacity=r(p,.37,.41);
+  const w=r(p,.38,.42)*(1-r(p,.54,.6));wire.forEach(x=>x.style.opacity=w);
+  blok.forEach((el,i)=>{const t=r(p,.41+i*.026,.47+i*.026);
+    el.style.opacity=t;el.style.transform='translate('+(1-t)*el.dataset.dx+'px,'+(1-t)*el.dataset.dy+'px) rotate('+(1-t)*el.dataset.r+'deg) scale('+(.85+.15*t)+')'});
+  // 4: google
+  const g=r(p,.6,.65)*(1-r(p,.8,.84));
+  goo.style.opacity=g;goo.style.transform='translateY('+(1-g)*20+'px)';
+  const n=Math.round(cl((p-.63)/.06)*CARI.length);taip.textContent=CARI.slice(0,n);
+  hasil.classList.toggle('on',p>.7);url.classList.toggle('kilat',p>.62&&p<.8);
+  // 5: tempahan
+  notis.forEach((el,i)=>{const t=r(p,.8+i*.045,.84+i*.045);el.style.opacity=t;el.style.transform='translateY('+(1-t)*-30+'px) scale('+(.94+.06*t)+')'});
+  const k=r(p,.82,.95);kira.style.opacity=r(p,.81,.85);kira.style.transform='translateY('+(1-r(p,.81,.85))*16+'px)';kirab.textContent=Math.round(k*23);
+}
+muat();lukis();
+addEventListener('resize',()=>{muat();last=-1;lukis()});
+let tik=false;addEventListener('scroll',()=>{if(!tik){tik=true;requestAnimationFrame(()=>{lukis();tik=false})}},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.15});
+$$('.muncul').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
