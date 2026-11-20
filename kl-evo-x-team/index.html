@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KL Evo-X · Team Perunding AIA Public Takaful</title>
+<meta name="description" content="KL Evo-X Nizzman WZS: 30 perunding takaful di seluruh Malaysia. Dapatkan sebut harga medical card, hibah dan sakit kritikal, atau sertai team.">
+<meta property="og:title" content="KL Evo-X · 30 perunding takaful, satu team">
+<meta property="og:description" content="Sebut harga medical card & hibah, atau bina kerjaya takaful bersama team KL Evo-X.">
+<meta property="og:image" content="https://hasfiwebdesign.github.io/kl-evo-x-team/img/og.jpg">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10131c;--ink2:#1b2030;--cream:#f7f2ea;--paper:#fffdf9;--red:#c41e3a;--red2:#e0435c;--gold:#d9b46a;--mute:#6b6f7b;--line:#e8e1d6;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red2)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+.btn-ink{background:var(--ink);color:#fff}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(16,19,28,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;color:#fff}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;letter-spacing:.02em}
+.mark{width:34px;height:34px;border-radius:10px;background:var(--red);display:grid;place-items:center;font-family:Fraunces,serif;font-size:1rem}
+.brand small{display:block;font-weight:500;font-size:.7rem;opacity:.7;letter-spacing:.08em}
+.nav nav{display:flex;gap:1.6rem;font-size:.92rem}
+.nav nav a{text-decoration:none;opacity:.85}.nav nav a:hover{opacity:1}
+@media(max-width:820px){.nav nav{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--ink)}
+.slides{position:absolute;inset:0}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease}
+.slides img.on{opacity:1;animation:kb 9s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,19,28,.55) 0%,rgba(16,19,28,.35) 30%,rgba(16,19,28,.94) 78%)}
+.hero-in{position:relative;z-index:2;padding:0 0 clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:clamp(2.4rem,7vw,5.2rem);max-width:13ch;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.15s;color:var(--gold)}
+.hero h1 span:nth-child(3) i{animation-delay:.3s}
+@keyframes up{to{transform:none}}
+.hero p.lead{max-width:46ch;margin:1.2rem 0 1.8rem;font-size:1.08rem;opacity:0;animation:fade 1s .6s forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;animation:fade 1s .8s forwards}
+@keyframes fade{to{opacity:1}}
+.leader{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.4rem;padding:.4rem .9rem .4rem .4rem;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);font-size:.85rem;opacity:0;animation:fade 1s .2s forwards}
+.leader img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:top;background:#f3c6d1}
+.leader b{display:block;font-size:.9rem}
+
+/* stats */
+.stats{background:var(--ink);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}
+.stat{background:var(--ink);padding:1.6rem 1rem;text-align:center}
+.stat b{display:block;font-family:Fraunces,serif;font-size:clamp(1.6rem,4vw,2.3rem);color:var(--gold)}
+.stat span{font-size:.82rem;opacity:.75}
+@media(max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:clamp(4rem,10vw,7rem) 0}
+.head{max-width:620px;margin-bottom:2.4rem}
+.head h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:.5rem 0 .8rem}
+.head p{color:var(--mute)}
+
+/* path chooser */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.path{position:relative;border-radius:var(--r);overflow:hidden;min-height:420px;color:#fff;display:flex;align-items:flex-end;text-decoration:none;isolation:isolate}
+.path img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.path::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(16,19,28,.9))}
+.path:hover img{transform:scale(1.06)}
+.path div{padding:1.8rem}
+.path h3{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:.3rem 0 .5rem}
+.path p{opacity:.85;max-width:34ch;margin-bottom:1rem}
+.path .go{font-weight:700;display:inline-flex;gap:.4rem;border-bottom:2px solid var(--gold);padding-bottom:2px}
+@media(max-width:720px){.paths{grid-template-columns:1fr}.path{min-height:340px}}
+
+/* plans */
+.plans{background:var(--cream)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:transform .25s,border-color .25s,box-shadow .25s}
+.tile:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 14px 30px -18px rgba(196,30,58,.5)}
+.tile .ic{width:44px;height:44px;border-radius:12px;background:#fbe7ea;color:var(--red);display:grid;place-items:center;margin-bottom:1rem}
+.tile h3{font-size:1.25rem;margin-bottom:.35rem}
+.tile p{font-size:.9rem;color:var(--mute)}
+.tile .tag{display:inline-block;font-size:.7rem;font-weight:700;background:var(--red);color:#fff;border-radius:999px;padding:.15rem .55rem;margin-bottom:.6rem}
+@media(max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
+
+/* form */
+.formbox{margin-top:2.6rem;background:var(--ink);color:#fff;border-radius:24px;padding:clamp(1.4rem,4vw,2.6rem);display:grid;grid-template-columns:1fr 1.25fr;gap:2rem}
+.formbox h3{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:.4rem 0 .6rem}
+.formbox .side p{opacity:.75}
+.how{margin-top:1.4rem;display:grid;gap:.8rem}
+.how div{display:flex;gap:.8rem;align-items:flex-start;font-size:.92rem}
+.how b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:.8rem}
+.steps{display:flex;gap:.4rem;margin-bottom:1.2rem}
+.steps i{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.15)}
+.steps i.on{background:var(--gold)}
+.step{display:none}.step.on{display:block;animation:fade .4s}
+.q{font-weight:700;margin-bottom:.7rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.chip{padding:.65rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;font:inherit;font-size:.9rem;cursor:pointer}
+.chip.on{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:700}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1rem}
+label.f{display:block;font-size:.8rem;opacity:.75;margin-bottom:.3rem}
+.inp{width:100%;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit}
+.inp:focus{outline:2px solid var(--gold);border-color:transparent}
+select.inp option{color:#111}
+.nav2{display:flex;justify-content:space-between;gap:.6rem;margin-top:.6rem}
+.back{background:none;border:0;color:#fff;opacity:.7;font:inherit;cursor:pointer}
+.sum{background:rgba(255,255,255,.06);border-radius:12px;padding:1rem;font-size:.88rem;margin-bottom:1rem;white-space:pre-line}
+.err{color:#ffb4c0;font-size:.85rem;min-height:1.2em;margin-top:.4rem}
+@media(max-width:820px){.formbox{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+
+/* team */
+.team-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.agent{text-align:center}
+.agent .ph{aspect-ratio:1;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#f3e9dc,#e9dccb);display:grid;place-items:center;margin-bottom:.6rem;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
+.agent .ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.agent .ph svg{width:42%;opacity:.35}
+.agent b{display:block;font-size:.92rem}
+.agent span{font-size:.78rem;color:var(--mute)}
+.agent.lead .ph{box-shadow:0 0 0 3px var(--red)}
+.note{margin-top:1.6rem;font-size:.85rem;color:var(--mute);border-left:3px solid var(--gold);padding-left:.9rem}
+@media(max-width:820px){.team-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* recruit */
+.recruit{position:relative;color:#fff;overflow:hidden;background:var(--ink)}
+.recruit .bg{position:absolute;inset:-15% 0;background:url(img/s2.webp) center/cover;opacity:.28;will-change:transform}
+.recruit::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 30%,rgba(16,19,28,.6))}
+.recruit .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:2.4rem;align-items:start}
+.recruit .head p{color:rgba(255,255,255,.75)}
+.perks{display:grid;gap:1rem}
+.perk{display:flex;gap:1rem;padding:1.1rem;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.perk .ic{flex:none;width:40px;height:40px;border-radius:12px;background:rgba(217,180,106,.18);color:var(--gold);display:grid;place-items:center}
+.perk b{display:block;margin-bottom:.2rem}
+.perk p{font-size:.88rem;opacity:.75}
+.rform{background:var(--paper);color:var(--ink);border-radius:22px;padding:1.6rem}
+.rform h3{font-size:1.5rem;margin-bottom:.3rem}
+.rform .sub{font-size:.88rem;color:var(--mute);margin-bottom:1.1rem}
+.rform .inp{background:#fff;color:var(--ink);border-color:var(--line)}
+.rform label.f{opacity:1;color:var(--mute)}
+.rform .chip{color:var(--ink);border-color:var(--line)}
+.rform .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rform .err{color:var(--red)}
+@media(max-width:860px){.recruit .wrap{grid-template-columns:1fr}}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:1.1rem 0}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";font-size:1.3rem;color:var(--red);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);margin-top:.6rem;max-width:70ch}
+.faq .wrap{max-width:820px}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:3rem 0 6.5rem;font-size:.88rem}
+footer .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.4rem;margin-bottom:1.6rem;color:#fff}
+footer small{display:block;opacity:.6;line-height:1.6}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .4s;gap:.5rem;padding:.5rem;border-radius:999px;background:rgba(16,19,28,.92);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.bar a{flex:1;justify-content:center;padding:.8rem;font-size:.92rem}
+@media(max-width:820px){.bar{display:flex}.bar.show{transform:none}.hero .ctas .btn{flex:1 1 100%;justify-content:center}}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1 span i{transform:none}.hero p.lead,.hero .ctas,.leader{opacity:1}.slides img:first-child{opacity:1}}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}.slides img:first-child{opacity:1}</style></noscript>
+</head>
+<body>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="mark">E</span><span>KL EVO-X<small>NIZZMAN WZS</small></span></a>
+    <nav><a href="#pelan">Pelan</a><a href="#team">Team</a><a href="#sertai">Sertai team</a><a href="#soalan">Soalan</a></nav>
+    <a class="btn btn-red" href="#sebut" style="padding:.6rem 1.1rem;font-size:.88rem">Sebut harga</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="slides" aria-hidden="true">
+    <img src="img/hero.webp" alt="" class="on" width="1400" height="934" fetchpriority="high">
+    <img src="img/t4.webp" alt="" width="800" height="1200" loading="lazy">
+    <img src="img/g3.webp" alt="" width="900" height="1382" loading="lazy">
+    <img src="img/t1.webp" alt="" width="800" height="1200" loading="lazy">
+  </div>
+  <div class="wrap hero-in">
+    <div class="leader"><img src="img/sofia.webp" alt="Wan Zarith Sofia" width="168" height="168"><span><b>Wan Zarith Sofia</b>Ketua team · AIA Public Takaful</span></div>
+    <h1><span><i>30 perunding.</i></span><span><i>Satu team.</i></span><span><i>Keluarga terlindung.</i></span></h1>
+    <p class="lead">KL Evo-X bantu keluarga di seluruh Malaysia pilih medical card, hibah dan pelan sakit kritikal ikut bajet. Atau, bina kerjaya takaful bersama kami.</p>
+    <div class="ctas">
+      <a class="btn btn-red" href="#sebut">Dapatkan sebut harga</a>
+      <a class="btn btn-ghost" href="#sertai">Sertai team</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>30</b><span>Perunding dalam team</span></div>
+    <div class="stat"><b>MY</b><span>Urusan seluruh Malaysia</span></div>
+    <div class="stat"><b>1.6K</b><span>Pengikut Facebook ketua team</span></div>
+    <div class="stat"><b>100%</b><span>Pelan patuh syariah</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Anda datang untuk</span><h2>Pilih laluan anda.</h2><p>Satu website untuk dua tujuan: lindungi keluarga, atau mula kerjaya takaful.</p></div>
+    <div class="paths">
+      <a class="path rv" href="#pelan"><img src="img/g2.webp" alt="Keluarga bersama" width="900" height="600" loading="lazy"><div><span class="eyebrow" style="color:var(--gold)">Untuk keluarga</span><h3>Saya nak perlindungan</h3><p>Pilih pelan, isi umur dan bajet. Perunding terdekat hubungi anda di WhatsApp.</p><span class="go">Lihat pelan →</span></div></a>
+      <a class="path rv d1" href="#sertai"><img src="img/t3.webp" alt="Perunding takaful bekerja" width="800" height="534" loading="lazy"><div><span class="eyebrow" style="color:var(--gold)">Untuk kerjaya</span><h3>Saya nak sertai team</h3><p>Sepenuh masa atau separuh masa, dengan bimbingan terus daripada ketua team.</p><span class="go">Ketahui lanjut →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="plans" id="pelan">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Pelan</span><h2>Perlindungan ikut fasa hidup.</h2><p>Tekan pelan untuk terus pilih dalam borang sebut harga.</p></div>
+    <div class="tiles">
+      <button class="tile rv" data-plan="Medical card"><span class="tag">Popular</span><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 9v6M9 12h6"/></svg></div><h3>Medical card</h3><p>Bil hospital dibayar terus mengikut had pelan.</p></button>
+      <button class="tile rv d1" data-plan="Hibah"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Hibah</h3><p>Wang tunai terus kepada penama, tanpa tunggu faraid.</p></button>
+      <button class="tile rv d2" data-plan="Sakit kritikal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Sakit kritikal</h3><p>Wang tunai bila didiagnos, untuk rawatan dan perbelanjaan.</p></button>
+      <button class="tile rv d3" data-plan="Semak polisi sedia ada"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Semak polisi</h3><p>Dah ada polisi? Semak sama ada masih mencukupi.</p></button>
+    </div>
+
+    <div class="formbox rv" id="sebut">
+      <div class="side">
+        <span class="eyebrow" style="color:var(--gold)">Sebut harga percuma</span>
+        <h3>Tiga langkah, terus ke WhatsApp.</h3>
+        <p>Tiada panggilan mengejut. Anda yang mula perbualan.</p>
+        <div class="how">
+          <div><b>1</b><span>Pilih pelan yang anda cari</span></div>
+          <div><b>2</b><span>Isi umur, bajet dan negeri</span></div>
+          <div><b>3</b><span>Perunding KL Evo-X di negeri anda hantar cadangan</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+        <div class="step on" data-s="1">
+          <p class="q">Pelan apa yang anda cari? <span style="opacity:.6;font-weight:400">(boleh pilih lebih)</span></p>
+          <div class="chips" id="cPlan"><button class="chip" type="button">Medical card</button><button class="chip" type="button">Hibah</button><button class="chip" type="button">Sakit kritikal</button><button class="chip" type="button">Semak polisi sedia ada</button></div>
+          <p class="q">Untuk siapa?</p>
+          <div class="chips" id="cWho" data-single><button class="chip" type="button">Diri sendiri</button><button class="chip" type="button">Pasangan</button><button class="chip" type="button">Anak</button><button class="chip" type="button">Seisi keluarga</button></div>
+          <div class="err" id="e1"></div>
+          <div class="nav2"><span></span><button class="btn btn-red" type="button" data-next="2">Seterusnya →</button></div>
+        </div>
+        <div class="step" data-s="2">
+          <div class="row">
+            <div><label class="f" for="age">Umur</label><input class="inp" id="age" type="number" min="0" max="80" inputmode="numeric" placeholder="cth. 32"></div>
+            <div><label class="f" for="bud">Bajet sebulan</label><select class="inp" id="bud"><option value="">Pilih</option><option>Bawah RM150</option><option>RM150 - RM300</option><option>RM300 - RM500</option><option>Lebih RM500</option></select></div>
+          </div>
+          <div class="row">
+            <div><label class="f" for="st">Negeri</label><select class="inp" id="st"><option value="">Pilih</option><option>Kuala Lumpur</option><option>Selangor</option><option>Johor</option><option>Kedah</option><option>Kelantan</option><option>Melaka</option><option>Negeri Sembilan</option><option>Pahang</option><option>Perak</option><option>Perlis</option><option>Pulau Pinang</option><option>Sabah</option><option>Sarawak</option><option>Terengganu</option></select></div>
+            <div><label class="f">Merokok?</label><div class="chips" id="cSmoke" data-single style="margin:0"><button class="chip" type="button">Tidak</button><button class="chip" type="button">Ya</button></div></div>
+          </div>
+          <div class="err" id="e2"></div>
+          <div class="nav2"><button class="back" type="button" data-next="1">← Kembali</button><button class="btn btn-red" type="button" data-next="3">Seterusnya →</button></div>
+        </div>
+        <div class="step" data-s="3">
+          <div class="row" style="grid-template-columns:1fr">
+            <div><label class="f" for="nm">Nama anda</label><input class="inp" id="nm" autocomplete="name" placeholder="Nama panggilan pun boleh"></div>
+          </div>
+          <div class="sum" id="sum"></div>
+          <div class="err" id="e3"></div>
+          <div class="nav2"><button class="back" type="button" data-next="2">← Kembali</button><button class="btn btn-red" type="button" id="sendQ">Hantar ke WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Team kami</span><h2>Kenali perunding KL Evo-X.</h2><p>Setiap perunding ada profil sendiri. Pelanggan boleh pilih perunding, atau biar team padankan ikut negeri.</p></div>
+    <div class="team-grid" id="tg"></div>
+    <p class="note rv">Contoh: 6 daripada 30 profil. Dalam website sebenar, setiap perunding ada gambar, kawasan, kepakaran dan butang WhatsApp sendiri.</p>
+  </div>
+</section>
+
+<section class="recruit" id="sertai">
+  <div class="bg" id="pbg"></div>
+  <div class="wrap">
+    <div>
+      <div class="head rv" style="margin-bottom:1.6rem"><span class="eyebrow" style="color:var(--gold)">Peluang kerjaya</span><h2>Bina kerjaya takaful bersama KL Evo-X.</h2><p>Team 30 orang yang sedang berkembang. Kami cari orang yang mahu membantu keluarga dan sedia belajar.</p></div>
+      <div class="perks">
+        <div class="perk rv"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><div><b>Bimbingan dari ketua team</b><p>Belajar cara faham pelan, terangkan kepada pelanggan dan urus permohonan.</p></div></div>
+        <div class="perk rv d1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Masa anda sendiri</b><p>Sepenuh masa atau separuh masa, sesuai untuk yang bekerja dan suri rumah.</p></div></div>
+        <div class="perk rv d2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><div><b>Team yang menyokong</b><p>30 rakan perunding untuk bertanya, berkongsi tips dan saling membantu.</p></div></div>
+        <div class="perk rv d3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg></div><div><b>Produk patuh syariah</b><p>Jual dengan tenang, pelan takaful AIA Public Takaful.</p></div></div>
+      </div>
+    </div>
+    <div class="rform rv d1">
+      <h3>Berminat sertai?</h3>
+      <p class="sub">Isi 4 perkara. Ketua team hubungi anda di WhatsApp untuk sesi taklimat.</p>
+      <label class="f" for="rn">Nama</label><input class="inp" id="rn" autocomplete="name" style="margin-bottom:.9rem">
+      <div class="row">
+        <div><label class="f" for="ra">Umur</label><input class="inp" id="ra" type="number" inputmode="numeric" min="18" max="70"></div>
+        <div><label class="f" for="rs">Negeri</label><select class="inp" id="rs"><option value="">Pilih</option><option>Kuala Lumpur</option><option>Selangor</option><option>Johor</option><option>Kedah</option><option>Kelantan</option><option>Melaka</option><option>Negeri Sembilan</option><option>Pahang</option><option>Perak</option><option>Perlis</option><option>Pulau Pinang</option><option>Sabah</option><option>Sarawak</option><option>Terengganu</option></select></div>
+      </div>
+      <label class="f">Minat</label>
+      <div class="chips" id="cMode" data-single><button class="chip" type="button">Sepenuh masa</button><button class="chip" type="button">Separuh masa</button><button class="chip" type="button">Nak tahu dulu</button></div>
+      <div class="err" id="er"></div>
+      <button class="btn btn-ink" type="button" id="sendR" style="width:100%;justify-content:center">Hantar ke WhatsApp ketua team</button>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="soalan">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Soalan lazim</span><h2>Sebelum anda bermula.</h2></div>
+    <details class="rv"><summary>Berapa caruman untuk umur saya?</summary><p>Isi borang sebut harga. Perunding kira ikut umur, merokok dan pelan, kemudian hantar cadangan di WhatsApp.</p></details>
+    <details class="rv"><summary>Siapa yang akan hubungi saya?</summary><p>Perunding KL Evo-X di negeri anda. Jika tiada, ketua team sendiri yang akan bantu.</p></details>
+    <details class="rv"><summary>Adakah ini patuh syariah?</summary><p>Ya. Semua pelan ialah pelan takaful, bukan insurans konvensional.</p></details>
+    <details class="rv"><summary>Perlu pengalaman untuk sertai team?</summary><p>Tidak. Ketua team beri bimbingan dari awal. Hubungi kami untuk sesi taklimat dan syarat lantikan.</p></details>
+    <details class="rv"><summary>Adakah ini laman rasmi syarikat takaful?</summary><p>Bukan. Ini laman team perunding KL Evo-X. Terma penuh pelan tertakluk kepada dokumen rasmi AIA Public Takaful.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="#top" style="color:#fff"><span class="mark">E</span><span>KL EVO-X<small>NIZZMAN WZS</small></span></a>
+      <div>Ketua team: Wan Zarith Sofia<br><a href="https://wa.me/60109535105" style="color:var(--gold)">WhatsApp 010-953 5105</a></div>
+    </div>
+    <small>Contoh reka bentuk oleh Hasfi Web Design untuk team KL Evo-X. Bukan laman rasmi. Gambar ilustrasi daripada Pexels; gambar ketua team daripada page Facebook. Manfaat dan caruman sebenar tertakluk kepada AIA Public Takaful.</small>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn btn-red" href="#sebut">Sebut harga</a><a class="btn btn-ghost" href="#sertai">Sertai team</a></div>
+
+<script>
+(function(){
+var WA='60109535105';
+var hd=document.getElementById('hd');
+var bar=document.querySelector('.bar');function onS(){hd.classList.toggle('solid',scrollY>40);bar.classList.toggle('show',scrollY>innerHeight*.7);}
+addEventListener('scroll',onS,{passive:true});onS();
+
+/* hero slides */
+var sl=[].slice.call(document.querySelectorAll('.slides img')),k=0,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!rm)setInterval(function(){sl[k].classList.remove('on');k=(k+1)%sl.length;sl[k].classList.add('on');},6000);
+
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+/* parallax recruit */
+var pbg=document.getElementById('pbg'),rec=document.getElementById('sertai');
+if(!rm)addEventListener('scroll',function(){var r=rec.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)pbg.style.transform='translateY('+(r.top*-.12)+'px)';},{passive:true});
+
+/* team */
+var team=[['Wan Zarith Sofia','Ketua team · KL','img/sofia.webp'],['Perunding 2','Selangor'],['Perunding 3','Johor'],['Perunding 4','Kelantan'],['Perunding 5','Perak'],['Perunding 6','Sabah']];
+var sil='<svg viewBox="0 0 24 24" fill="#6b6f7b"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg>';
+document.getElementById('tg').innerHTML=team.map(function(t,i){return '<div class="agent rv'+(i?'':' lead')+'" style="transition-delay:'+(i*.06)+'s"><div class="ph">'+(t[2]?'<img src="'+t[2]+'" alt="'+t[0]+'" width="168" height="168" loading="lazy">':sil)+'</div><b>'+t[0]+'</b><span>'+t[1]+'</span></div>';}).join('');
+document.querySelectorAll('#tg .rv').forEach(function(el){io.observe(el);});
+
+/* chips */
+document.querySelectorAll('.chips').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;if(g.hasAttribute('data-single'))g.querySelectorAll('.chip').forEach(function(c){if(c!==b)c.classList.remove('on');});b.classList.toggle('on');});});
+function picked(id){return [].slice.call(document.querySelectorAll('#'+id+' .chip.on')).map(function(c){return c.textContent;});}
+
+/* plan tiles -> form */
+document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('click',function(){var p=t.getAttribute('data-plan');document.querySelectorAll('#cPlan .chip').forEach(function(c){if(c.textContent===p)c.classList.add('on');});go(1);document.getElementById('sebut').scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});});});
+
+/* steps */
+var steps=document.querySelectorAll('.step'),bars=document.querySelectorAll('.steps i');
+function v(id){return document.getElementById(id).value.trim();}
+function err(id,m){document.getElementById(id).textContent=m;return !m;}
+function check(n){
+  if(n>=2&&!err('e1',picked('cPlan').length?'':'Pilih sekurang-kurangnya satu pelan.'))return 1;
+  if(n>=3){var a=+v('age');if(!err('e2',!a||a>80?'Isi umur yang betul.':!v('bud')?'Pilih bajet.':!v('st')?'Pilih negeri.':''))return 2;}
+  return 0;
+}
+function msgQ(){var w=picked('cWho')[0],s=picked('cSmoke')[0];return 'Salam KL Evo-X, saya nak sebut harga.\n\nPelan: '+picked('cPlan').join(', ')+(w?'\nUntuk: '+w:'')+'\nUmur: '+v('age')+(s?'\nMerokok: '+s:'')+'\nBajet: '+v('bud')+'\nNegeri: '+v('st')+'\nNama: '+(v('nm')||'-');}
+function go(n){var bad=check(n);if(bad){n=bad;}steps.forEach(function(s){s.classList.toggle('on',+s.getAttribute('data-s')===n);});bars.forEach(function(b,i){b.classList.toggle('on',i<n);});if(n===3)document.getElementById('sum').textContent=msgQ();}
+document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){go(+b.getAttribute('data-next'));});});
+document.getElementById('nm').addEventListener('input',function(){document.getElementById('sum').textContent=msgQ();});
+document.getElementById('sendQ').addEventListener('click',function(){if(!err('e3',v('nm')?'':'Isi nama anda.'))return;open('https://wa.me/'+WA+'?text='+encodeURIComponent(msgQ()),'_blank');});
+
+document.getElementById('sendR').addEventListener('click',function(){
+  var m=picked('cMode')[0],a=+v('ra');
+  if(!err('er',!v('rn')?'Isi nama.':!a||a<18?'Isi umur (18 ke atas).':!v('rs')?'Pilih negeri.':!m?'Pilih minat anda.':''))return;
+  open('https://wa.me/'+WA+'?text='+encodeURIComponent('Salam Puan Sofia, saya berminat sertai team KL Evo-X.\n\nNama: '+v('rn')+'\nUmur: '+v('ra')+'\nNegeri: '+v('rs')+'\nMinat: '+m),'_blank');
+});
+})();
+</script>
+</body>
+</html>
