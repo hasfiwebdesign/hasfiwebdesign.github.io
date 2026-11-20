@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ms">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KL Evo-X · Team Perunding AIA Public Takaful</title>
-<meta name="description" content="KL Evo-X Nizzman WZS: 30 perunding takaful di seluruh Malaysia. Dapatkan sebut harga medical card, hibah dan sakit kritikal, atau sertai team.">
-<meta property="og:title" content="KL Evo-X · 30 perunding takaful, satu team">
-<meta property="og:description" content="Sebut harga medical card & hibah, atau bina kerjaya takaful bersama team KL Evo-X.">
+<title>KL Evo-X · AIA Public Takaful Advisor Team</title>
+<meta name="description" content="KL Evo-X Nizzman WZS: 30 takaful advisors across Malaysia. Get a quote for medical card, hibah and critical illness, or join the team.">
+<meta property="og:title" content="KL Evo-X · 30 takaful advisors, one team">
+<meta property="og:description" content="Medical card and hibah quotes, or build a takaful career with team KL Evo-X.">
 <meta property="og:image" content="https://hasfiwebdesign.github.io/kl-evo-x-team/img/og.jpg">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +36,8 @@ header.solid{background:rgba(16,19,28,.92);backdrop-filter:blur(10px);box-shadow
 .mark{width:34px;height:34px;border-radius:10px;background:var(--red);display:grid;place-items:center;font-family:Fraunces,serif;font-size:1rem}
 .brand small{display:block;font-weight:500;font-size:.7rem;opacity:.7;letter-spacing:.08em}
 .nav nav{display:flex;gap:1.6rem;font-size:.92rem}
+.lang{display:flex;padding:3px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2)}.lang button{border:0;background:none;color:#fff;font:inherit;font-size:.78rem;font-weight:700;padding:.4rem .65rem;border-radius:999px;cursor:pointer;opacity:.75}.lang button.on{background:#fff;color:var(--ink);opacity:1}
+@media(max-width:420px){.hcta{display:none!important}}
 .nav nav a{text-decoration:none;opacity:.85}.nav nav a:hover{opacity:1}
 @media(max-width:820px){.nav nav{display:none}}
 
@@ -184,7 +186,7 @@ footer small{display:block;opacity:.6;line-height:1.6}
   <div class="wrap nav">
     <a class="brand" href="#top"><span class="mark">E</span><span>KL EVO-X<small>NIZZMAN WZS</small></span></a>
     <nav><a href="#pelan">Pelan</a><a href="#team">Team</a><a href="#sertai">Sertai team</a><a href="#soalan">Soalan</a></nav>
-    <a class="btn btn-red" href="#sebut" style="padding:.6rem 1.1rem;font-size:.88rem">Sebut harga</a>
+    <div style="display:flex;align-items:center;gap:.6rem"><div class="lang" role="group" aria-label="Language"><button type="button" data-l="en">EN</button><button type="button" data-l="ms">BM</button></div><a class="btn btn-red hcta" href="#sebut" style="padding:.6rem 1.1rem;font-size:.88rem">Sebut harga</a></div>
   </div>
 </header>
 
@@ -367,23 +369,38 @@ var sil='<svg viewBox="0 0 24 24" fill="#6b6f7b"><circle cx="12" cy="8" r="4.5"/
 document.getElementById('tg').innerHTML=team.map(function(t,i){return '<div class="agent rv'+(i?'':' lead')+'" style="transition-delay:'+(i*.06)+'s"><div class="ph">'+(t[2]?'<img src="'+t[2]+'" alt="'+t[0]+'" width="168" height="168" loading="lazy">':sil)+'</div><b>'+t[0]+'</b><span>'+t[1]+'</span></div>';}).join('');
 document.querySelectorAll('#tg .rv').forEach(function(el){io.observe(el);});
 
+
+var T={"Pelan": "Plans", "Team": "Team", "Sertai team": "Join the team", "Soalan": "FAQ", "Sebut harga": "Get a quote", "Ketua team · AIA Public Takaful": "Team leader · AIA Public Takaful", "30 perunding.": "30 advisors.", "Satu team.": "One team.", "Keluarga terlindung.": "Families protected.", "KL Evo-X bantu keluarga di seluruh Malaysia pilih medical card, hibah dan pelan sakit kritikal ikut bajet. Atau, bina kerjaya takaful bersama kami.": "KL Evo-X helps families across Malaysia choose medical cards, hibah and critical illness plans that fit their budget. Or build a takaful career with us.", "Dapatkan sebut harga": "Get a free quote", "Perunding dalam team": "Advisors in the team", "Urusan seluruh Malaysia": "Serving all of Malaysia", "Pengikut Facebook ketua team": "Facebook followers of the team leader", "Pelan patuh syariah": "Shariah-compliant plans", "Anda datang untuk": "You are here for", "Pilih laluan anda.": "Choose your path.", "Satu website untuk dua tujuan: lindungi keluarga, atau mula kerjaya takaful.": "One website, two purposes: protect your family, or start a takaful career.", "Untuk keluarga": "For families", "Saya nak perlindungan": "I want protection", "Pilih pelan, isi umur dan bajet. Perunding terdekat hubungi anda di WhatsApp.": "Choose a plan, enter your age and budget. The nearest advisor contacts you on WhatsApp.", "Lihat pelan →": "See plans →", "Untuk kerjaya": "For your career", "Saya nak sertai team": "I want to join the team", "Sepenuh masa atau separuh masa, dengan bimbingan terus daripada ketua team.": "Full time or part time, with direct guidance from the team leader.", "Ketahui lanjut →": "Learn more →", "Perlindungan ikut fasa hidup.": "Protection for every stage of life.", "Tekan pelan untuk terus pilih dalam borang sebut harga.": "Tap a plan to select it in the quote form.", "Bil hospital dibayar terus mengikut had pelan.": "Hospital bills paid directly, up to your plan limit.", "Wang tunai terus kepada penama, tanpa tunggu faraid.": "Cash straight to your nominee, without waiting for faraid.", "Sakit kritikal": "Critical illness", "Wang tunai bila didiagnos, untuk rawatan dan perbelanjaan.": "A cash payout on diagnosis, for treatment and daily costs.", "Semak polisi": "Policy review", "Dah ada polisi? Semak sama ada masih mencukupi.": "Already have a policy? Check whether it is still enough.", "Sebut harga percuma": "Free quote", "Tiga langkah, terus ke WhatsApp.": "Three steps, straight to WhatsApp.", "Tiada panggilan mengejut. Anda yang mula perbualan.": "No surprise calls. You start the conversation.", "Pilih pelan yang anda cari": "Choose the plan you need", "Isi umur, bajet dan negeri": "Enter your age, budget and state", "Perunding KL Evo-X di negeri anda hantar cadangan": "A KL Evo-X advisor in your state sends a proposal", "Pelan apa yang anda cari?": "Which plan are you looking for?", "(boleh pilih lebih)": "(choose any)", "Semak polisi sedia ada": "Review my existing policy", "Untuk siapa?": "Who is it for?", "Diri sendiri": "Myself", "Pasangan": "Spouse", "Anak": "Children", "Seisi keluarga": "Whole family", "Seterusnya →": "Next →", "Umur": "Age", "Bajet sebulan": "Monthly budget", "Pilih": "Choose", "Bawah RM150": "Below RM150", "Lebih RM500": "Above RM500", "Negeri": "State", "Merokok?": "Smoker?", "Merokok": "Smoker", "Tidak": "No", "Ya": "Yes", "← Kembali": "← Back", "Nama anda": "Your name", "Hantar ke WhatsApp": "Send to WhatsApp", "Team kami": "Our team", "Kenali perunding KL Evo-X.": "Meet the KL Evo-X advisors.", "Setiap perunding ada profil sendiri. Pelanggan boleh pilih perunding, atau biar team padankan ikut negeri.": "Every advisor has their own profile. Pick an advisor, or let the team match you by state.", "Ketua team · KL": "Team leader · KL", "Perunding 2": "Advisor 2", "Perunding 3": "Advisor 3", "Perunding 4": "Advisor 4", "Perunding 5": "Advisor 5", "Perunding 6": "Advisor 6", "Contoh: 6 daripada 30 profil. Dalam website sebenar, setiap perunding ada gambar, kawasan, kepakaran dan butang WhatsApp sendiri.": "Sample: 6 of 30 profiles. On the real website, every advisor has their own photo, area, expertise and WhatsApp button.", "Peluang kerjaya": "Career opportunity", "Bina kerjaya takaful bersama KL Evo-X.": "Build a takaful career with KL Evo-X.", "Team 30 orang yang sedang berkembang. Kami cari orang yang mahu membantu keluarga dan sedia belajar.": "A growing team of 30. We are looking for people who want to help families and are ready to learn.", "Bimbingan dari ketua team": "Guidance from the team leader", "Belajar cara faham pelan, terangkan kepada pelanggan dan urus permohonan.": "Learn how to understand plans, explain them to clients and handle applications.", "Masa anda sendiri": "Your own schedule", "Sepenuh masa atau separuh masa, sesuai untuk yang bekerja dan suri rumah.": "Full time or part time, suitable for working adults and homemakers.", "Team yang menyokong": "A supportive team", "30 rakan perunding untuk bertanya, berkongsi tips dan saling membantu.": "30 fellow advisors to ask, share tips and help each other.", "Produk patuh syariah": "Shariah-compliant products", "Jual dengan tenang, pelan takaful AIA Public Takaful.": "Sell with peace of mind: AIA Public Takaful plans.", "Berminat sertai?": "Interested in joining?", "Isi 4 perkara. Ketua team hubungi anda di WhatsApp untuk sesi taklimat.": "Fill in 4 details. The team leader will contact you on WhatsApp for a briefing.", "Nama": "Name", "Minat": "Interest", "Sepenuh masa": "Full time", "Separuh masa": "Part time", "Nak tahu dulu": "Just exploring", "Hantar ke WhatsApp ketua team": "Send to the team leader on WhatsApp", "Soalan lazim": "FAQ", "Sebelum anda bermula.": "Before you start.", "Berapa caruman untuk umur saya?": "How much is the contribution for my age?", "Isi borang sebut harga. Perunding kira ikut umur, merokok dan pelan, kemudian hantar cadangan di WhatsApp.": "Fill in the quote form. An advisor calculates it by age, smoking status and plan, then sends a proposal on WhatsApp.", "Siapa yang akan hubungi saya?": "Who will contact me?", "Perunding KL Evo-X di negeri anda. Jika tiada, ketua team sendiri yang akan bantu.": "A KL Evo-X advisor in your state. If there is none, the team leader will help you personally.", "Adakah ini patuh syariah?": "Is it shariah-compliant?", "Ya. Semua pelan ialah pelan takaful, bukan insurans konvensional.": "Yes. All plans are takaful plans, not conventional insurance.", "Perlu pengalaman untuk sertai team?": "Do I need experience to join?", "Tidak. Ketua team beri bimbingan dari awal. Hubungi kami untuk sesi taklimat dan syarat lantikan.": "No. The team leader guides you from day one. Contact us for a briefing and appointment requirements.", "Adakah ini laman rasmi syarikat takaful?": "Is this the official takaful company website?", "Bukan. Ini laman team perunding KL Evo-X. Terma penuh pelan tertakluk kepada dokumen rasmi AIA Public Takaful.": "No. This is the KL Evo-X advisor team website. Full plan terms are subject to official AIA Public Takaful documents.", "Ketua team: Wan Zarith Sofia": "Team leader: Wan Zarith Sofia", "Contoh reka bentuk oleh Hasfi Web Design untuk team KL Evo-X. Bukan laman rasmi. Gambar ilustrasi daripada Pexels; gambar ketua team daripada page Facebook. Manfaat dan caruman sebenar tertakluk kepada AIA Public Takaful.": "Sample design by Hasfi Web Design for team KL Evo-X. Not an official website. Illustration photos from Pexels; team leader photo from her Facebook page. Actual benefits and contributions are subject to AIA Public Takaful.", "cth. 32": "e.g. 32", "Nama panggilan pun boleh": "A nickname is fine", "Pilih sekurang-kurangnya satu pelan.": "Choose at least one plan.", "Isi umur yang betul.": "Enter a valid age.", "Pilih bajet.": "Choose a budget.", "Pilih negeri.": "Choose a state.", "Isi nama anda.": "Enter your name.", "Isi nama.": "Enter your name.", "Isi umur (18 ke atas).": "Enter your age (18 and above).", "Pilih minat anda.": "Choose your interest.", "Salam KL Evo-X, saya nak sebut harga.": "Hi KL Evo-X, I would like a quote.", "Untuk": "For", "Bajet": "Budget", "Salam Puan Sofia, saya berminat sertai team KL Evo-X.": "Hi Puan Sofia, I am interested in joining team KL Evo-X."};
+var LANG='en';try{LANG=localStorage.getItem('evoLang')||'en';}catch(e){}
+function tr(x){return LANG==='en'&&T[x]?T[x]:x;}
+var TXT=[],PH=[];
+(function(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return n.parentElement.closest('script,style,#sum')?2:1;}}),n;while(n=w.nextNode()){var k=n.nodeValue.trim();if(T[k])TXT.push([n,n.nodeValue,k]);}
+document.querySelectorAll('[placeholder]').forEach(function(e){if(T[e.placeholder])PH.push([e,e.placeholder]);});
+document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('data-k',c.textContent);});})();
+function applyLang(){TXT.forEach(function(a){a[0].nodeValue=LANG==='en'?a[1].replace(a[2],T[a[2]]):a[1];});PH.forEach(function(a){a[0].placeholder=tr(a[1]);});
+document.documentElement.lang=LANG==='en'?'en':'ms';document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===LANG);});
+['e1','e2','e3','er'].forEach(function(id){document.getElementById(id).textContent='';});
+if(window.__sum)window.__sum();}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){LANG=b.getAttribute('data-l');try{localStorage.setItem('evoLang',LANG);}catch(e){}applyLang();});});
+
 /* chips */
 document.querySelectorAll('.chips').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;if(g.hasAttribute('data-single'))g.querySelectorAll('.chip').forEach(function(c){if(c!==b)c.classList.remove('on');});b.classList.toggle('on');});});
 function picked(id){return [].slice.call(document.querySelectorAll('#'+id+' .chip.on')).map(function(c){return c.textContent;});}
 
 /* plan tiles -> form */
-document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('click',function(){var p=t.getAttribute('data-plan');document.querySelectorAll('#cPlan .chip').forEach(function(c){if(c.textContent===p)c.classList.add('on');});go(1);document.getElementById('sebut').scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});});});
+document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('click',function(){var p=t.getAttribute('data-plan');document.querySelectorAll('#cPlan .chip').forEach(function(c){if(c.getAttribute('data-k')===p)c.classList.add('on');});go(1);document.getElementById('sebut').scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});});});
 
 /* steps */
 var steps=document.querySelectorAll('.step'),bars=document.querySelectorAll('.steps i');
 function v(id){return document.getElementById(id).value.trim();}
-function err(id,m){document.getElementById(id).textContent=m;return !m;}
+function err(id,m){document.getElementById(id).textContent=tr(m);return !m;}
 function check(n){
   if(n>=2&&!err('e1',picked('cPlan').length?'':'Pilih sekurang-kurangnya satu pelan.'))return 1;
   if(n>=3){var a=+v('age');if(!err('e2',!a||a>80?'Isi umur yang betul.':!v('bud')?'Pilih bajet.':!v('st')?'Pilih negeri.':''))return 2;}
   return 0;
 }
-function msgQ(){var w=picked('cWho')[0],s=picked('cSmoke')[0];return 'Salam KL Evo-X, saya nak sebut harga.\n\nPelan: '+picked('cPlan').join(', ')+(w?'\nUntuk: '+w:'')+'\nUmur: '+v('age')+(s?'\nMerokok: '+s:'')+'\nBajet: '+v('bud')+'\nNegeri: '+v('st')+'\nNama: '+(v('nm')||'-');}
+function msgQ(){var w=picked('cWho')[0],s=picked('cSmoke')[0],b=document.getElementById('bud'),bt=b.value?b.options[b.selectedIndex].text:'';return tr('Salam KL Evo-X, saya nak sebut harga.')+'\n\n'+tr('Pelan')+': '+picked('cPlan').join(', ')+(w?'\n'+tr('Untuk')+': '+w:'')+'\n'+tr('Umur')+': '+v('age')+(s?'\n'+tr('Merokok')+': '+s:'')+'\n'+tr('Bajet')+': '+bt+'\n'+tr('Negeri')+': '+v('st')+'\n'+tr('Nama')+': '+(v('nm')||'-');}
+window.__sum=function(){if(document.querySelector('.step.on[data-s="3"]'))document.getElementById('sum').textContent=msgQ();};
 function go(n){var bad=check(n);if(bad){n=bad;}steps.forEach(function(s){s.classList.toggle('on',+s.getAttribute('data-s')===n);});bars.forEach(function(b,i){b.classList.toggle('on',i<n);});if(n===3)document.getElementById('sum').textContent=msgQ();}
 document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){go(+b.getAttribute('data-next'));});});
 document.getElementById('nm').addEventListener('input',function(){document.getElementById('sum').textContent=msgQ();});
@@ -392,8 +409,9 @@ document.getElementById('sendQ').addEventListener('click',function(){if(!err('e3
 document.getElementById('sendR').addEventListener('click',function(){
   var m=picked('cMode')[0],a=+v('ra');
   if(!err('er',!v('rn')?'Isi nama.':!a||a<18?'Isi umur (18 ke atas).':!v('rs')?'Pilih negeri.':!m?'Pilih minat anda.':''))return;
-  open('https://wa.me/'+WA+'?text='+encodeURIComponent('Salam Puan Sofia, saya berminat sertai team KL Evo-X.\n\nNama: '+v('rn')+'\nUmur: '+v('ra')+'\nNegeri: '+v('rs')+'\nMinat: '+m),'_blank');
+  open('https://wa.me/'+WA+'?text='+encodeURIComponent(tr('Salam Puan Sofia, saya berminat sertai team KL Evo-X.')+'\n\n'+tr('Nama')+': '+v('rn')+'\n'+tr('Umur')+': '+v('ra')+'\n'+tr('Negeri')+': '+v('rs')+'\n'+tr('Minat')+': '+m),'_blank');
 });
+applyLang();
 })();
 </script>
 </body>
