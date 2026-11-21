@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/h1.jpg">
+<link rel="preload" as="image" href="img/hero-poster.webp">
 <style>
 :root{--night:#0a1215;--night2:#111d22;--sun:#f2a541;--sun2:#ffcf87;--sea:#0f766e;--sand:#f6f1ea;--card:#fff;--ink:#0c1518;--mut:#5d6a6e;--line:#e3ddd4;
 --od:#fbf7f1;--odm:rgba(251,247,241,.74);
@@ -287,9 +287,76 @@ dialog#bk::backdrop{background:rgba(5,10,12,.66);backdrop-filter:blur(4px)}
 }
 @media(max-width:420px){.wa-top .t{display:none}.wa-top{padding:0 13px}.brand small{display:none}.brand b{font-size:15px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.slides img{transform:none}}
+/* ===== SINEMA v4 ===== */
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:0;transition:opacity 1.6s ease;transform:scale(1.06);will-change:transform}
+.hero video.on{opacity:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(130% 100% at 50% 45%,transparent 55%,rgba(0,0,0,.55) 100%)}
+.grain{position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,2%)}100%{transform:translate(0,0)}}
+.lbx{position:fixed;left:0;right:0;height:13vh;background:#000;z-index:80;pointer-events:none;transition:transform 1.5s cubic-bezier(.77,0,.18,1) .5s}
+.lbx.t{top:0}.lbx.b{bottom:0}
+body.go .lbx.t{transform:translateY(-101%)}body.go .lbx.b{transform:translateY(101%)}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(105%);transition:transform 1.3s cubic-bezier(.19,1,.22,1)}
+body.go .hero h1 .w>span{transform:none}
+.hero .wrap>*:not(h1){opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1.2s cubic-bezier(.19,1,.22,1)}
+body.go .hero .wrap>*:not(h1){opacity:1;transform:none}
+body.go .hero .badge{transition-delay:.9s}body.go .hero .sub{transition-delay:1.55s}body.go .hero .book{transition-delay:1.75s}body.go .hero .trust{transition-delay:1.95s}
+.chap{position:absolute;left:var(--gl);top:calc(118px + env(safe-area-inset-top,0px));display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:0;transition:opacity 1s 2.2s}
+body.go .chap{opacity:1}
+.chap .rec{width:8px;height:8px;border-radius:50%;background:#ff4d3d;box-shadow:0 0 0 0 rgba(255,77,61,.6);animation:rec 1.6s infinite}
+@keyframes rec{70%{box-shadow:0 0 0 8px rgba(255,77,61,0)}100%{box-shadow:0 0 0 0 rgba(255,77,61,0)}}
+.chap b{font-weight:800;color:#fff}
+.chap .tc{font-variant-numeric:tabular-nums;opacity:.7}
+.prog{position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.12);z-index:1}
+.prog i{display:block;height:100%;width:0;background:var(--sun)}
+.cue{display:none;position:absolute;right:var(--gr);bottom:54px;writing-mode:vertical-rl;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.7);align-items:center;gap:14px}
+.cue::after{content:"";width:1px;height:60px;background:linear-gradient(rgba(255,255,255,.8),transparent);animation:cue 2.2s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+/* babak (scroll story) */
+.story{background:#05090b;color:var(--od);padding:0;position:relative}
+.story .wrap{display:grid;gap:0}
+.st-vis{position:sticky;top:0;height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:0}
+.st-vis figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.2s ease}
+.st-vis figure.on{opacity:1}
+.st-vis img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 7s cubic-bezier(.2,.7,.2,1)}
+.st-vis figure.on img{transform:scale(1)}
+.st-vis::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,9,11,.55),rgba(5,9,11,.15) 40%,rgba(5,9,11,.85)),radial-gradient(120% 90% at 50% 50%,transparent 50%,rgba(0,0,0,.6))}
+.st-txt{position:relative;z-index:1;margin-top:-100svh}
+.st-txt .ch{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:15vh 0;max-width:34rem}
+.st-txt .ch .no{font:italic 400 22px/1 var(--serif);color:var(--sun);display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.st-txt .ch .no::after{content:"";width:60px;height:1px;background:currentColor;opacity:.6}
+.st-txt h2{font-size:clamp(46px,7.4vw,96px);margin:0 0 .25em;text-shadow:0 10px 40px rgba(0,0,0,.5)}
+.st-txt p{font-size:18px;color:rgba(251,247,241,.86);margin:0;max-width:28em;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.st-txt .ch{opacity:.25;transform:translateY(30px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.19,1,.22,1)}
+.st-txt .ch.on{opacity:1;transform:none}
+.st-rail{position:absolute;right:var(--gr);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:2}
+.st-rail i{width:2px;height:34px;background:rgba(255,255,255,.25);transition:background .4s,height .4s}
+.st-rail i.on{background:var(--sun);height:54px}
+/* reveal: curtain wipe */
+.cw{clip-path:inset(0 0 100% 0);transition:clip-path 1.4s cubic-bezier(.77,0,.18,1)}
+.cw.in{clip-path:inset(0 0 0 0)}
+.cw img{transform:scale(1.25);transition:transform 2s cubic-bezier(.19,1,.22,1)}
+.cw.in img{transform:scale(1)}
+h2.rv{opacity:1;animation:none!important}
+h2.rv.hd{opacity:0;transform:translateY(40px);filter:blur(10px);transition:opacity 1.1s ease,transform 1.2s cubic-bezier(.19,1,.22,1),filter 1.1s ease}
+h2.rv.hd.in{opacity:1;transform:none;filter:blur(0)}
+.final video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.final::before{content:"";position:absolute;left:0;right:0;top:0;height:9vh;background:#000;z-index:0}
+.final .wrap{position:relative;z-index:1}
+.final .fb2{position:absolute;left:0;right:0;bottom:0;height:9vh;background:#000;z-index:0}
+.st-vis figure.fr .bg{display:none}
+@media(max-width:999px){.st-txt .ch{justify-content:flex-end;padding:0 0 16svh}.st-txt h2{font-size:clamp(42px,12vw,64px)}.st-vis figure.fr .bg{display:block;filter:blur(34px) brightness(.5);transform:scale(1.3)!important}.st-vis figure.fr .pic{position:absolute;left:16px;right:16px;top:86px;width:calc(100% - 32px);height:44svh;border-radius:18px;object-position:50% 45%!important;z-index:1;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}}
+@media(min-width:1000px){.cue{display:flex}.st-txt .ch{padding-left:4vw}
+ .st-vis figure.fr .bg{display:block;filter:blur(40px) brightness(.55) saturate(1.2);transform:scale(1.3)!important}
+ .st-vis figure.fr .pic{position:absolute;right:11vw;top:50%;width:auto;height:72svh;aspect-ratio:3/4;translate:0 -50%;border-radius:22px;box-shadow:0 50px 100px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12);z-index:1}
+ .st-vis figure.fr .pic{transform:scale(1.06) rotate(1.5deg)}.st-vis figure.fr.on .pic{transform:scale(1) rotate(0)}}
+@media(prefers-reduced-motion:reduce){.lbx,.grain{display:none}.hero h1 .w>span,.hero .wrap>*{transform:none!important;opacity:1!important}.cw{clip-path:none}.cw img{transform:none}h2.rv.hd{opacity:1;transform:none;filter:none}.st-txt .ch{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
+<div class="lbx t" aria-hidden="true"></div><div class="lbx b" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
 
 <header class="top" id="hdr"><div class="demo" role="note" data-en="Design sample by Hasfi Web Design for Langkawi Car Rental by Azri. Not the official website.">Contoh reka bentuk oleh Hasfi Web Design untuk Langkawi Car Rental by Azri. Bukan laman rasmi.</div><div class="wrap">
 <a class="brand" href="#top"><span class="mk" aria-hidden="true">A</span><span><b>Langkawi Car Rental</b><small data-en="by Azri · Kuah">by Azri · Kuah</small></span></a>
@@ -305,7 +372,11 @@ dialog#bk::backdrop{background:rgba(5,10,12,.66);backdrop-filter:blur(4px)}
 <img src="img/h2.jpg" width="1600" height="1067" alt="" loading="lazy" data-c="Telaga Harbour">
 <img src="img/h3.jpg" width="1600" height="900" alt="" loading="lazy" data-c="Langkawi Yacht Marina">
 </div>
-<div class="cap" aria-hidden="true"><span id="capt">Langkawi Sky Bridge</span><span class="dots"><i class="on"></i><i></i><i></i></span></div>
+<video id="hv" muted playsinline loop preload="none" poster="img/hero-poster.webp" aria-hidden="true"></video>
+<div class="chap" aria-hidden="true"><span class="rec"></span><b id="chn">Dataran Lang, Kuah</b><span class="tc" id="tc">00:00</span></div>
+<span class="cue" aria-hidden="true" data-en="Scroll">Tatal</span>
+<div class="prog" aria-hidden="true"><i id="pg"></i></div>
+<div class="cap" aria-hidden="true" style="display:none"><span id="capt">Langkawi Sky Bridge</span><span class="dots"><i class="on"></i><i></i><i></i></span></div>
 <div class="wrap">
 <span class="badge"><span class="st">★ 4.9</span><span data-en="145 Google reviews · guests from Malaysia &amp; abroad">145 ulasan Google · pelanggan tempatan &amp; luar negara</span></span>
 <h1 id="h1" data-en="Land in Langkawi. &lt;em&gt;Your car is waiting.&lt;/em&gt;">Mendarat di Langkawi. <em>Kereta dah menunggu.</em></h1>
@@ -349,6 +420,20 @@ dialog#bk::backdrop{background:rgba(5,10,12,.66);backdrop-filter:blur(4px)}
 <div class="perk rv"><span class="n">24/7</span><h3 data-en="Booking locked any time">Tempahan dikunci bila-bila masa</h3><p data-en="Message at 3am and your car is locked in. Azri replies from 6.30am.">Hantar mesej pukul 3 pagi pun kereta tetap dikunci. Azri balas dari 6.30 pagi.</p></div>
 </div>
 </div></section>
+
+<section class="story" id="babak" aria-label="Perjalanan anda" data-en-aria="Your journey">
+<div class="st-vis" aria-hidden="true">
+<figure class="on"><img src="img/h2.jpg" width="1600" height="1066" alt="" loading="lazy"></figure>
+<figure class="fr"><img class="bg" src="img/t2.jpg" width="750" height="1000" alt="" loading="lazy"><img class="pic" src="img/t2.jpg" width="750" height="1000" alt="" loading="lazy" style="object-position:50% 40%"></figure>
+<figure><img src="img/d-rhu.jpg" width="900" height="568" alt="" loading="lazy"></figure>
+<div class="st-rail"><i class="on"></i><i></i><i></i></div>
+</div>
+<div class="wrap st-txt">
+<div class="ch on" data-i="0"><span class="no" data-en="Scene 01 · Arrival">Babak 01 · Ketibaan</span><h2 data-en="You land. &lt;em&gt;We are already there.&lt;/em&gt;">Anda mendarat. <em>Kami dah sampai.</em></h2><p data-en="No taxi queue and no counter. Azri waits at arrivals or at Kuah Jetty, free of charge.">Tiada barisan teksi, tiada kaunter. Azri menunggu di balai ketibaan atau Jeti Kuah, percuma.</p></div>
+<div class="ch" data-i="1"><span class="no" data-en="Scene 02 · The keys">Babak 02 · Kunci</span><h2 data-en="Five minutes. &lt;em&gt;Keys in hand.&lt;/em&gt;">Lima minit. <em>Kunci di tangan.</em></h2><p data-en="Show your licence, sign once, and the car is yours. A low deposit, a clean car, a friendly face.">Tunjuk lesen, tandatangan sekali, dan kereta milik anda. Deposit rendah, kereta bersih, wajah mesra.</p></div>
+<div class="ch" data-i="2"><span class="no" data-en="Scene 03 · The island">Babak 03 · Pulau</span><h2 data-en="The whole island. &lt;em&gt;On your time.&lt;/em&gt;">Seluruh pulau. <em>Ikut masa anda.</em></h2><p data-en="Sunrise at Tanjung Rhu, lunch in Cenang, sunset on the Sky Bridge. No tour schedule, no waiting.">Matahari terbit di Tanjung Rhu, makan tengah hari di Cenang, matahari terbenam di Sky Bridge. Tiada jadual tour, tiada menunggu.</p></div>
+</div>
+</section>
 
 <section id="cara" aria-labelledby="st-h"><div class="wrap">
 <p class="eyebrow" data-en="How it works">Cara tempah</p>
@@ -416,7 +501,7 @@ dialog#bk::backdrop{background:rgba(5,10,12,.66);backdrop-filter:blur(4px)}
 </div>
 </div></section>
 
-<section class="final" aria-labelledby="fi-h"><img src="img/h3.jpg" width="1600" height="900" alt="" loading="lazy">
+<section class="final" aria-labelledby="fi-h"><img src="img/h3.jpg" width="1600" height="900" alt="" loading="lazy"><video id="fv" muted playsinline loop preload="none" aria-hidden="true"></video><span class="fb2" aria-hidden="true"></span>
 <div class="wrap"><h2 id="fi-h" data-en="Your Langkawi story &lt;em&gt;starts with the keys.&lt;/em&gt;">Kisah Langkawi anda <em>bermula dengan kunci.</em></h2>
 <p data-en="Choose your dates, pick a car and send. Azri takes care of the rest.">Pilih tarikh, pilih kereta dan hantar. Selebihnya Azri uruskan.</p>
 <div class="ctas"><a class="btn sun" href="#kereta" data-en="See available cars">Lihat pilihan kereta</a><a class="btn ghost" href="https://wa.me/60194863077" rel="noopener" data-en="WhatsApp Mat E">WhatsApp Mat E</a></div></div>
@@ -516,7 +601,40 @@ lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('x
 /* language */
 const lang=q('#lang');
 function setL(l){L=l;document.documentElement.lang=l==='en'?'en':'ms';els.forEach(e=>e.innerHTML=l==='en'?e.dataset.en:e.dataset.ms);alts.forEach(e=>e.alt=l==='en'?e.dataset.enAlt:e.dataset.msAlt);phs.forEach(e=>e.placeholder=l==='en'?e.dataset.enPh:e.dataset.msPh);lang.textContent=l==='en'?'BM':'EN';lang.setAttribute('aria-label',l==='en'?'Tukar ke Bahasa Melayu':'Switch to English');renderFleet();if(cur&&bk.open)openBk(CARS.indexOf(cur));try{localStorage.setItem('L'+location.pathname,l)}catch(e){}}
-lang.addEventListener('click',()=>setL(L==='en'?'ms':'en'));
+lang.addEventListener('click',()=>window.setL(L==='en'?'ms':'en'));
+
+/* ===== SINEMA v4 ===== */
+(function(){
+ const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const SD=navigator.connection&&navigator.connection.saveData;
+ const h1=q('#h1');
+ function splitH1(){if(h1.dataset.split===L)return;const tmp=document.createElement('div');tmp.innerHTML=h1.innerHTML;
+  const wrapW=(node)=>{[...node.childNodes].forEach(n=>{if(n.nodeType===3){const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t)){f.appendChild(document.createTextNode(t));return}const w=document.createElement('span');w.className='w';const i=document.createElement('span');i.textContent=t;w.appendChild(i);f.appendChild(w)});n.replaceWith(f)}else if(n.nodeType===1)wrapW(n)})};
+  wrapW(tmp);h1.innerHTML=tmp.innerHTML;let k=0;h1.querySelectorAll('.w>span').forEach(s=>{s.style.transitionDelay=(.35+k*.09)+'s';k++});h1.dataset.split=L}
+ splitH1();
+ const oldSet=setL;window.setL=setL=function(l){oldSet(l);splitH1();q('#babak').setAttribute('aria-label',l==='en'?'Your journey':'Perjalanan anda')};
+ requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('go')));
+ /* hero video */
+ const hv=q('#hv'),fv=q('#fv'),mob=matchMedia('(max-width:820px)').matches,src=mob?'img/hero-m.mp4':'img/hero.mp4';
+ const CH=[[0,'Dataran Lang, Kuah','Eagle Square, Kuah'],[5.5,'Selat Kuah','Kuah Strait'],[10.5,'Kilim Geoforest','Kilim Geoforest']];
+ if(!RM&&!SD){hv.src=src;hv.play().then(()=>{hv.classList.add('on');q('#slides').style.visibility='hidden'}).catch(()=>{});
+  const pg=q('#pg'),chn=q('#chn'),tc=q('#tc');let last=-1;
+  hv.addEventListener('timeupdate',()=>{const t=hv.currentTime,d=hv.duration||15;pg.style.width=(t/d*100)+'%';tc.textContent='00:'+String(Math.floor(t)).padStart(2,'0');let c=0;CH.forEach((x,i)=>{if(t>=x[0])c=i});if(c!==last){last=c;chn.textContent=T(CH[c][1],CH[c][2])}});
+  addEventListener('scroll',()=>{const y=scrollY;if(y<innerHeight)hv.style.transform='translateY('+(y*.28)+'px) scale(1.06)'},{passive:true});
+  const fo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!fv.src){fv.src=src;fv.addEventListener('loadedmetadata',()=>{fv.currentTime=10.6},{once:true})}fv.play().catch(()=>{})}else fv.pause()}),{rootMargin:'200px'});fo.observe(q('.final'));
+ }
+ /* story */
+ const figs=qa('.st-vis figure'),rl=qa('.st-rail i'),chs=qa('.st-txt .ch');
+ const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=+e.target.dataset.i;chs.forEach((c,j)=>c.classList.toggle('on',j===i));figs.forEach((f,j)=>f.classList.toggle('on',j===i));rl.forEach((r,j)=>r.classList.toggle('on',j===i))}}),{threshold:.55});
+ chs.forEach(c=>so.observe(c));
+ /* curtain + heading reveals */
+ if(!RM){
+  const KIDS=new Map();
+  const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){(KIDS.get(e.target)||[e.target]).forEach((k,n)=>setTimeout(()=>k.classList.add('in'),n*140));ro.unobserve(e.target);KIDS.delete(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  const arm=()=>{qa('.dest,.quote,.real button,#fleet .car figure').forEach(el=>{if(!el.classList.contains('cw')){el.classList.add('cw');const pa=el.parentElement;if(!KIDS.has(pa)){KIDS.set(pa,[]);ro.observe(pa)}KIDS.get(pa).push(el)}});qa('h2.rv').forEach(el=>{if(!el.classList.contains('hd')){el.classList.add('hd');ro.observe(el)}})};
+  arm();new MutationObserver(arm).observe(q('#fleet'),{childList:true});
+ }
+})();
 syncInputs();
 try{if(localStorage.getItem('L'+location.pathname)==='en')setL('en');else renderFleet()}catch(e){renderFleet()}
 </script>
