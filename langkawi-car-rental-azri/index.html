@@ -12,7 +12,8 @@
 <meta property="og:url" content="https://hasfiwebdesign.github.io/langkawi-car-rental-azri/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0a1215">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a1215'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-style='italic' font-size='36' fill='%23f2a541' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,6 +50,7 @@ section{padding-block:96px}
 .top .wrap{display:flex;align-items:center;gap:12px;height:72px}
 .top.solid{background:rgba(10,18,21,.88);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 1px 0 rgba(255,255,255,.06)}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--od);min-width:0}
+.lg{height:44px;width:auto;flex:none;filter:drop-shadow(0 4px 12px rgba(0,0,0,.35))}
 .mk{width:40px;height:40px;border-radius:12px;border:1.5px solid rgba(242,165,65,.7);color:var(--sun);display:grid;place-items:center;font:italic 400 26px/1 var(--serif);flex:none}
 .brand b{display:block;font-weight:800;font-size:16px;line-height:1.1;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brand small{display:block;color:var(--odm);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
@@ -285,7 +287,7 @@ dialog#bk::backdrop{background:rgba(5,10,12,.66);backdrop-filter:blur(4px)}
  .bar{left:auto;right:calc(22px + env(safe-area-inset-right,0px));bottom:22px;border-radius:999px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
  .bar .btn.sun{flex:none}
 }
-@media(max-width:420px){.wa-top .t{display:none}.wa-top{padding:0 13px}.brand small{display:none}.brand b{font-size:15px}}
+@media(max-width:420px){.lg{height:36px}.wa-top .t{display:none}.wa-top{padding:0 13px}.brand small{display:none}.brand b{font-size:15px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.slides img{transform:none}}
 /* ===== SINEMA v4 ===== */
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:0;transition:opacity 1.6s ease;transform:scale(1.06);will-change:transform}
@@ -359,7 +361,7 @@ h2.rv.hd.in{opacity:1;transform:none;filter:blur(0)}
 <div class="lbx t" aria-hidden="true"></div><div class="lbx b" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
 
 <header class="top" id="hdr"><div class="demo" role="note" data-en="Design sample by Hasfi Web Design for Langkawi Car Rental by Azri. Not the official website.">Contoh reka bentuk oleh Hasfi Web Design untuk Langkawi Car Rental by Azri. Bukan laman rasmi.</div><div class="wrap">
-<a class="brand" href="#top"><span class="mk" aria-hidden="true">A</span><span><b>Langkawi Car Rental</b><small data-en="by Azri · Kuah">by Azri · Kuah</small></span></a>
+<a class="brand" href="#top"><img class="lg" src="img/logo-aee.webp" srcset="img/logo-aee.webp 1x, img/logo-aee-l.webp 2x" width="81" height="44" alt="AEE Car Rental"><span><b>Langkawi Car Rental</b><small data-en="by Azri · Kuah">by Azri · Kuah</small></span></a>
 <nav class="nav" aria-label="Menu"><a href="#kereta" data-en="Fleet">Kereta</a><a href="#kenapa" data-en="Why us">Kenapa kami</a><a href="#jelajah" data-en="Explore">Jelajah</a><a href="#ulasan" data-en="Reviews">Ulasan</a><a href="#hubungi" data-en="Contact">Hubungi</a></nav>
 <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
 <a class="wa-top" href="https://wa.me/60194863077" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg><span class="t">WhatsApp</span></a>
@@ -509,7 +511,7 @@ h2.rv.hd.in{opacity:1;transform:none;filter:blur(0)}
 </main>
 
 <footer><div class="wrap">
-<div><span class="fb">Langkawi Car Rental by Azri</span><p style="margin:0" data-en="AEE Car Rental · Kuah, Langkawi, Kedah">AEE Car Rental · Kuah, Langkawi, Kedah</p></div>
+<div><img src="img/logo-aee-l.webp" width="118" height="64" alt="AEE Car Rental" loading="lazy" style="margin-bottom:14px"><span class="fb">Langkawi Car Rental by Azri</span><p style="margin:0" data-en="AEE Car Rental · Kuah, Langkawi, Kedah">AEE Car Rental · Kuah, Langkawi, Kedah</p></div>
 <div><b data-en="Contact">Hubungi</b><p style="margin:8px 0 0">WhatsApp <a href="https://wa.me/60194863077">019-486 3077</a></p></div>
 <div><small data-en="Design sample by Hasfi Web Design. Car and customer photos are from this business&#x27;s public Google Maps profile. Langkawi scenery photos are from Pexels. Prices and offers are from the business&#x27;s own messages; all prices and details must be confirmed by the business.">Contoh reka bentuk oleh Hasfi Web Design. Gambar kereta dan pelanggan daripada profil Google Maps awam perniagaan ini. Gambar pemandangan Langkawi daripada Pexels. Harga dan tawaran diambil daripada mesej perniagaan sendiri; semua harga dan butiran perlu disahkan oleh pihak perniagaan.</small></div>
 </div></footer>
