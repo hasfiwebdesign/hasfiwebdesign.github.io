@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ms">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ZZ&amp;S Car Rental | Kereta Sewa Johor Bahru 24/7</title>
-<meta name="description" content="Kereta sewa Johor Bahru, buka 24/7. Pilih tarikh dan kereta, tempahan terus masuk WhatsApp. 5.0 bintang, 100 ulasan Google.">
+<title>ZZ&amp;S Car Rental | Car Rental Johor Bahru 24/7</title>
+<meta name="description" content="Car rental in Johor Bahru, open 24/7. Pick your dates and car, book straight on WhatsApp. 5.0 stars from 100 Google reviews.">
 <meta property="og:title" content="ZZ&amp;S Car Rental Johor Bahru">
 <meta property="og:description" content="Kereta sewa JB 24/7. Tempah terus melalui WhatsApp.">
 <meta property="og:image" content="img/h0.webp">
@@ -13,14 +13,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#111214;--ink2:#1c1e22;--or:#ff5f00;--or2:#ff7a26;--bg:#f4f4f2;--line:#e3e3df;--mute:#64666b}
-*{box-sizing:border-box;margin:0;padding:0}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box;margin:0;padding:0}[hidden]{display:none!important}html[lang=en] .ms,html[lang=ms] .en{display:none!important}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.35);border-radius:8px;overflow:hidden;margin-left:auto}.lang button{font:inherit;font-size:.8rem;font-weight:700;background:none;border:0;color:#fff;padding:7px 10px;cursor:pointer;opacity:.6}.lang button.on{opacity:1;background:rgba(255,255,255,.15)}
+.hd .btn{margin-left:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.55}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .wrap{width:min(1180px,92vw);margin:auto}
 .top{background:var(--or);color:#fff;font-size:.85rem;font-weight:600;text-align:center;padding:8px 12px}
 header{position:sticky;top:0;z-index:40;background:var(--ink);color:#fff}
 .hd{display:flex;align-items:center;gap:26px;height:66px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.logo{white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
 .logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:9px;background:var(--or);font-style:normal;font-size:.95rem}
 nav{display:flex;gap:24px;font-weight:600;font-size:.95rem;margin-left:14px}nav a{opacity:.85}nav a:hover{opacity:1;color:var(--or2)}
 .hd .btn{margin-left:auto;white-space:nowrap}
@@ -38,8 +40,8 @@ h1{font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:.98;font-weight:800;letter-s
 h1 em{font-style:normal;color:var(--or)}
 .hero p.lead{font-size:1.12rem;opacity:.9;max-width:470px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.chips span{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:600;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px}
-.chips span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--or)}
+.chips>span{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:600;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px}
+.chips>span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--or)}
 /* booking widget */
 .book{background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
 .book h2{font-size:1.35rem;font-weight:800;margin-bottom:4px}.book .sub{color:var(--mute);font-size:.92rem;margin-bottom:16px}
@@ -57,7 +59,7 @@ h1 em{font-style:normal;color:var(--or)}
 .trust{border-bottom:1px solid var(--line)}
 .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
 .trust div{padding:24px 18px;border-right:1px solid var(--line)}.trust div:last-child{border:0}
-.trust b{display:block;font-size:1.5rem;font-weight:800}.trust span{color:var(--mute);font-size:.92rem}
+.trust b span{font-size:inherit;color:inherit}.trust b{display:block;color:var(--ink);font-size:1.5rem;font-weight:800}.trust span{color:var(--mute);font-size:.92rem}
 /* sections */
 section.s{padding:90px 0}.eyebrow{color:var(--or);font-weight:800;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
 h2.t{font-size:clamp(2rem,4vw,3rem);line-height:1.05;font-weight:800;letter-spacing:-.025em;margin:8px 0 12px}
@@ -123,68 +125,69 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--line);padding:10px 12px;gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
  .mbar .btn{flex:1;padding:14px}body{padding-bottom:74px}
 }
-@media(max-width:420px){.car .spec{font-size:.78rem;gap:8px}.car .ft .btn{font-size:.85rem}}
+@media(max-width:420px){.logo{font-size:.92rem;gap:8px}.logo i{width:32px;height:32px}.hd{gap:10px}.lang button{padding:6px 8px}.hd .btn{padding:9px 12px;font-size:.85rem}.car .spec{font-size:.78rem;gap:8px}.car .ft .btn{font-size:.85rem}}
 </style>
 </head>
 <body>
-<div class="top">Buka 24 jam, 7 hari · Hantar kereta ke rumah atau hotel di Johor Bahru</div>
+<div class="top"><span class="en">Open 24 hours, 7 days · Car delivery to your home or hotel in Johor Bahru</span><span class="ms">Buka 24 jam, 7 hari · Hantar kereta ke rumah atau hotel di Johor Bahru</span></div>
 <header><div class="wrap hd">
  <a href="#" class="logo"><i>ZS</i>ZZ&amp;S Car Rental</a>
- <nav><a href="#kereta">Kereta</a><a href="#cara">Cara tempah</a><a href="#ulasan">Ulasan</a><a href="#lokasi">Lokasi</a></nav>
- <a class="btn" href="#tempah">Tempah sekarang</a>
+ <nav><a href="#kereta"><span class="en">Cars</span><span class="ms">Kereta</span></a><a href="#cara"><span class="en">How it works</span><span class="ms">Cara tempah</span></a><a href="#ulasan"><span class="en">Reviews</span><span class="ms">Ulasan</span></a><a href="#lokasi"><span class="en">Location</span><span class="ms">Lokasi</span></a></nav>
+ <span class="lang"><button data-l="en">EN</button><button data-l="ms">BM</button></span>
+ <a class="btn" href="#tempah"><span class="en">Book now</span><span class="ms">Tempah sekarang</span></a>
 </div></header>
 
 <section class="hero"><div class="hero-bg"></div><div class="wrap hero-in">
  <div>
-  <span class="rate"><b>★ 5.0</b> · 100 ulasan Google</span>
-  <h1>Kereta sewa JB.<br><em>Tanpa leceh.</em></h1>
-  <p class="lead">Pilih tarikh dan kereta. Tempahan terus masuk WhatsApp ZZ&amp;S Car Rental, lengkap dengan tarikh ambil, tarikh pulang dan jumlah hari.</p>
-  <div class="chips"><span>Kereta sebenar, bukan gambar internet</span><span>Balas pantas 24/7</span><span>Ambil di Danga Bay</span></div>
+  <span class="rate"><b>★ 5.0</b> <span class="en">· 100 Google reviews</span></span><span class="ms">· 100 ulasan Google</span></span>
+  <h1><span class="en">JB car rental.<br><em>Zero hassle.</em></span><span class="ms">Kereta sewa JB.<br><em>Tanpa leceh.</em></span></h1>
+  <p class="lead"><span class="en">Pick your dates and car. Your booking goes straight to ZZ&amp;S Car Rental on WhatsApp, with pick-up, return and total days filled in.</span><span class="ms">Pilih tarikh dan kereta. Tempahan terus masuk WhatsApp ZZ&amp;S Car Rental, lengkap dengan tarikh ambil, tarikh pulang dan jumlah hari.</span></p>
+  <div class="chips"><span><span class="en">Real cars, not stock photos</span><span class="ms">Kereta sebenar, bukan gambar internet</span></span><span><span class="en">Fast replies 24/7</span><span class="ms">Balas pantas 24/7</span></span><span><span class="en">Pick up at Danga Bay</span><span class="ms">Ambil di Danga Bay</span></span></div>
  </div>
  <form class="book" id="tempah">
-  <h2>Bila anda perlukan kereta?</h2><p class="sub">Isi dalam seminit. Kami sahkan kereta dan harga melalui WhatsApp.</p>
-  <div class="seg" role="tablist"><button type="button" class="on" data-l="Ambil di premis (Danga Bay)">Ambil di premis</button><button type="button" data-l="Hantar ke rumah / hotel">Hantar ke saya</button></div>
-  <div class="f" id="alamatF" hidden><label for="alamat">Alamat hantar</label><input id="alamat" placeholder="Contoh: hotel, kawasan di JB"></div>
-  <div class="row2"><div class="f"><label for="d1">Tarikh ambil</label><input id="d1" type="date" required></div><div class="f"><label for="t1">Masa</label><input id="t1" type="time" value="10:00"></div></div>
-  <div class="row2"><div class="f"><label for="d2">Tarikh pulang</label><input id="d2" type="date" required></div><div class="f"><label for="t2">Masa</label><input id="t2" type="time" value="10:00"></div></div>
-  <div class="f"><label for="jenis">Jenis kereta</label><select id="jenis"><option>Kecil (Myvi)</option><option>Sedan</option><option>MPV 7 tempat duduk</option><option>SUV</option><option>Belum pasti</option></select></div>
-  <div class="f"><label for="nama">Nama anda</label><input id="nama" required placeholder="Nama penuh"></div>
-  <div class="days"><span>Tempoh sewa</span><span id="hari">Pilih tarikh</span></div>
-  <button class="btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Semak kereta di WhatsApp</button>
-  <p class="note">Tiada bayaran di laman ini. Harga penuh disahkan di WhatsApp.</p>
+  <h2><span class="en">When do you need a car?</span><span class="ms">Bila anda perlukan kereta?</span></h2><p class="sub"><span class="en">Takes a minute. We confirm the car and price on WhatsApp.</span><span class="ms">Isi dalam seminit. Kami sahkan kereta dan harga melalui WhatsApp.</span></p>
+  <div class="seg" role="tablist"><button type="button" class="on" data-l="pick"><span class="en">Pick up</span><span class="ms">Ambil di premis</span></button><button type="button" data-l="deliver"><span class="en">Deliver to me</span><span class="ms">Hantar ke saya</span></button></div>
+  <div class="f" id="alamatF" hidden><label for="alamat"><span class="en">Delivery address</span><span class="ms">Alamat hantar</span></label><input id="alamat" placeholder="e.g. hotel or area in JB" data-ms="Contoh: hotel, kawasan di JB"></div>
+  <div class="row2"><div class="f"><label for="d1"><span class="en">Pick-up date</span><span class="ms">Tarikh ambil</span></label><input id="d1" type="date" required></div><div class="f"><label for="t1"><span class="en">Time</span><span class="ms">Masa</span></label><input id="t1" type="time" value="10:00"></div></div>
+  <div class="row2"><div class="f"><label for="d2"><span class="en">Return date</span><span class="ms">Tarikh pulang</span></label><input id="d2" type="date" required></div><div class="f"><label for="t2"><span class="en">Time</span><span class="ms">Masa</span></label><input id="t2" type="time" value="10:00"></div></div>
+  <div class="f"><label for="jenis"><span class="en">Car type</span><span class="ms">Jenis kereta</span></label><select id="jenis"><option data-ms="Kecil (Myvi)">Compact (Myvi)</option><option data-ms="Sedan">Sedan</option><option data-ms="MPV 7 tempat duduk">MPV 7-seater</option><option data-ms="SUV">SUV</option><option data-ms="Belum pasti">Not sure yet</option></select></div>
+  <div class="f"><label for="nama"><span class="en">Your name</span><span class="ms">Nama anda</span></label><input id="nama" required placeholder="Full name" data-ms="Nama penuh"></div>
+  <div class="days"><span class="en"><span>Rental period</span></span><span class="ms"><span>Tempoh sewa</span></span><span id="hari">Pilih tarikh</span></div>
+  <button class="btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span class="en">Check availability on WhatsApp</button></span><span class="ms">Semak kereta di WhatsApp</button></span>
+  <p class="note"><span class="en">No payment on this page. Full price confirmed on WhatsApp.</span><span class="ms">Tiada bayaran di laman ini. Harga penuh disahkan di WhatsApp.</span></p>
  </form>
 </div></section>
 
 <div class="trust"><div class="wrap">
- <div><b>★ 5.0</b><span>100 ulasan Google</span></div>
- <div><b>24/7</b><span>Balas dan serah kunci</span></div>
- <div><b>Danga Bay</b><span>Ambil di premis kami</span></div>
- <div><b>Hantar</b><span>Ke rumah atau hotel di JB</span></div>
+ <div><b>★ 5.0</b><span><span class="en">100 Google reviews</span><span class="ms">100 ulasan Google</span></span></div>
+ <div><b>24/7</b><span><span class="en">Replies and key handover</span><span class="ms">Balas dan serah kunci</span></span></div>
+ <div><b>Danga Bay</b><span><span class="en">Pick up at our premises</span><span class="ms">Ambil di premis kami</span></span></div>
+ <div><b><span class="en">Delivery</span><span class="ms">Hantar</span></b><span><span class="en">To your home or hotel in JB</span><span class="ms">Ke rumah atau hotel di JB</span></span></div>
 </div></div>
 
 <section class="s" id="kereta"><div class="wrap">
- <div class="fleet-top"><div><p class="eyebrow">Kereta kami</p><h2 class="t">Pilih, pandu, pulang.</h2><p class="lede">Gambar di bawah ialah kereta ZZ&amp;S sendiri. Tekan "Tanya harga", mesej terus masuk WhatsApp dengan kereta yang dipilih.</p></div>
- <div class="filters"><button class="on" data-c="all">Semua</button><button data-c="kecil">Kecil</button><button data-c="sedan">Sedan</button><button data-c="mpv">MPV</button><button data-c="suv">SUV</button></div></div>
+ <div class="fleet-top"><div><p class="eyebrow"><span class="en">Our fleet</span><span class="ms">Kereta kami</span></p><h2 class="t"><span class="en">Pick it. Drive it. Return it.</span><span class="ms">Pilih, pandu, pulang.</span></h2><p class="lede"><span class="en">Every photo below is a real ZZ&amp;S car. Tap "Get price" and a WhatsApp message opens with your chosen car.</span><span class="ms">Gambar di bawah ialah kereta ZZ&amp;S sendiri. Tekan "Tanya harga", mesej terus masuk WhatsApp dengan kereta yang dipilih.</span></p></div>
+ <div class="filters"><button class="on" data-c="all"><span class="en">All</span><span class="ms">Semua</span></button><button data-c="kecil"><span class="en">Compact</span><span class="ms">Kecil</span></button><button data-c="sedan">Sedan</button><button data-c="mpv">MPV</button><button data-c="suv">SUV</button></div></div>
  <div class="grid" id="grid"></div>
 </div></section>
 
 <section class="band"><div class="wrap">
- <div class="rv"><h2>Kereta datang<br>kepada anda.</h2><p>Baru sampai JB, menginap di hotel atau tak sempat ke premis? Pilih "Hantar ke saya" dan nyatakan lokasi. Kami bincang hantaran melalui WhatsApp.</p><a class="btn" href="#tempah">Tempah hantaran</a></div>
+ <div class="rv"><h2><span class="en">We bring<br>the car to you.</span><span class="ms">Kereta datang<br>kepada anda.</span></h2><p><span class="en">Just landed in JB, staying at a hotel or short on time? Choose "Deliver to me" and tell us where. We arrange delivery on WhatsApp.</span><span class="ms">Baru sampai JB, menginap di hotel atau tak sempat ke premis? Pilih "Hantar ke saya" dan nyatakan lokasi. Kami bincang hantaran melalui WhatsApp.</span></p><a class="btn" href="#tempah"><span class="en">Book a delivery</span><span class="ms">Tempah hantaran</span></a></div>
  <img class="rv" src="img/g6.webp" alt="MPV ZZ&amp;S Car Rental di lobi hotel" loading="lazy">
 </div></section>
 
 <section class="s" id="cara"><div class="wrap">
- <p class="eyebrow">Cara tempah</p><h2 class="t">Tiga langkah. Satu WhatsApp.</h2>
+ <p class="eyebrow"><span class="en">How it works</span><span class="ms">Cara tempah</span></p><h2 class="t"><span class="en">Three steps. One WhatsApp.</span><span class="ms">Tiga langkah. Satu WhatsApp.</span></h2>
  <div class="steps">
-  <div class="step rv"><b>1</b><h3>Pilih tarikh &amp; kereta</h3><p>Isi borang tempahan. Jumlah hari dikira sendiri.</p></div>
-  <div class="step rv"><b>2</b><h3>Kami sahkan</h3><p>Kami balas dengan kereta yang ada dan harga penuh.</p></div>
-  <div class="step rv"><b>3</b><h3>Ambil kunci</h3><p>Bawa IC atau pasport dan lesen memandu yang sah. Selamat memandu.</p></div>
+  <div class="step rv"><b>1</b><h3><span class="en">Choose dates &amp; car</span><span class="ms">Pilih tarikh &amp; kereta</span></h3><p><span class="en">Fill in the booking form. Total days are calculated for you.</span><span class="ms">Isi borang tempahan. Jumlah hari dikira sendiri.</span></p></div>
+  <div class="step rv"><b>2</b><h3><span class="en">We confirm</span><span class="ms">Kami sahkan</span></h3><p><span class="en">We reply with available cars and the full price.</span><span class="ms">Kami balas dengan kereta yang ada dan harga penuh.</span></p></div>
+  <div class="step rv"><b>3</b><h3><span class="en">Collect the keys</span><span class="ms">Ambil kunci</span></h3><p><span class="en">Bring your IC or passport and a valid driving licence. Enjoy the drive.</span><span class="ms">Bawa IC atau pasport dan lesen memandu yang sah. Selamat memandu.</span></p></div>
  </div>
 </div></section>
 
 <section class="s rev" id="ulasan"><div class="wrap rev-in">
- <div class="rv"><p class="eyebrow">Kata pelanggan</p><div class="big">5.0</div><div class="stars">★★★★★</div><p style="opacity:.75;margin-top:8px">100 ulasan di Google</p>
- <a class="btn ghost" style="margin-top:22px" target="_blank" rel="noopener" href="https://www.google.com/maps/place/ZZ%26S+Car+Rental+Johor+Bahru/data=!4m7!3m6!1s0x31da7307d15acd1f:0x442a8142e297d2e8!8m2!3d1.478378!4d103.722255">Baca di Google</a></div>
+ <div class="rv"><p class="eyebrow"><span class="en">What customers say</span><span class="ms">Kata pelanggan</span></p><div class="big">5.0</div><div class="stars">★★★★★</div><p style="opacity:.75;margin-top:8px"><span class="en">100 reviews on Google</span><span class="ms">100 ulasan di Google</span></p>
+ <a class="btn ghost" style="margin-top:22px" target="_blank" rel="noopener" href="https://www.google.com/maps/place/ZZ%26S+Car+Rental+Johor+Bahru/data=!4m7!3m6!1s0x31da7307d15acd1f:0x442a8142e297d2e8!8m2!3d1.478378!4d103.722255"><span class="en">Read on Google</span><span class="ms">Baca di Google</span></a></div>
  <div class="quotes">
   <div class="q rv"><span class="stars">★★★★★</span><p>“He responds quickly and provides excellent service... Although he is the boss, he strives to do his best in everything he does. His rental cars are also kept in good condition. Plus, it's 24/7, available anytime. Strongly recommended.”</p><cite>Alyse Teoh · Google</cite></div>
   <div class="q rv"><span class="stars">★★★★★</span><p>“Had a great experience renting a car for my 2-day JB trip!”</p><cite>Angie Lim · Google</cite></div>
@@ -192,47 +195,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></section>
 
 <section class="s" id="lokasi"><div class="wrap two">
- <div><p class="eyebrow">Soalan lazim</p><h2 class="t">Sebelum anda tempah.</h2>
-  <details open><summary>Dokumen apa yang perlu dibawa?</summary><p>Kad pengenalan (atau pasport) dan lesen memandu yang masih sah.</p></details>
-  <details><summary>Berapa harga sewa sehari?</summary><p>Harga ikut jenis kereta dan tempoh sewa. Isi borang tempahan, kami balas harga penuh melalui WhatsApp.</p></details>
-  <details><summary>Ada deposit?</summary><p>Deposit ikut jenis kereta dan tempoh sewa. Butiran disahkan semasa tempahan melalui WhatsApp.</p></details>
-  <details><summary>Boleh hantar kereta ke rumah atau hotel?</summary><p>Boleh dibincang. Pilih "Hantar ke saya" dalam borang dan nyatakan lokasi.</p></details>
+ <div><p class="eyebrow"><span class="en">FAQ</span><span class="ms">Soalan lazim</span></p><h2 class="t"><span class="en">Before you book.</span><span class="ms">Sebelum anda tempah.</span></h2>
+  <details open><summary><span class="en">What documents do I need?</span><span class="ms">Dokumen apa yang perlu dibawa?</span></summary><p><span class="en">Your IC (or passport) and a valid driving licence.</span><span class="ms">Kad pengenalan (atau pasport) dan lesen memandu yang masih sah.</span></p></details>
+  <details><summary><span class="en">How much per day?</span><span class="ms">Berapa harga sewa sehari?</span></summary><p><span class="en">Price depends on the car and rental period. Fill in the booking form and we reply with the full price on WhatsApp.</span><span class="ms">Harga ikut jenis kereta dan tempoh sewa. Isi borang tempahan, kami balas harga penuh melalui WhatsApp.</span></p></details>
+  <details><summary><span class="en">Is there a deposit?</span><span class="ms">Ada deposit?</span></summary><p><span class="en">The deposit depends on the car and rental period. Details are confirmed when you book on WhatsApp.</span><span class="ms">Deposit ikut jenis kereta dan tempoh sewa. Butiran disahkan semasa tempahan melalui WhatsApp.</span></p></details>
+  <details><summary><span class="en">Can you deliver to my home or hotel?</span><span class="ms">Boleh hantar kereta ke rumah atau hotel?</span></summary><p><span class="en">Yes, by arrangement. Choose "Deliver to me" in the form and tell us the location.</span><span class="ms">Boleh dibincang. Pilih "Hantar ke saya" dalam borang dan nyatakan lokasi.</span></p></details>
  </div>
  <div class="map rv"><iframe title="Peta ZZ&amp;S Car Rental" src="https://maps.google.com/maps?q=ZZ%26S+Car+Rental+Johor+Bahru&amp;output=embed"></iframe>
-  <div class="ad"><b>ZZ&amp;S Car Rental</b><p>Bay Point Country Garden, Danga Bay, 80200 Johor Bahru, Johor</p><a class="btn dark" target="_blank" rel="noopener" href="https://www.google.com/maps/place/ZZ%26S+Car+Rental+Johor+Bahru/data=!4m7!3m6!1s0x31da7307d15acd1f:0x442a8142e297d2e8!8m2!3d1.478378!4d103.722255">Buka Google Maps</a></div></div>
+  <div class="ad"><b>ZZ&amp;S Car Rental</b><p>Bay Point Country Garden, Danga Bay, 80200 Johor Bahru, Johor</p><a class="btn dark" target="_blank" rel="noopener" href="https://www.google.com/maps/place/ZZ%26S+Car+Rental+Johor+Bahru/data=!4m7!3m6!1s0x31da7307d15acd1f:0x442a8142e297d2e8!8m2!3d1.478378!4d103.722255"><span class="en">Open Google Maps</span><span class="ms">Buka Google Maps</span></a></div></div>
 </div></section>
 
-<section class="cta"><div class="wrap"><h2>Perjalanan anda<br><em>bermula di sini.</em></h2><p>Tempah dalam seminit, kami balas 24/7.</p><a class="btn" href="#tempah">Tempah sekarang</a></div></section>
-<footer><div class="wrap"><span>© 2026 ZZ&amp;S Car Rental · Johor Bahru, Johor</span><span>Contoh website oleh Hasfi Web Design</span></div></footer>
-<div class="mbar"><a class="btn dark" href="https://wa.me/60177476891" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="#tempah">Tempah</a></div>
+<section class="cta"><div class="wrap"><h2><span class="en">Your trip<br><em>starts here.</em></span><span class="ms">Perjalanan anda<br><em>bermula di sini.</em></span></h2><p><span class="en">Book in a minute. We reply 24/7.</span><span class="ms">Tempah dalam seminit, kami balas 24/7.</span></p><a class="btn" href="#tempah"><span class="en">Book now</span><span class="ms">Tempah sekarang</span></a></div></section>
+<footer><div class="wrap"><span>© 2026 ZZ&amp;S Car Rental · Johor Bahru, Johor</span><span><span class="en">Sample website by Hasfi Web Design</span><span class="ms">Contoh website oleh Hasfi Web Design</span></span></div></footer>
+<div class="mbar"><a class="btn dark" href="https://wa.me/60177476891" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="#tempah"><span class="en">Book</span><span class="ms">Tempah</span></a></div>
 
 <script>
 const WA='60177476891';
+const EN=()=>document.documentElement.lang==='en';
+const K={kecil:['Compact','Kecil'],sedan:['Sedan','Sedan'],mpv:['MPV','MPV'],suv:['SUV','SUV']};
 const CARS=[
- {img:'g0',c:'kecil',n:'Perodua Myvi',k:'Kecil',s:'5 tempat',b:'Auto'},
- {img:'g4',c:'kecil',n:'Perodua Myvi',k:'Kecil',s:'5 tempat',b:'Auto'},
- {img:'h0',c:'sedan',n:'Honda City',k:'Sedan',s:'5 tempat',b:'Auto'},
- {img:'g1',c:'sedan',n:'Sedan',k:'Sedan',s:'5 tempat',b:'Auto'},
- {img:'g5',c:'sedan',n:'Sedan',k:'Sedan',s:'5 tempat',b:'Auto'},
- {img:'g2',c:'mpv',n:'Perodua Alza',k:'MPV',s:'7 tempat',b:'Auto'},
- {img:'g6',c:'mpv',n:'Toyota Innova',k:'MPV',s:'7 tempat',b:'Auto'},
- {img:'g3',c:'suv',n:'Perodua Ativa',k:'SUV',s:'5 tempat',b:'Auto'},
- {img:'h1',c:'sedan',n:'Sedan',k:'Sedan',s:'5 tempat',b:'Auto'}];
+ {img:'g0',c:'kecil',n:'Perodua Myvi',s:5},{img:'g4',c:'kecil',n:'Perodua Myvi',s:5},{img:'h0',c:'sedan',n:'Honda City',s:5},
+ {img:'g1',c:'sedan',n:'Sedan',s:5},{img:'g5',c:'sedan',n:'Sedan',s:5},{img:'g2',c:'mpv',n:'Perodua Alza',s:7},
+ {img:'g6',c:'mpv',n:'Toyota Innova',s:7},{img:'g3',c:'suv',n:'Perodua Ativa',s:5},{img:'h1',c:'sedan',n:'Sedan',s:5}];
 const g=document.getElementById('grid');
-g.innerHTML=CARS.map(x=>`<article class="car rv" data-c="${x.c}"><div class="ph"><img src="img/${x.img}.webp" alt="${x.n} ZZ&amp;S Car Rental" loading="lazy"><span class="tag">${x.k}</span></div><div class="bd"><h3>${x.n}</h3><div class="spec"><span>👤 ${x.s}</span><span>⚙ ${x.b}</span></div><div class="ft"><small>Harga di WhatsApp</small><a class="btn" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent('Salam ZZ&S, saya nak tanya harga sewa '+x.n+' ('+x.k+').')}">Tanya harga</a></div></div></article>`).join('');
+function cards(){const e=EN();g.innerHTML=CARS.map(x=>{const k=K[x.c][e?0:1];const msg=e?`Hi ZZ&S, I'd like the rental price for the ${x.n} (${k}).`:`Salam ZZ&S, saya nak tanya harga sewa ${x.n} (${k}).`;
+ return `<article class="car rv in" data-c="${x.c}"><div class="ph"><img src="img/${x.img}.webp" alt="${x.n} ZZ&amp;S Car Rental" loading="lazy"><span class="tag">${k}</span></div><div class="bd"><h3>${x.n}</h3><div class="spec"><span>👤 ${x.s} ${e?'seats':'tempat'}</span><span>⚙ Auto</span></div><div class="ft"><small>${e?'Price on WhatsApp':'Harga di WhatsApp'}</small><a class="btn" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent(msg)}">${e?'Get price':'Tanya harga'}</a></div></div></article>`}).join('');
+ const on=document.querySelector('.filters button.on');if(on)on.click()}
 document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.car').forEach(c=>c.classList.toggle('hide',b.dataset.c!=='all'&&c.dataset.c!==b.dataset.c))});
-let lok='Ambil di premis (Danga Bay)';
-document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));lok=b.dataset.l;document.getElementById('alamatF').hidden=!lok.startsWith('Hantar')});
+let lok='pick';
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));lok=b.dataset.l;document.getElementById('alamatF').hidden=lok!=='deliver'});
 const d1=document.getElementById('d1'),d2=document.getElementById('d2'),hari=document.getElementById('hari');
 const today=new Date();const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);
 d1.min=iso(today);d1.value=iso(today);const t2=new Date(today);t2.setDate(t2.getDate()+2);d2.value=iso(t2);d2.min=d1.value;
-function kira(){const a=new Date(d1.value),b=new Date(d2.value);const n=Math.round((b-a)/864e5);hari.textContent=(d1.value&&d2.value&&n>0)?n+' hari':'Pilih tarikh';return n}
-d1.onchange=()=>{d2.min=d1.value;if(d2.value<=d1.value){const x=new Date(d1.value);x.setDate(x.getDate()+1);d2.value=iso(x)}kira()};d2.onchange=kira;kira();
+function kira(){const a=new Date(d1.value),b=new Date(d2.value);const n=Math.round((b-a)/864e5);hari.textContent=(d1.value&&d2.value&&n>0)?n+(EN()?(n>1?' days':' day'):' hari'):(EN()?'Choose dates':'Pilih tarikh');return n}
+d1.onchange=()=>{d2.min=d1.value;if(d2.value<=d1.value){const x=new Date(d1.value);x.setDate(x.getDate()+1);d2.value=iso(x)}kira()};d2.onchange=kira;
 const fmt=s=>s.split('-').reverse().join('/');
-document.getElementById('tempah').onsubmit=e=>{e.preventDefault();const n=kira();
-let m=`Salam ZZ&S, saya nak tempah kereta:\nNama: ${document.getElementById('nama').value}\nJenis: ${document.getElementById('jenis').value}\nAmbil: ${fmt(d1.value)} ${document.getElementById('t1').value}\nPulang: ${fmt(d2.value)} ${document.getElementById('t2').value}`+(n>0?`\nTempoh: ${n} hari`:'')+`\nLokasi: ${lok}`;
-const al=document.getElementById('alamat').value;if(!document.getElementById('alamatF').hidden&&al)m+=` (${al})`;
+document.getElementById('tempah').onsubmit=e=>{e.preventDefault();const n=kira(),en=EN(),v=id=>document.getElementById(id).value;
+const jenis=document.getElementById('jenis').selectedOptions[0].textContent;
+const L=en?['Hi ZZ&S, I would like to book a car:','Name','Car','Pick-up','Return','Duration','Location',' days','Pick up at your premises (Danga Bay)','Deliver to me']
+ :['Salam ZZ&S, saya nak tempah kereta:','Nama','Jenis','Ambil','Pulang','Tempoh','Lokasi',' hari','Ambil di premis (Danga Bay)','Hantar ke rumah / hotel'];
+let m=`${L[0]}\n${L[1]}: ${v('nama')}\n${L[2]}: ${jenis}\n${L[3]}: ${fmt(v('d1'))} ${v('t1')}\n${L[4]}: ${fmt(v('d2'))} ${v('t2')}`+(n>0?`\n${L[5]}: ${n}${L[7]}`:'')+`\n${L[6]}: ${lok==='deliver'?L[9]:L[8]}`;
+if(lok==='deliver'&&v('alamat'))m+=` (${v('alamat')})`;
 window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank')};
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}
+ document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+ document.querySelectorAll('[data-ms]').forEach(x=>{const a=x.tagName==='OPTION'?'textContent':'placeholder';x.dataset.en=x.dataset.en||x[a];x[a]=l==='ms'?x.dataset.ms:x.dataset.en});
+ document.title=l==='ms'?'ZZ&S Car Rental | Kereta Sewa Johor Bahru 24/7':'ZZ&S Car Rental | Car Rental Johor Bahru 24/7';
+ cards();kira()}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setL(b.dataset.l));
+let L0='en';try{L0=localStorage.getItem('lang')||'en'}catch(e){}setL(L0);
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.rv').forEach(x=>io.observe(x));
 </script>
