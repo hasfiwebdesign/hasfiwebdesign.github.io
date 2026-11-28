@@ -85,6 +85,26 @@ footer{color:#fff;padding:44px 0 110px}footer .wrap{display:flex;justify-content
 .reveal{opacity:0;transform:translateY(24px);transition:.8s}.reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.hs.on{animation:none}.reveal{opacity:1;transform:none}}
 @media(max-width:900px){header nav{display:none}.strip{grid-template-columns:1fr 1fr}.story-in,.board-in,.book .formbox,.visit-in{grid-template-columns:1fr}.badge{right:10px}.menuc ul{columns:1}.sticky{display:flex}form{grid-template-columns:1fr}.sl:after{background:linear-gradient(0deg,rgba(15,30,22,.9),rgba(15,30,22,.25))}.sl-tx{justify-content:flex-end;padding-bottom:70px}}
+
+.deco{position:absolute;top:0;z-index:2;pointer-events:none;transform-origin:top center;animation:sway 5s ease-in-out infinite alternate}
+.deco svg{width:auto;display:block;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.flame{animation:fl 1.6s ease-in-out infinite alternate}@keyframes fl{to{opacity:.65}}
+.d1{left:5%;width:58px}.d2{left:13%;width:46px;animation-delay:-1.5s}.d3{left:21%;width:40px;animation-delay:-3s}
+.d4{right:5%;width:58px;animation-delay:-2s}.d5{right:13%;width:46px;animation-delay:-.7s}.d6{right:21%;width:40px;animation-delay:-2.6s}
+.d1 svg,.d4 svg{height:190px}.d2 svg,.d5 svg{height:250px}.d3 svg,.d6 svg{height:150px}
+.stars{position:absolute;inset:0;z-index:1;pointer-events:none;background-image:radial-gradient(1.6px 1.6px at 12% 22%,#f3e3b8,transparent),radial-gradient(1.2px 1.2px at 30% 12%,#f3e3b8,transparent),radial-gradient(1.8px 1.8px at 72% 18%,#f3e3b8,transparent),radial-gradient(1.2px 1.2px at 86% 30%,#f3e3b8,transparent),radial-gradient(1.4px 1.4px at 60% 8%,#f3e3b8,transparent),radial-gradient(1.2px 1.2px at 44% 26%,#f3e3b8,transparent);animation:tw 3s ease-in-out infinite alternate}
+@keyframes tw{to{opacity:.4}}
+.crescent{position:absolute;z-index:1;top:9%;right:31%;width:64px;height:64px;border-radius:50%;box-shadow:-12px 10px 0 0 #e7d3a6;transform:rotate(-20deg);opacity:.9;pointer-events:none}
+.ketdiv{display:flex;align-items:center;justify-content:center;gap:14px;padding:26px 0;background:var(--ivory)}
+.ketdiv:before,.ketdiv:after{content:"";height:1.5px;width:min(30vw,300px);background:linear-gradient(90deg,transparent,var(--gold))}.ketdiv:after{transform:scaleX(-1)}
+.ketdiv svg{width:46px;height:70px}
+.ketdiv.dk{background:var(--mint)}
+.pelita-row{display:flex;justify-content:center;gap:clamp(18px,5vw,60px);padding:6px 0 0;margin-bottom:-6px}
+.pelita-row svg{width:40px;height:74px}
+.salam{font:600 italic clamp(20px,2.4vw,28px)/1.2 var(--disp);color:var(--gold);text-align:center;margin:0 0 6px}
+@media(max-width:900px){.d2,.d5{display:none}.d1{left:3%;width:44px}.d4{right:3%;width:44px}.d3{left:16%;width:34px}.d6{right:16%;width:34px}.d1 svg,.d4 svg{height:130px}.d3 svg,.d6 svg{height:96px}.crescent{right:12%;top:7%;width:44px;height:44px;box-shadow:-9px 7px 0 0 #e7d3a6}}
+@media (prefers-reduced-motion:reduce){.deco,.flame,.stars{animation:none}}
 </style>
 </head>
 <body>
@@ -103,9 +123,10 @@ footer{color:#fff;padding:44px 0 110px}footer .wrap{display:flex;justify-content
  <div class="hs on" style="background-image:url(img/buf.webp)"></div>
  <div class="hs" style="background-image:url(img/gh2.webp)"></div>
  <div class="hs" style="background-image:url(img/fd1.webp)"></div>
+<div class="stars"></div><div class="crescent"></div><div class="deco d1"><svg viewBox="0 0 60 92" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="22" stroke="#c9a96a" stroke-width="1.2"/><g transform="translate(30 50) rotate(45)"><rect x="-19" y="-19" width="38" height="38" rx="3" fill="#2e5a43" stroke="#c9a96a" stroke-width="1.6"/><path d="M-19 -6H19M-19 6H19M-6 -19V19M6 -19V19" stroke="#c9a96a" stroke-width="1.2"/><path d="M-19 -19 19 19" stroke="#e7d3a6" stroke-width=".8" opacity=".6"/></g><path d="M30 77c-3 5-8 8-12 9M30 77c3 5 8 8 12 9" stroke="#6f8f74" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><div class="deco d2"><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg></div><div class="deco d3"><svg viewBox="0 0 60 92" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="22" stroke="#c9a96a" stroke-width="1.2"/><g transform="translate(30 50) rotate(45)"><rect x="-19" y="-19" width="38" height="38" rx="3" fill="#2e5a43" stroke="#c9a96a" stroke-width="1.6"/><path d="M-19 -6H19M-19 6H19M-6 -19V19M6 -19V19" stroke="#c9a96a" stroke-width="1.2"/><path d="M-19 -19 19 19" stroke="#e7d3a6" stroke-width=".8" opacity=".6"/></g><path d="M30 77c-3 5-8 8-12 9M30 77c3 5 8 8 12 9" stroke="#6f8f74" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><div class="deco d4"><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg></div><div class="deco d5"><svg viewBox="0 0 60 92" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="22" stroke="#c9a96a" stroke-width="1.2"/><g transform="translate(30 50) rotate(45)"><rect x="-19" y="-19" width="38" height="38" rx="3" fill="#2e5a43" stroke="#c9a96a" stroke-width="1.6"/><path d="M-19 -6H19M-19 6H19M-6 -19V19M6 -19V19" stroke="#c9a96a" stroke-width="1.2"/><path d="M-19 -19 19 19" stroke="#e7d3a6" stroke-width=".8" opacity=".6"/></g><path d="M30 77c-3 5-8 8-12 9M30 77c3 5 8 8 12 9" stroke="#6f8f74" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><div class="deco d6"><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg></div>
  <div class="roundel">
   <div>
-   <div class="moon">☾</div>
+   <div class="moon">☾ ✦</div>
    <small>Strand Mall · Kota Damansara</small>
    <h1>Buffet <em>Ramadan</em></h1>
    <p>15 stall juadah berbuka dalam dewan berhawa dingin, dengan surau di dalam premis.</p>
@@ -145,6 +166,7 @@ footer{color:#fff;padding:44px 0 110px}footer .wrap{display:flex;justify-content
  <div class="dots"></div>
 </section>
 
+<div class="ketdiv dk"><svg viewBox="0 0 60 92" aria-hidden="true"><g transform="translate(30 40) rotate(45)"><rect x="-19" y="-19" width="38" height="38" rx="3" fill="#2e5a43" stroke="#c9a96a" stroke-width="1.6"/><path d="M-19 -6H19M-19 6H19M-6 -19V19M6 -19V19" stroke="#c9a96a" stroke-width="1.2"/></g><path d="M30 67c-3 5-8 8-12 9M30 67c3 5 8 8 12 9" stroke="#6f8f74" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div>
 <section id="harga" class="board">
  <div class="wrap board-in">
   <div class="reveal">
@@ -166,6 +188,7 @@ footer{color:#fff;padding:44px 0 110px}footer .wrap{display:flex;justify-content
  </div>
 </section>
 
+<div class="ketdiv"><svg viewBox="0 0 60 92" aria-hidden="true"><g transform="translate(30 40) rotate(45)"><rect x="-19" y="-19" width="38" height="38" rx="3" fill="#2e5a43" stroke="#c9a96a" stroke-width="1.6"/><path d="M-19 -6H19M-19 6H19M-6 -19V19M6 -19V19" stroke="#c9a96a" stroke-width="1.2"/></g><path d="M30 67c-3 5-8 8-12 9M30 67c3 5 8 8 12 9" stroke="#6f8f74" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div>
 <section id="tempah" class="book">
  <div class="wrap">
   <div class="formbox reveal">
@@ -206,6 +229,8 @@ footer{color:#fff;padding:44px 0 110px}footer .wrap{display:flex;justify-content
 </main>
 
 <footer class="pat">
+ <div class="pelita-row"><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg><svg viewBox="0 0 60 110" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="24" stroke="#c9a96a" stroke-width="1.2"/><path d="M22 24h16l-2 6H24z" fill="#c9a96a"/><path d="M18 30h24c4 10 6 22 4 40H14c-2-18 0-30 4-40z" fill="rgba(201,169,106,.18)" stroke="#c9a96a" stroke-width="1.6"/><path d="M30 34v32M22 34c-3 10-3 22-1 32M38 34c3 10 3 22 1 32" stroke="#c9a96a" stroke-width=".9" opacity=".7"/><ellipse cx="30" cy="56" rx="5" ry="8" fill="#ffd27a" class="flame"/><path d="M14 70h32l-4 7H18z" fill="#c9a96a"/><path d="M30 77v12" stroke="#c9a96a" stroke-width="1.2"/><circle cx="30" cy="92" r="3" fill="#c9a96a"/></svg></div>
+ <p class="salam" style="margin-top:18px">Selamat menyambut Ramadan, Selamat Hari Raya Aidilfitri</p>
  <div class="wrap">
   <div><img src="img/logo-krim.png" alt="Sireh Junjung Banquet Hall" width="640" height="434" loading="lazy"><p>F55, Encorp Strand Mall, Kota Damansara</p><p>WhatsApp <a href="#" data-wa="Salam Sireh Junjung, saya nak tanya tentang Buffet Ramadan.">011-6218 6678</a></p></div>
   <div><p><a href="https://sirehjunjungbanquethall.com/">sirehjunjungbanquethall.com</a></p><p style="font-size:12.5px">Contoh reka bentuk oleh Hasfi Web Design.</p></div>
