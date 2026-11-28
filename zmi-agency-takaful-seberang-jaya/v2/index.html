@@ -47,26 +47,27 @@ h1 em,.h2 em{font-style:italic;color:var(--teal2);font-weight:500}
 section{padding:96px 0}
 
 /* HERO */
-.hero{padding:56px 0 0}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:end}
-.hero .lead{font-size:18.5px;color:var(--ink2);max-width:540px;margin:22px 0 28px}
-.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:560px}
-.path{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 18px 16px;text-decoration:none;transition:border-color .2s,transform .2s;display:block}
+.hero{position:relative;min-height:calc(100svh - 96px);display:flex;align-items:flex-end;padding:120px 0 60px;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%;transform:scale(1.04);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,34,48,0) 35%,rgba(15,34,48,.78) 100%),linear-gradient(90deg,rgba(15,34,48,.62) 0%,rgba(15,34,48,.25) 45%,transparent 70%)}
+.hero .bg{filter:saturate(1.12) brightness(1.06)}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero .eyebrow{color:#7ee0d6}
+.hero h1{max-width:900px;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero h1 em{color:#7ee0d6}
+.hero .lead{font-size:18.5px;color:#e6eef0;max-width:600px;margin:20px 0 28px}
+.hero .path{background:rgba(255,253,248,.95)}
+.hero .trust{color:#dfe8ea}.hero .trust b{color:#fff}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:620px}
+.path{border:1px solid var(--line);border-radius:20px;padding:18px 18px 16px;text-decoration:none;transition:border-color .2s,transform .2s;display:block;color:var(--ink)}
 .path:hover{border-color:var(--teal);transform:translateY(-2px)}
 .path .k{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
 .path b{display:block;font:600 21px/1.15 var(--disp);margin:6px 0 4px}
 .path span{font-size:13.5px;color:var(--ink2)}
 .path .ar{float:right;font-size:20px;color:var(--teal2)}
-.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font-size:14px;color:var(--ink2)}
-.trust b{color:var(--ink)}
+.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font-size:14px}
 .stars{color:var(--gold);letter-spacing:1px}
-.hero-pic{position:relative}
-.hero-pic .ph{border-radius:28px 28px 0 0;overflow:hidden;aspect-ratio:4/4.3;background:#ddd}
-.hero-pic .ph img{width:100%;height:100%;object-fit:cover;object-position:38% 50%}
-.hero-pic .tag{position:absolute;left:-22px;bottom:34px;background:var(--ink);color:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px -16px rgba(15,34,48,.6)}
-.hero-pic .tag b{display:block;font:600 26px/1 var(--disp);color:var(--teal)}
-.hero-pic .tag span{font-size:12.5px;opacity:.85}
-.hero-pic .tag2{position:absolute;right:16px;top:16px;background:rgba(255,253,248,.95);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600}
 .band{background:var(--ink);color:#e9efee}
 .band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .band div.s{padding:26px 22px;border-left:1px solid rgba(255,255,255,.1)}
@@ -82,6 +83,7 @@ section{padding:96px 0}
 .tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
 .fasa{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
 .fasa .vis{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#e7efe9,#d5e4de);min-height:400px;display:grid;place-items:end center}
+.fasa .vis .kunci{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .fasa .vis svg{width:100%;height:auto;display:block}
 .fasa .vis .slot{position:absolute;top:16px;left:16px;background:rgba(255,253,248,.92);border:1.5px dashed var(--teal2);color:var(--teal2);border-radius:12px;padding:8px 12px;font-size:12.5px;font-weight:600}
 .fasa .vis .st{position:absolute;top:16px;right:16px;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;color:#fff}
@@ -172,9 +174,7 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
 
 @media(max-width:980px){
  nav{display:none}
- .hero-grid,.fasa,.calc,.renew,.pel{grid-template-columns:1fr}
- .hero-pic .ph{aspect-ratio:16/11;border-radius:24px}
- .hero-pic .tag{left:12px;bottom:12px}
+ .fasa,.calc,.renew,.pel{grid-template-columns:1fr}
  .band .wrap{grid-template-columns:1fr 1fr}
  .band div.s:nth-child(3){border-left:0}
  .hl{grid-template-columns:repeat(2,1fr)}
@@ -185,6 +185,9 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
  section{padding:70px 0}
 }
 @media(max-width:620px){
+ .hero{padding:90px 0 40px;min-height:auto}
+ .hero:after{background:linear-gradient(180deg,rgba(15,34,48,.35) 0%,rgba(15,34,48,.62) 35%,rgba(15,34,48,.85) 100%)}
+ .hero .bg{object-position:72% 50%}
  .hdr-cta{display:none}
  .paths{grid-template-columns:1fr}
  .form{grid-template-columns:1fr;padding:20px}
@@ -207,22 +210,16 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
 
 <main>
 <section class="hero">
- <div class="wrap hero-grid">
-  <div>
-   <span class="eyebrow">Seberang Jaya · Pulau Pinang</span>
-   <h1>Kereta diurus. <em>Rumah dicari.</em> Satu kaunter.</h1>
-   <p class="lead">ZMI Agency di Jln Tenggiri. Renew insurans dan roadtax dengan pantas, dan bantu keluarga dapatkan rumah projek dari fasa awal. Semua bermula di WhatsApp.</p>
-   <div class="paths">
-    <a class="path" href="#renew"><span class="ar">→</span><span class="k">Kenderaan</span><b>Renew insurans &amp; roadtax</b><span>Isi no. plat, kami semak harga terbaik.</span></a>
-    <a class="path" href="#projek"><span class="ar">→</span><span class="k">Hartanah</span><b>Rumah projek</b><span>Lihat fasa, kira ansuran, daftar minat.</span></a>
-   </div>
-   <div class="trust"><span><span class="stars">★★★★★</span> <b>4.9</b> · 12 ulasan Google</span><span>Buka <b>8.30 pagi hingga 5.30 petang</b></span></div>
+ <img class="bg" src="img/hero.webp" alt="Rumah teres moden dengan kanak-kanak bermain di hadapan" width="2000" height="1414" fetchpriority="high">
+ <div class="wrap hero-in">
+  <span class="eyebrow">Seberang Jaya · Pulau Pinang</span>
+  <h1>Rumah untuk keluarga. <em>Kereta yang terjaga.</em></h1>
+  <p class="lead">ZMI Agency bantu anda dapatkan rumah projek dari fasa awal, dan uruskan renew insurans serta roadtax dengan pantas. Semua bermula di WhatsApp.</p>
+  <div class="paths">
+   <a class="path" href="#projek"><span class="ar">→</span><span class="k">Hartanah</span><b>Cari rumah projek</b><span>Lihat fasa, kira ansuran, daftar minat.</span></a>
+   <a class="path" href="#renew"><span class="ar">→</span><span class="k">Kenderaan</span><b>Renew insurans &amp; roadtax</b><span>Isi no. plat, kami semak harga terbaik.</span></a>
   </div>
-  <div class="hero-pic">
-   <div class="ph"><img src="img/depan.webp" alt="Premis ZMI Agency, Wakil Insurans dan Takaful di Jln Tenggiri Seberang Jaya" width="1080" height="524" fetchpriority="high"></div>
-   <span class="tag2">📍 No 63B, Jln Tenggiri</span>
-   <div class="tag"><b>4.9★</b><span>"Easy and fast" · ulasan Google</span></div>
-  </div>
+  <div class="trust"><span><span class="stars">★★★★★</span> <b>4.9</b> · 12 ulasan Google</span><span>📍 No 63B, Jln Tenggiri</span><span>Buka <b>8.30 pagi hingga 5.30 petang</b></span></div>
  </div>
 </section>
 
@@ -253,7 +250,7 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
    <div class="vis">
     <span class="slot">Ruang gambar &amp; brosur projek</span>
     <span class="st buka" id="fSt">Fasa semasa</span>
-    <svg viewBox="0 0 600 300" aria-hidden="true"><g fill="none" stroke="#0f2230" stroke-width="2.2" stroke-linejoin="round"><path d="M0 268h600"/><g id="rumah"></g></g></svg>
+    <img class="kunci" src="img/kunci.webp" alt="Serahan kunci rumah baharu" loading="lazy"><svg viewBox="0 0 600 300" aria-hidden="true" style="display:none"><g fill="none" stroke="#0f2230" stroke-width="2.2" stroke-linejoin="round"><path d="M0 268h600"/><g id="rumah"></g></g></svg>
    </div>
    <div class="info">
     <span class="eyebrow" id="fEy">Fasa 1</span>
