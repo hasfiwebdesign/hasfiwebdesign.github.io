@@ -129,15 +129,21 @@ section{padding:96px 0}
 #hotline{background:var(--ink);color:#fff}
 #hotline .eyebrow{color:var(--teal)}
 #hotline .sub{color:#b9c8cf}
-.hl{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}
+.hl{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:36px}
 .hl a{background:#16303f;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
 .hl a:hover{transform:translateY(-3px);border-color:var(--teal)}
-.hl .im{aspect-ratio:4/3;background:#fff;overflow:hidden}
-.hl .im img{width:100%;height:100%;object-fit:cover}
-.hl .t{padding:14px 16px}
-.hl .t small{font-size:12px;color:#9fb3bb}
-.hl .t b{display:block;font-size:17px;letter-spacing:.01em;margin-top:2px}
-.hl .t span{font-size:12.5px;color:var(--teal);font-weight:600}
+.hl .im{position:relative;aspect-ratio:4/3;background:#0b1a24;overflow:hidden}
+.hl .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.hl a:hover .im img{transform:scale(1.06)}
+.hl .ov{position:absolute;inset:auto 0 0 0;padding:44px 14px 12px;background:linear-gradient(180deg,transparent,rgba(8,20,28,.92))}
+.hl .ov small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7ee0d6}
+.hl .ov b{display:block;font:700 21px/1.1 var(--body);color:#fff;letter-spacing:.01em;margin-top:3px}
+.hl .t{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px}
+.hl .t span{font-size:13px;color:#c9d6db}
+.hl .t em{font-style:normal;font-size:12.5px;color:var(--teal);font-weight:700}
+.hl .ask .im{background:linear-gradient(150deg,#14a89c,#0c7f76)}
+.hl .ask .ov{background:none;inset:0;display:flex;flex-direction:column;justify-content:flex-end}
+.hl .ask .ov small{color:#e6fffb}
 .hl-note{font-size:12.5px;color:#9fb3bb;margin-top:16px}
 
 /* PELANGGAN */
@@ -177,6 +183,9 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
  .fasa,.calc,.renew,.pel{grid-template-columns:1fr}
  .band .wrap{grid-template-columns:1fr 1fr}
  .band div.s:nth-child(3){border-left:0}
+ .hl{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:620px){
  .hl{grid-template-columns:repeat(2,1fr)}
  .office{grid-template-columns:1fr 1fr}
  .office figure.wide{grid-column:1/-1;aspect-ratio:16/9}
@@ -194,7 +203,7 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
  .fasa .vis{min-height:260px}
  .spec{grid-template-columns:1fr 1fr}
  .sticky{display:flex}
- .hl .t b{font-size:15px}
+ .hl .ov b{font-size:17px}
 }
 </style>
 </head>
@@ -318,15 +327,16 @@ footer p+p{margin-top:12px;font-size:12.5px;opacity:.8}
  <div class="wrap">
   <span class="eyebrow">Kereta rosak di jalan?</span>
   <h2 class="h2" style="color:#fff">Hotline tunda <em style="color:var(--teal)">24 jam.</em></h2>
-  <p class="sub">Simpan nombor penanggung insurans anda. Tekan untuk terus call.</p>
+  <p class="sub">Kereta rosak, tayar pancit atau bateri kong? Simpan nombor penanggung insurans anda. Tekan untuk terus call.</p>
   <div class="hl">
-   <a href="tel:1800222262"><span class="im"><img src="img/h-generali.webp" alt="Kad bantuan jalan raya Generali" loading="lazy"></span><span class="t"><small>Generali</small><b>1800 22 2262</b><span>Call sekarang</span></span></a>
-   <a href="tel:1800881186"><span class="im"><img src="img/h-ikhlas.webp" alt="Kad Ikhlas Road Assist" loading="lazy"></span><span class="t"><small>Takaful Ikhlas</small><b>1-800-88-1186</b><span>Call sekarang</span></span></a>
-   <a href="tel:1800888788"><span class="im"><img src="img/h-takafulmy.webp" alt="Kad bantuan Takaful Malaysia" loading="lazy"></span><span class="t"><small>Takaful Malaysia</small><b>1800-888-788</b><span>Call sekarang</span></span></a>
-   <a href="tel:1800886491"><span class="im"><img src="img/h-etiqa.webp" alt="Kad auto assist 24 jam" loading="lazy"></span><span class="t"><small>Auto Assist</small><b>1800 88 6491</b><span>Call sekarang</span></span></a>
-   <a href="tel:1800884488"><span class="im"><img src="img/h-pacific.webp" alt="Kad Pacific Insurance Motor Roadside Assist" loading="lazy"></span><span class="t"><small>Pacific Insurance</small><b>1-800-88-4488</b><span>Call sekarang</span></span></a>
+   <a href="tel:1800222262" aria-label="Call Generali 1800 22 2262"><span class="im"><img src="img/hl-tunda.webp" alt="Kereta ditunda bila rosak" loading="lazy"><span class="ov"><small>Generali</small><b>1800 22 2262</b></span></span><span class="t"><span>Kereta ditunda bila rosak</span><em>📞 Tekan untuk call</em></span></a>
+   <a href="tel:1800881186" aria-label="Call Takaful Ikhlas 1-800-88-1186"><span class="im"><img src="img/hl-tayar.webp" alt="Tayar pancit di tengah jalan" loading="lazy"><span class="ov"><small>Takaful Ikhlas</small><b>1-800-88-1186</b></span></span><span class="t"><span>Tayar pancit di tengah jalan</span><em>📞 Tekan untuk call</em></span></a>
+   <a href="tel:1800888788" aria-label="Call Takaful Malaysia 1800-888-788"><span class="im"><img src="img/hl-tepi.webp" alt="Enjin mati di tepi jalan" loading="lazy"><span class="ov"><small>Takaful Malaysia</small><b>1800-888-788</b></span></span><span class="t"><span>Enjin mati di tepi jalan</span><em>📞 Tekan untuk call</em></span></a>
+   <a href="tel:1800886491" aria-label="Call Auto Assist 1800 88 6491"><span class="im"><img src="img/hl-malam.webp" alt="Rosak lewat malam, 24 jam" loading="lazy"><span class="ov"><small>Auto Assist</small><b>1800 88 6491</b></span></span><span class="t"><span>Rosak lewat malam, 24 jam</span><em>📞 Tekan untuk call</em></span></a>
+   <a href="tel:1800884488" aria-label="Call Pacific Insurance 1-800-88-4488"><span class="im"><img src="img/hl-enjin.webp" alt="Bateri kong atau enjin panas" loading="lazy"><span class="ov"><small>Pacific Insurance</small><b>1-800-88-4488</b></span></span><span class="t"><span>Bateri kong atau enjin panas</span><em>📞 Tekan untuk call</em></span></a>
+   <a href="#" class="ask" data-wa="Salam ZMI Agency, kereta saya rosak. Boleh bantu semak polisi saya dengan siapa? No. plat: "><span class="im"><span class="ov"><small>Tak pasti polisi?</small><b>WhatsApp ZMI</b></span></span><span class="t"><span>Beri no. plat, kami semak penanggung dan nombornya</span><em>💬 019-559 2554</em></span></a>
   </div>
-  <p class="hl-note">Untuk pemegang polisi, tertakluk kepada terma penanggung insurans. Tak pasti polisi anda dengan siapa? WhatsApp ZMI dengan no. plat.</p>
+  <p class="hl-note">Untuk pemegang polisi, tertakluk kepada terma penanggung insurans. </p>
  </div>
 </section>
 
