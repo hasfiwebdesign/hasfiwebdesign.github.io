@@ -15,12 +15,12 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d31145'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' fill='%23fff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600;1,9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--red:#d31145;--wine:#7a0a22;--ink:#1d1418;--mut:#6d5f64;--line:#eadfe2;--bg:#fbf7f6;--card:#fff;--gold:#c9973a;--blush:#fdeef1;
+:root{--red:#d31145;--wine:#7a0a22;--ink:#1d1418;--mut:#56474c;--line:#eadfe2;--bg:#fbf7f6;--card:#fff;--gold:#c9973a;--blush:#fdeef1;
 --disp:"Fraunces",Georgia,serif;--body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--r:22px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font:16px/1.65 var(--body);color:var(--ink);background:var(--bg);overflow-x:hidden}
+body{margin:0;font:500 16px/1.65 var(--body);color:var(--ink);background:var(--bg);overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}a{color:inherit}
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 .demo{background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:7px 12px;opacity:.92}
@@ -38,6 +38,10 @@ img{max-width:100%;height:auto;display:block}a{color:inherit}
 .b-red{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(211,17,69,.28)}.b-red:hover{box-shadow:0 10px 28px rgba(211,17,69,.38)}
 .b-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
 .b-wa{background:#1faa59;color:#fff}
+.lang{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;padding:3px;margin-left:auto;background:#fff;flex:none}
+.lang button{border:0;background:none;font:800 12.5px var(--body);padding:7px 11px;border-radius:999px;cursor:pointer;color:var(--mut);min-width:40px;min-height:34px}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.nav+.lang{margin-left:14px}
 .top .btn{margin-left:8px;padding:10px 18px;font-size:14px}
 svg.i{width:18px;height:18px;fill:currentColor;flex:none}
 /* hero */
@@ -45,8 +49,8 @@ svg.i{width:18px;height:18px;fill:currentColor;flex:none}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--red)}
-h1{font:650 clamp(36px,5.2vw,62px)/1.04 var(--disp);letter-spacing:-.02em;margin:14px 0 16px}
-h1 em{font-style:italic;color:var(--red);font-weight:500}
+h1{font:800 clamp(36px,4.4vw,54px)/1.04 var(--disp);letter-spacing:-.02em;margin:14px 0 16px}
+h1 em{font-style:italic;color:var(--red);font-weight:700}
 .lead{font-size:18px;color:var(--mut);max-width:540px;margin:0 0 22px}
 /* kad ejen (Goosehead / State Farm) */
 .agent{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;max-width:540px;box-shadow:0 10px 30px rgba(60,10,25,.06)}
@@ -75,11 +79,11 @@ select:focus,input:focus{outline:2px solid var(--red);outline-offset:1px;border-
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .proof div{padding:26px 18px;border-left:1px solid rgba(255,255,255,.14)}
 .proof div:first-child{border-left:0}
-.proof b{display:block;font:650 30px/1.1 var(--disp)}
+.proof b{display:block;font:800 30px/1.1 var(--disp)}
 .proof span{display:block;font-size:13.5px;opacity:.82;margin-top:6px;line-height:1.45}
 section{padding:78px 0}
-.h2{font:650 clamp(30px,3.8vw,44px)/1.1 var(--disp);letter-spacing:-.015em;margin:12px 0 12px}
-.h2 em{font-style:italic;color:var(--red);font-weight:500}
+.h2{font:800 clamp(30px,3.8vw,44px)/1.1 var(--disp);letter-spacing:-.015em;margin:12px 0 12px}
+.h2 em{font-style:italic;color:var(--red);font-weight:700}
 .sub{color:var(--mut);max-width:640px;margin:0 0 30px;font-size:17px}
 /* kuiz padanan */
 .quiz{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -89,10 +93,10 @@ section{padding:78px 0}
 .opt .ic{font-size:26px}.opt b{display:block;font-size:17px;margin:10px 0 4px}.opt span{color:var(--mut);font-size:14px;line-height:1.5}
 .ans{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:none;grid-template-columns:1fr auto;gap:20px;align-items:center}
 .ans.on{display:grid}
-.ans h3{margin:0 0 6px;font:650 24px var(--disp)}.ans p{margin:0;color:var(--mut)}
+.ans h3{margin:0 0 6px;font:800 24px var(--disp)}.ans p{margin:0;color:var(--mut)}
 /* mitos */
 .myth{background:var(--ink);color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-.myth .q{font:500 italic clamp(24px,2.8vw,32px)/1.25 var(--disp)}
+.myth .q{font:600 italic clamp(24px,2.8vw,32px)/1.25 var(--disp)}
 .myth ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .myth li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px 16px;font-size:15px}
 .myth li b{color:#ff8aa8}
@@ -117,7 +121,7 @@ section{padding:78px 0}
 /* langkah */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
 .steps div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
-.steps div::before{counter-increment:s;content:"0" counter(s);font:650 28px var(--disp);color:var(--red)}
+.steps div::before{counter-increment:s;content:"0" counter(s);font:800 28px var(--disp);color:var(--red)}
 .steps b{display:block;margin:6px 0 4px;font-size:17px}.steps span{color:var(--mut);font-size:14.5px}
 /* borang */
 .formbox{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px;display:grid;grid-template-columns:.85fr 1.15fr;gap:36px}
@@ -186,6 +190,7 @@ footer b{color:#fff}
   <nav class="nav" aria-label="Menu">
    <a href="#padan">Pelan</a><a href="#pencapaian">Pencapaian</a><a href="#kisah">Kenali Wani</a><a href="#sertai">Sertai pasukan</a>
   </nav>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en">EN</button><button type="button" data-l="ms">BM</button></div>
   <a class="btn b-red" href="#sebut-harga">Dapatkan sebut harga</a>
  </div>
 </header>
@@ -404,23 +409,34 @@ footer b{color:#fff}
 
 <script>
 const WA='60125073018';
+let L=localStorage.getItem('wani-lang')||'en';const EN={"Contoh reka bentuk oleh Hasfi Web Design untuk Syazwani Rosli. Bukan laman rasmi AIA.": "Design sample by Hasfi Web Design for Syazwani Rosli. Not an official AIA website.", "Pelan": "Plans", "Pencapaian": "Achievements", "Kenali Wani": "Meet Wani", "Sertai pasukan": "Join the team", "Dapatkan sebut harga": "Get a quote", "Bila jatuh sakit,": "When illness strikes,", "keluarga": "your family", "tak patut jatuh sekali.": "shouldn't fall with you.", "Saya Wani, Life Planner AIA Public Takaful. Saya bantu anda pilih perlindungan yang muat dengan bajet, dan saya terangkan setiap manfaat sampai anda betul-betul faham.": "I'm Wani, a Life Planner with AIA Public Takaful. I help you choose cover that fits your budget, and I explain every benefit until you truly understand it.", "Sebut harga pantas, terus ke WhatsApp": "Quick quote, straight to WhatsApp", "Medical card bayi": "Newborn medical card", "Medical card pekerja (SME)": "Employee medical card (SME)", "Semak harga": "Check price", "Wani balas dengan anggaran caruman ikut umur anda. Tiada kewajipan.": "Wani replies with an estimated contribution for your age. No obligation.", "Tahun pertama, 2022": "First year, 2022", "Mei 2022": "May 2022", "Mula sebagai Life Planner AIA Public Takaful": "Started as a Life Planner with AIA Public Takaful", "Padankan pelan dalam 10 saat": "Match a plan in 10 seconds", "Apa yang paling": "What worries you", "anda risaukan?": "the most?", "Pilih satu. Wani terangkan pelan yang sesuai, kemudian anda boleh terus tanya di WhatsApp.": "Pick one. Wani explains the right plan, then you can ask her directly on WhatsApp.", "Bil hospital": "Hospital bills", "Takut kos wad dan pembedahan habiskan simpanan.": "Worried ward and surgery costs will drain your savings.", "Keluarga jika saya tiada": "My family if I'm gone", "Mahu tinggalkan wang tunai terus kepada penama.": "Want to leave cash directly to your nominee.", "Gaji terhenti bila sakit": "No salary when I'm sick", "Komitmen bulanan tetap berjalan walaupun tak boleh bekerja.": "Monthly commitments continue even when you can't work.", "Pekerja syarikat": "My employees", "Mahu medical card untuk staf sebagai manfaat pekerja.": "Want medical cards for staff as an employee benefit.", "Tanya Wani": "Ask Wani", "Ramai tak tahu": "Many don't know", "\"Ramai fikir kalau ada medical card je dah cukup. Rupanya medical card tak beri wang pampasan.\"": "\"Many think a medical card alone is enough. In fact, a medical card doesn't pay you any compensation.\"", "Dari perkongsian Wani di Instagram": "From Wani's Instagram post", "bayar bil hospital. Itu sahaja tugasnya.": "pays your hospital bills. That's its only job.", "ganti pendapatan bila anda tak dapat bekerja kerana sakit kritikal.": "replaces your income when critical illness stops you from working.", "beri wang tunai terus kepada penama, tanpa tunggu faraid.": "pays cash directly to your nominee, without waiting for faraid.", "Wani semak polisi sedia ada anda dan tunjuk jurang perlindungan, percuma.": "Wani reviews your existing policies and shows the gaps in your cover, free.", "Rekod, bukan janji": "Track record, not promises", "Dipercayai pelanggan,": "Trusted by clients,", "diiktiraf AIA.": "recognised by AIA.", "Setiap anugerah ini datang daripada pelanggan yang memilih untuk dilindungi bersama Wani.": "Every award here comes from clients who chose to be protected with Wani.", "Platinum Champion · Okt 2026": "Platinum Champion · Oct 2026", "Titanium Legend, Jun 2026": "Titanium Legend, Jun 2026", "Rekrut Sama-sama Challenge · Top 52": "AIA Rekrut Sama-sama Challenge · Top 52", "Dari menulis kod,": "From writing code,", "kepada melindungi keluarga.": "to protecting families.", "Wani dahulu bekerja dalam bidang sistem dan kod. Dia menyertai AIA pada Mei 2022, dinaikkan ke Assistant Unit Manager pada Oktober 2024, dan kini mengetuai unitnya sendiri.": "Wani used to work in systems and coding. She joined AIA in May 2022, was promoted to Assistant Unit Manager in October 2024, and now leads her own unit.", "Terang sampai faham": "Explained until it's clear", "Setiap manfaat, pengecualian dan caruman diterangkan dalam bahasa mudah sebelum anda setuju.": "Every benefit, exclusion and contribution is explained in plain language before you agree.", "Ada bila anda perlu tuntut": "There when you need to claim", "Wani kekal sebagai rujukan anda, termasuk semasa membuat tuntutan.": "Wani stays your point of contact, including when you make a claim.", "Individu, keluarga dan syarikat": "Individuals, families and companies", "Dari medical card bayi baru lahir hingga perlindungan perubatan pekerja SME.": "From newborn medical cards to medical cover for SME employees.", "Cara mohon": "How to apply", "Empat langkah,": "Four steps,", "semua di WhatsApp.": "all on WhatsApp.", "Isi borang ringkas": "Fill in a short form", "Pelan, umur dan bajet. Kurang dari satu minit.": "Plan, age and budget. Under a minute.", "Terima cadangan": "Get a proposal", "Wani hantar pilihan pelan dan anggaran caruman.": "Wani sends plan options and estimated contributions.", "Faham dahulu": "Understand first", "Tanya apa sahaja sampai jelas. Tiada desakan.": "Ask anything until it's clear. No pressure.", "Dilindungi": "Covered", "Sijil aktif, dan Wani kekal sebagai rujukan anda.": "Your certificate is active, and Wani remains your point of contact.", "Sebut harga": "Quote", "Dapatkan cadangan": "Get a proposal", "ikut bajet anda.": "that fits your budget.", "Semua butiran masuk terus ke WhatsApp Wani. Dia balas dengan cadangan pelan dan anggaran caruman.": "Your details go straight to Wani's WhatsApp. She replies with plan options and estimated contributions.", "Pelan yang dicari": "Plans you're looking for", "Semak polisi sedia ada": "Review my existing policy", "Umur": "Age", "Jantina": "Gender", "Perempuan": "Female", "Lelaki": "Male", "Merokok?": "Smoker?", "Tidak": "No", "Ya": "Yes", "Bajet sebulan": "Monthly budget", "Bawah RM150": "Below RM150", "Lebih RM500": "Above RM500", "Nama anda": "Your name", "Hantar ke WhatsApp Wani": "Send to Wani on WhatsApp", "Sertai pasukan Wani": "Join Wani's team", "Cari pendapatan sampingan,": "Looking for extra income?", "bina kerjaya.": "Build a career.", "Wani beralih dari dunia kod ke AIA Elite Academy pada 2022. Kini dia membimbing pasukannya sendiri.": "Wani moved from coding to the AIA Elite Academy in 2022. Today she mentors her own team.", "Latihan berstruktur dari hari pertama": "Structured training from day one", "Mentor dan sokongan pasukan": "Mentoring and team support", "Pengiktirafan di majlis anugerah tahunan": "Recognition at annual award nights", "Saya berminat, hubungi saya": "I'm interested, contact me", "Soalan lazim": "FAQ", "Sebelum anda": "Before you", "memohon.": "apply.", "Berapa caruman untuk umur saya?": "How much is the contribution for my age?", "Caruman ikut umur, jantina, status merokok dan pelan. Isi borang sebut harga, Wani kira dan hantar anggaran di WhatsApp.": "It depends on age, gender, smoking status and plan. Fill in the quote form and Wani will calculate and send an estimate on WhatsApp.", "Saya dah ada medical card. Perlu lagi ke?": "I already have a medical card. Do I need more?", "Medical card hanya bayar bil hospital. Ia tidak menggantikan pendapatan atau beri wang tunai kepada keluarga. Wani boleh semak polisi anda dan tunjuk jurangnya.": "A medical card only pays hospital bills. It doesn't replace your income or give cash to your family. Wani can review your policy and show the gaps.", "Adakah pelan ini patuh syariah?": "Are these plans shariah-compliant?", "Ya. Pelan AIA Public Takaful ialah pelan takaful.": "Yes. AIA Public Takaful plans are takaful plans.", "Boleh ambil untuk bayi baru lahir?": "Can I get cover for a newborn?", "Boleh. Tanya Wani tentang medical card bayi dan bila ia boleh dimohon.": "Yes. Ask Wani about the newborn medical card and when you can apply.", "Adakah ini laman rasmi AIA?": "Is this an official AIA website?", "Bukan. Ini laman perunding takaful persendirian. Terma penuh tertakluk kepada dokumen rasmi AIA Public Takaful.": "No. This is a personal takaful consultant's page. Full terms are subject to official AIA Public Takaful documents.", "Contoh reka bentuk oleh Hasfi Web Design. Gambar daripada Instagram perunding. Manfaat dan caruman sebenar tertakluk kepada AIA Public Takaful.": "Design sample by Hasfi Web Design. Photos from the consultant's Instagram. Actual benefits and contributions are subject to AIA Public Takaful.", "Salam Wani, saya ingin bertanya tentang perlindungan takaful.": "Hi Wani, I'd like to ask about takaful protection.", "Telefon Wani": "Call Wani", "Simpan kenalan Wani": "Save Wani's contact", "Syazwani Rosli di majlis AIA Public Takaful": "Syazwani Rosli at an AIA Public Takaful event", "Pilih kerisauan": "Choose a concern", "Syazwani Rosli di Annual Award Night 2024": "Syazwani Rosli at Annual Award Night 2024", "Top Recruiter Champion di pentas": "Top Recruiter Champion on stage", "Syazwani Rosli bersama rakan pasukan di majlis anugerah": "Syazwani Rosli with teammates at an award night", "Pasukan Evo X Nizzman di Annual Award Night": "The Evo X Nizzman team at Annual Award Night", "Salam Wani, saya berminat untuk sertai pasukan AIA. Boleh terangkan?": "Hi Wani, I'm interested in joining your AIA team. Could you tell me more?", "Salam Wani": "Hi Wani", "Gambar besar": "Large image", "Tutup": "Close", "Menu": "Menu", "Bil hospital dibayar terus ikut had pelan, termasuk wad dan pembedahan. Sesuai sebagai perlindungan asas setiap orang.": "Hospital bills paid directly up to the plan limit, including ward and surgery. Basic cover everyone should have.", "Wang tunai terus kepada penama yang anda pilih, tanpa tunggu faraid. Untuk hutang rumah, pendidikan anak dan belanja keluarga.": "Cash paid directly to the nominee you choose, without waiting for faraid. For your home loan, children's education and family expenses.", "Bayaran tunai bila didiagnos sakit kritikal, untuk ganti pendapatan semasa tak boleh bekerja. Boleh diambil berasingan dari medical card.": "A cash payout when you're diagnosed with a critical illness, to replace income while you can't work. Can be taken separately from a medical card.", "Perlindungan pekerja (SME)": "Employee cover (SME)", "Medical card berkumpulan untuk staf syarikat sebagai manfaat pekerja. Wani terangkan pilihan ikut saiz syarikat anda.": "Group medical cards for company staff as an employee benefit. Wani explains the options for your company size.", "Salam Wani, saya nak tahu tentang medical card.": "Hi Wani, I'd like to know about medical cards.", "Salam Wani, saya nak tahu tentang hibah untuk keluarga.": "Hi Wani, I'd like to know about hibah for my family.", "Salam Wani, saya nak tahu tentang income protection.": "Hi Wani, I'd like to know about income protection.", "Salam Wani, saya nak tahu tentang medical card untuk pekerja syarikat.": "Hi Wani, I'd like to know about medical cards for my employees."};const T=x=>L==='en'?(EN[x]||x):x;
 const go=t=>window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank','noopener');
 document.querySelectorAll('[data-wa]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();go(a.dataset.wa)}));
-document.getElementById('quick').addEventListener('submit',e=>{e.preventDefault();const u=document.getElementById('qa').value;go('Salam Wani, saya nak sebut harga '+document.getElementById('qp').value+(u?' untuk umur '+u+' tahun':'')+'.')});
-document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const f=e.target,p=[...f.querySelectorAll('[name=p]:checked')].map(x=>x.value).join(', ')||'Belum pasti';
- go(`Salam Wani, saya ${f.nama.value}.\nNak sebut harga: ${p}\nUmur: ${f.umur.value}\nJantina: ${f.jantina.value}\nMerokok: ${f.rokok.value}\nBajet: ${f.bajet.value}`)});
+document.getElementById('quick').addEventListener('submit',e=>{e.preventDefault();const u=document.getElementById('qa').value;const pl=document.getElementById('qp').selectedOptions[0].textContent;go(L==='en'?'Hi Wani, I\'d like a quote for '+pl+(u?', age '+u:'')+'.':'Salam Wani, saya nak sebut harga '+pl+(u?' untuk umur '+u+' tahun':'')+'.')});
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const f=e.target,p=[...f.querySelectorAll('[name=p]:checked')].map(x=>T(x.value)).join(', ')||T('Belum pasti');const o=n=>f[n].selectedOptions[0].textContent;
+ go(L==='en'?`Hi Wani, I'm ${f.nama.value}.\nQuote for: ${p}\nAge: ${f.umur.value}\nGender: ${o('jantina')}\nSmoker: ${o('rokok')}\nBudget: ${o('bajet')}`:`Salam Wani, saya ${f.nama.value}.\nNak sebut harga: ${p}\nUmur: ${f.umur.value}\nJantina: ${o('jantina')}\nMerokok: ${o('rokok')}\nBajet: ${o('bajet')}`)});
 const A={mc:['Medical card','Bil hospital dibayar terus ikut had pelan, termasuk wad dan pembedahan. Sesuai sebagai perlindungan asas setiap orang.','Salam Wani, saya nak tahu tentang medical card.'],
 hb:['Hibah','Wang tunai terus kepada penama yang anda pilih, tanpa tunggu faraid. Untuk hutang rumah, pendidikan anak dan belanja keluarga.','Salam Wani, saya nak tahu tentang hibah untuk keluarga.'],
 ip:['Income protection','Bayaran tunai bila didiagnos sakit kritikal, untuk ganti pendapatan semasa tak boleh bekerja. Boleh diambil berasingan dari medical card.','Salam Wani, saya nak tahu tentang income protection.'],
 sme:['Perlindungan pekerja (SME)','Medical card berkumpulan untuk staf syarikat sebagai manfaat pekerja. Wani terangkan pilihan ikut saiz syarikat anda.','Salam Wani, saya nak tahu tentang medical card untuk pekerja syarikat.']};
 document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');const a=A[b.dataset.k];
- ansT.textContent=a[0];ansP.textContent=a[1];ansB.onclick=e=>{e.preventDefault();go(a[2])};ans.classList.add('on')}));
+ cur=a;ansT.textContent=T(a[0]);ansP.textContent=T(a[1]);ansB.onclick=e=>{e.preventDefault();go(T(a[2]))};ans.classList.add('on')}));
 document.querySelectorAll('.opt').forEach(b=>b.setAttribute('aria-pressed','false'));
 document.getElementById('vcard').addEventListener('click',e=>{e.preventDefault();const v='BEGIN:VCARD\nVERSION:3.0\nFN:Syazwani Rosli\nORG:AIA Public Takaful\nTITLE:Assistant Unit Manager\nTEL;TYPE=CELL:+60125073018\nURL:https://www.instagram.com/syazwanirosli__/\nEND:VCARD';
  const l=document.createElement('a');l.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));l.download='Syazwani-Rosli.vcf';l.click()});
 const lb=document.getElementById('lb'),li=lb.querySelector('img');
 document.querySelectorAll('.bento figure').forEach(f=>f.addEventListener('click',()=>{const i=f.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')}));
 lb.addEventListener('click',e=>{if(e.target!==li)lb.classList.remove('on')});document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+let cur=null;
+const ORI=new Map(),ATT=['placeholder','aria-label','alt','data-wa'];
+function setLang(l){L=l;localStorage.setItem('wani-lang',l);document.documentElement.lang=l==='en'?'en':'ms';
+ const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('script,style')?2:1});let n;
+ while(n=w.nextNode()){if(!ORI.has(n))ORI.set(n,n.nodeValue);const o=ORI.get(n),k=o.trim();if(!k)continue;n.nodeValue=l==='en'&&EN[k]?o.replace(k,EN[k]):o;}
+ document.querySelectorAll('*').forEach(e=>ATT.forEach(a=>{if(!e.hasAttribute(a))return;const key='o_'+a.replace(/-/g,'_');if(!(key in e.dataset))e.dataset[key]=e.getAttribute(a);const o=e.dataset[key];e.setAttribute(a,l==='en'&&EN[o]?EN[o]:o)}));
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+ if(cur){ansT.textContent=T(cur[0]);ansP.textContent=T(cur[1]);ansB.onclick=e=>{e.preventDefault();go(T(cur[2]))};}}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
+setLang(L);
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(x=>io.observe(x));
 </script>
